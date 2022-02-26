@@ -180,6 +180,7 @@ export const PADarkTheme: ThemeOptions = {
         // BUTTON OVERRIDES
         MuiButton: {
             root: {
+                borderRadius: 0,
                 textTransform: 'none',
                 '&:hover': {
                     backgroundColor: BLUIColors.black[400],

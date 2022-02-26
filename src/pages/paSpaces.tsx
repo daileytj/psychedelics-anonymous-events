@@ -10,6 +10,7 @@ import {
     makeStyles,
     useTheme,
     Grid,
+    CircularProgress,
 } from '@material-ui/core';
 import Menu from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
@@ -26,6 +27,12 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: theme.spacing(2),
             flexGrow: 1,
             justifyContent: 'center'
+        },
+        emptyContainer: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1
         }
     })
 );
@@ -84,14 +91,18 @@ export const PASpacesPage = (): JSX.Element => {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.eventContainer}>
-                {((!events || (events && events.length === 0)) && isLoading) && (
-                    <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem' }}>Loading...</Typography>
-                )}
-                {(!events || (events && events.length === 0)) && (
-                    <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem' }}>No Events Currently Scheduled</Typography>
-                )}
-                {(events && events.length > 0 && !isLoading) && (<Grid container spacing={2} alignItems={'stretch'}>
+            {(!events || (events && events.length === 0)) && (
+                <div className={classes.emptyContainer}>
+                    {isLoading && (
+                        <CircularProgress color="secondary" size={64} />
+                    )}
+                    {!isLoading && (
+                        <Typography variant={'h6'} color={'secondary'} style={{ textAlign: 'center', marginTop: '2rem' }}>No Events Currently Scheduled</Typography>
+                    )}
+                </div>
+            )}
+            {(events && events.length > 0) && (<div className={classes.eventContainer}>
+                <Grid container spacing={2} alignItems={'stretch'}>
                     {events.map((item, index) => (
                         <Grid item sm={12} md={6} xl={4} key={index}>
                             <EventCard
@@ -102,10 +113,9 @@ export const PASpacesPage = (): JSX.Element => {
                                 twitterRecordingLink={item.twitterRecordingLink ? item.twitterRecordingLink : undefined}
                             />
                         </Grid>
-                    ))
-                    }
-                </Grid>)}
-            </div>
+                    ))}
+                </Grid>
+            </div>)}
         </div>
     );
 };
