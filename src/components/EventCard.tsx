@@ -60,6 +60,10 @@ const useStyles = makeStyles<Theme, EventCardProps>((theme) =>
             marginTop: theme.spacing(2),
             marginBottom: theme.spacing(3),
         },
+        descriptionContainer: {
+            height: '60px',
+            overflow: 'scroll'
+        },
         twitterLink: {
             width: '100%'
         },
@@ -127,9 +131,11 @@ export const EventCard: React.FC<EventCardProps> = (
             <CardContent>
                 <CountdownTimer date={date} />
                 <Divider className={classes.divider} />
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {description}
-                </Typography>
+                <div className={classes.descriptionContainer}>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {description}
+                    </Typography>
+                </div>
             </CardContent>
             <CardActions disableSpacing>
                 {twitterLink && (
@@ -139,37 +145,37 @@ export const EventCard: React.FC<EventCardProps> = (
                         color={'primary'}
                         target="_blank"
                         href={twitterLink}
-                        onMouseOver={(): void => {setIsTwitterButtonHovered(true)}}
-                        onMouseOut={(): void => {setIsTwitterButtonHovered(false)}}
-                        >
-                         <TwitterIcon
-                             className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
-                             fill='inherit' />
+                        onMouseOver={(): void => { setIsTwitterButtonHovered(true) }}
+                        onMouseOut={(): void => { setIsTwitterButtonHovered(false) }}
+                    >
+                        <TwitterIcon
+                            className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
+                            fill='inherit' />
                         Twitter
                     </Button>)}
-                    {twitterRecordingLink && (
+                {twitterRecordingLink && (
                     <Button
                         className={classes.twitterLink}
                         variant={'contained'}
                         color={'primary'}
                         target="_blank"
                         href={twitterRecordingLink}
-                        onMouseOver={(): void => {setIsTwitterButtonHovered(true)}}
-                        onMouseOut={(): void => {setIsTwitterButtonHovered(false)}}
-                        >
-                         <TwitterIcon
-                             className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
-                             fill='inherit' />
+                        onMouseOver={(): void => { setIsTwitterButtonHovered(true) }}
+                        onMouseOut={(): void => { setIsTwitterButtonHovered(false) }}
+                    >
+                        <TwitterIcon
+                            className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
+                            fill='inherit' />
                         Go To Recording
                     </Button>)}
-                    {eventLink && (
+                {eventLink && (
                     <Button
                         className={classes.twitterLink}
                         variant={'contained'}
                         color={'primary'}
                         target="_blank"
                         href={eventLink}
-                        >
+                    >
                         View Event
                     </Button>)}
             </CardActions>
