@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { createStyles, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, createStyles, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { useHistory, useLocation } from 'react-router';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import Menu from '@material-ui/icons/Menu';
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavItem } from '@brightlayer-ui/react-components';
+import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerNavItem } from '@brightlayer-ui/react-components';
 import { PAGES } from './routes';
 
 const useStyles = makeStyles(() =>
@@ -77,6 +77,13 @@ export const NavigationDrawer: React.FC = () => {
                         />);
                 })}
             </DrawerBody>
+            <DrawerFooter divider={false}>
+                <Button 
+                    color={'primary'}
+                    style={{ width: '100%', height: 48, fontWeight: 200, letterSpacing: 2 }}
+                    target="_blank"
+                    href={"https://twitter.com/daileytj"}><Typography color={'secondary'} style={{ fontWeight: 200, letterSpacing: 2, marginRight: 4 }}>/</Typography>built and maintained by @daileytj</Button>
+            </DrawerFooter>
         </Drawer>
     );
 };

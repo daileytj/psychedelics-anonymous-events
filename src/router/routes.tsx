@@ -17,8 +17,8 @@ export const PAGES = [
         icon: People,
     },
     {
-        title: 'Weekly Spaces',
-        route: '/weekly-spaces',
+        title: 'Daily Spaces',
+        route: '/daily-spaces',
         component: PASpacesPage,
         icon: Mic,
     },

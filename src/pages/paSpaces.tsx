@@ -87,7 +87,7 @@ export const PASpacesPage = (): JSX.Element => {
                         letterSpacing: '5px',
                         textTransform: 'uppercase'
                     }}>
-                        Spaces
+                        Daily Spaces
                     </Typography>
                 </Toolbar>
             </AppBar>
