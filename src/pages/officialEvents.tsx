@@ -58,20 +58,23 @@ export const PAOfficialEventsPage = (): JSX.Element => {
                                 setDrawerOpen(true);
                             }}
                             edge={'start'}
-                            style={{ marginRight: theme.spacing(3) }}
+                            style={{ marginRight: theme.spacing(1) }}
                         >
                             <MenuIcon />
                         </IconButton>
                     </Hidden>
                     <Typography variant={'h6'} style={{
                         color: '#FFFF00', fontWeight: 200,
-                        letterSpacing: '5px',
+                        letterSpacing: '3px',
                         textTransform: 'uppercase'
                     }}>&nbsp;/&nbsp;</Typography>
                     <Typography variant={'h6'} color={'inherit'} style={{
                         fontWeight: 200,
-                        letterSpacing: '5px',
-                        textTransform: 'uppercase'
+                        letterSpacing: '3px',
+                        textTransform: 'uppercase',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                     }}>Official Events
                     </Typography>
                 </Toolbar>

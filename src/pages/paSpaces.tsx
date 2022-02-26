@@ -72,20 +72,23 @@ export const PASpacesPage = (): JSX.Element => {
                                 setDrawerOpen(true);
                             }}
                             edge={'start'}
-                            style={{ marginRight: theme.spacing(3) }}
+                            style={{ marginRight: theme.spacing(1) }}
                         >
                             <Menu />
                         </IconButton>
                     </Hidden>
                     <Typography variant={'h6'} style={{
                         color: '#FFFF00', fontWeight: 200,
-                        letterSpacing: '5px',
+                        letterSpacing: '3px',
                         textTransform: 'uppercase'
                     }}>&nbsp;/&nbsp;</Typography>
                     <Typography variant={'h6'} color={'inherit'} style={{
                         fontWeight: 200,
-                        letterSpacing: '5px',
-                        textTransform: 'uppercase'
+                        letterSpacing: '3px',
+                        textTransform: 'uppercase',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                     }}>
                         Daily Spaces
                     </Typography>
@@ -104,7 +107,7 @@ export const PASpacesPage = (): JSX.Element => {
             {(events && events.length > 0) && (<div className={classes.eventContainer}>
                 <Grid container spacing={2} alignItems={'stretch'}>
                     {events.map((item, index) => (
-                        <Grid item sm={12} md={6} xl={4} key={index}>
+                        <Grid item sm={12} md={6} xl={4} key={index} style={{width: '100%'}}>
                             <EventCard
                                 title={item.title}
                                 description={item.description}
