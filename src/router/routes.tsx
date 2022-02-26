@@ -1,25 +1,25 @@
-import { HomePage, PageOne, PageTwo } from '../pages';
-import Home from '@material-ui/icons/Home';
-import LooksOne from '@material-ui/icons/LooksOne';
-import LooksTwo from '@material-ui/icons/LooksTwo';
+import Event from '@material-ui/icons/Event';
+import People from '@material-ui/icons/People';
+import Mic from '@material-ui/icons/Mic';
+import { PACommunityEventsPage, PAOfficialEventsPage, PASpacesPage } from '../pages';
 
 export const PAGES = [
     {
-        title: 'Home Page',
+        title: 'Official Events',
         route: '/',
-        component: HomePage,
-        icon: Home,
+        component: PAOfficialEventsPage,
+        icon: Event,
     },
     {
-        title: 'Page One',
-        route: '/page-one',
-        component: PageOne,
-        icon: LooksOne,
+        title: 'Community Events',
+        route: '/community-events',
+        component: PACommunityEventsPage,
+        icon: People,
     },
     {
-        title: 'Page Two',
-        route: '/page-two',
-        component: PageTwo,
-        icon: LooksTwo,
+        title: 'Weekly Spaces',
+        route: '/weekly-spaces',
+        component: PASpacesPage,
+        icon: Mic,
     },
 ];

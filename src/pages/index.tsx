@@ -1,3 +1,3 @@
-export * from './home';
-export * from './pageOne';
-export * from './pageTwo';
+export * from './officialEvents';
+export * from './paCommunity';
+export * from './paSpaces';

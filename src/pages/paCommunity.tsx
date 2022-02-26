@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export const PageOne = (): JSX.Element => {
+export const PACommunityEventsPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -45,16 +45,22 @@ export const PageOne = (): JSX.Element => {
                             <Menu />
                         </IconButton>
                     </Hidden>
-                    <Typography variant={'h6'} color={'inherit'}>
-                        Page One
+                    <Typography variant={'h6'} style={{color: '#FFFF00', fontWeight: 200,
+                        letterSpacing: '5px',
+                        textTransform: 'uppercase'}}>&nbsp;/&nbsp;</Typography>
+                    <Typography variant={'h6'} color={'inherit'} style={{
+                        fontWeight: 200,
+                        letterSpacing: '5px',
+                        textTransform: 'uppercase'
+                    }}>
+                        Community Events
                     </Typography>
                 </Toolbar>
             </AppBar>
             <div style={{ flex: '1 1 0px' }}>
                 <EmptyState
                     icon={<Event fontSize={'inherit'} />}
-                    title={'Coming Soon'}
-                    description={'Replace this page with your own content'}
+                    title={'Community Events Coming Soon'}
                 />
             </div>
         </div>
