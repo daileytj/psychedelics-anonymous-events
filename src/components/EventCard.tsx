@@ -14,6 +14,15 @@ import { Button, CardActions, Divider } from '@material-ui/core';
 import { ReactComponent as TwitterIcon } from '../assets/twitter-icon.svg';
 import * as BLUIColors from '@brightlayer-ui/colors';
 
+export type PAEvent = {
+    title: string;
+    description: string;
+    date: number[];
+    twitterLink?: string;
+    twitterRecordingLink?: string;
+    eventLink?: string;
+}
+
 export type EventCardProps = {
     title: string;
     description: string;

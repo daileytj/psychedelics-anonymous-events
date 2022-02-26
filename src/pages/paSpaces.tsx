@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     AppBar,
     IconButton,
@@ -13,7 +13,8 @@ import {
 } from '@material-ui/core';
 import Menu from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
-import { EventCard } from '../components/EventCard';
+import { EventCard, PAEvent } from '../components/EventCard';
+import { getPAEvents } from '../api';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -33,59 +34,25 @@ export const PASpacesPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
+    const [events, setEvents] = useState<PAEvent[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const data = [
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 1, 1, 17, 0, 0),
-            twitterRecordingLink: "https://twitter.com/paspaces/status/1495857332907085827?s=20&t=mon2_3rjNqQoSixx6cJ6iw"
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 1, 17, 0, 0),
-            twitterLink: "https://twitter.com/paspaces"
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 7, 17, 0, 0),
-            twitterLink: "https://twitter.com/paspaces"
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 15, 17, 0, 0),
-            twitterLink: "https://twitter.com/paspaces"
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 22, 17, 0, 0),
-            twitterLink: "https://twitter.com/paspaces"
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 29, 17, 0, 0)
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 4, 1, 17, 0, 0)
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 5, 1, 17, 0, 0)
-        },
-        {
-            title: "Mindfulness Monday",
-            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 7, 1, 17, 0, 0)
-        }
-    ]
+    useEffect(() => {
+        let isMounted = true;
+
+        setIsLoading(true);
+        const loadRoadmap = async (): Promise<void> => {
+            const data = await getPAEvents('pa-spaces-events');
+            if (isMounted) {
+                setEvents(data || []);
+            }
+            setIsLoading(false);
+        };
+        void loadRoadmap();
+        return (): void => {
+            isMounted = false;
+        };
+    }, []);
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -118,20 +85,26 @@ export const PASpacesPage = (): JSX.Element => {
                 </Toolbar>
             </AppBar>
             <div className={classes.eventContainer}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    {data.map((item, index) => (
+                {((!events || (events && events.length === 0)) && isLoading) && (
+                    <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem' }}>Loading...</Typography>
+                )}
+                {(!events || (events && events.length === 0)) && (
+                    <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem' }}>No Events Currently Scheduled</Typography>
+                )}
+                {(events && events.length > 0 && !isLoading) && (<Grid container spacing={2} alignItems={'stretch'}>
+                    {events.map((item, index) => (
                         <Grid item sm={12} md={6} xl={4} key={index}>
                             <EventCard
                                 title={item.title}
                                 description={item.description}
-                                date={item.date}
+                                date={new Date(item.date[0], item.date[1], item.date[2], item.date[3], item.date[4], item.date[5])}
                                 twitterLink={item.twitterLink ? item.twitterLink : undefined}
                                 twitterRecordingLink={item.twitterRecordingLink ? item.twitterRecordingLink : undefined}
                             />
                         </Grid>
                     ))
                     }
-                </Grid>
+                </Grid>)}
             </div>
         </div>
     );
