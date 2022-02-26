@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) =>
     createStyles({
         root: {
             padding: theme.spacing(),
+            paddingTop: 0,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-evenly'
@@ -78,7 +79,11 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = (
 
     return (
         <div className={classes.root}>
-            <div className={classes.timeComponent}>
+            {timeUntilEvent.days === 0 && timeUntilEvent.hours === 0 && timeUntilEvent.minutes === 0 && timeUntilEvent.seconds === 0 && (
+            <Typography variant={'h4'} style={{marginTop: 38}}>This Event Is Over</Typography>
+            )}
+            {!(timeUntilEvent.days === 0 && timeUntilEvent.hours === 0 && timeUntilEvent.minutes === 0 && timeUntilEvent.seconds === 0) && (
+            <><div className={classes.timeComponent}>
                 <Typography className={classes.timeLabel} variant={'body1'}>{timeUntilEvent.days === 1 ? 'Day' : 'Days'}</Typography>
                 <div className={classes.timeNumber}>
                     <Typography variant={'h3'}>{timeUntilEvent.days}</Typography>
@@ -101,7 +106,8 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = (
                 <div className={classes.timeNumber}>
                     <Typography variant={'h3'}>{timeUntilEvent.seconds}</Typography>
                 </div>
-            </div>
+            </div> 
+            </>)}
         </div>
     );
 };

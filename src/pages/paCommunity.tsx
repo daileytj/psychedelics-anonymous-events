@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
+        // eventContainer: {
+        //     padding: theme.spacing(2),
+        //     flexGrow: 1,
+        //     justifyContent: 'center'
+        // }
     })
 );
 
@@ -63,6 +68,23 @@ export const PACommunityEventsPage = (): JSX.Element => {
                     title={'Community Events Coming Soon'}
                 />
             </div>
+            {/* <div className={classes.eventContainer}>
+                <Grid container spacing={2}>
+                    {data.map((item, index) => (
+                        <Grid item sm={12} md={6} xl={4} key={index}>
+                            <EventCard
+                                title={item.title}
+                                description={item.description}
+                                date={item.date}
+                                iconColor={'yellow'}
+                                avatarBackgroundColor={theme.palette.background.default}
+                                titleColor={theme.palette.primary.main}
+                            />
+                        </Grid>
+                    ))
+                    }
+                </Grid>
+            </div> */}
         </div>
     );
 };

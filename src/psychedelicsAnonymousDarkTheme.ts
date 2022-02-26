@@ -228,7 +228,8 @@ export const PADarkTheme: ThemeOptions = {
                 backgroundColor: ThemeColors.primary.dark,
                 color: WhiteText,
                 '&:hover': {
-                    backgroundColor: BLUIColors.green[300],
+                    backgroundColor: ThemeColors.secondary.main,
+                    color: BlackText
                 },
                 '&$disabled': {
                     borderWidth: 0,

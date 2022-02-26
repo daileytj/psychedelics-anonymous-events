@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: theme.spacing(2),
             flexGrow: 1,
             justifyContent: 'center'
-
         }
     })
 );
@@ -39,22 +38,32 @@ export const PASpacesPage = (): JSX.Element => {
         {
             title: "Mindfulness Monday",
             description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 1, 17, 0, 0)
+            date: new Date(2022, 1, 1, 17, 0, 0),
+            twitterRecordingLink: "https://twitter.com/paspaces/status/1495857332907085827?s=20&t=mon2_3rjNqQoSixx6cJ6iw"
         },
         {
             title: "Mindfulness Monday",
             description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 7, 17, 0, 0)
+            date: new Date(2022, 2, 1, 17, 0, 0),
+            twitterLink: "https://twitter.com/paspaces"
         },
         {
             title: "Mindfulness Monday",
             description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 15, 17, 0, 0)
+            date: new Date(2022, 2, 7, 17, 0, 0),
+            twitterLink: "https://twitter.com/paspaces"
         },
         {
             title: "Mindfulness Monday",
             description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
-            date: new Date(2022, 2, 22, 17, 0, 0)
+            date: new Date(2022, 2, 15, 17, 0, 0),
+            twitterLink: "https://twitter.com/paspaces"
+        },
+        {
+            title: "Mindfulness Monday",
+            description: "Mindfulness Monday description blah blah blah. And some more stuff about it, but mostly more blah.",
+            date: new Date(2022, 2, 22, 17, 0, 0),
+            twitterLink: "https://twitter.com/paspaces"
         },
         {
             title: "Mindfulness Monday",
@@ -109,13 +118,15 @@ export const PASpacesPage = (): JSX.Element => {
                 </Toolbar>
             </AppBar>
             <div className={classes.eventContainer}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} alignItems={'stretch'}>
                     {data.map((item, index) => (
                         <Grid item sm={12} md={6} xl={4} key={index}>
                             <EventCard
                                 title={item.title}
                                 description={item.description}
                                 date={item.date}
+                                twitterLink={item.twitterLink ? item.twitterLink : undefined}
+                                twitterRecordingLink={item.twitterRecordingLink ? item.twitterRecordingLink : undefined}
                             />
                         </Grid>
                     ))
