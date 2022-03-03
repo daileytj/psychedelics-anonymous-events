@@ -29,6 +29,36 @@
             "description": "Hear Junior Whooo! Among other PA related discussions.",
             "date": [2022, 2, 4, 17, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 2, 7, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Tea. Tacos. Texas Toast. Tyrannosaurus Rex. Tuesday.",
+            "date": [2022, 2, 8, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Women Led Wednesday",
+            "description": "Come join us on Wednesdays, where PA Women run the show.",
+            "date": [2022, 2, 9, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Theory Thursday",
+            "description": "Don't let the lore befuddle you. You're not alone on Thursday when we discuss the latest theory.",
+            "date": [2022, 2, 10, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hear Junior Whooo! Among other PA related discussions.",
+            "date": [2022, 2, 11, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
         }
     ]
 }

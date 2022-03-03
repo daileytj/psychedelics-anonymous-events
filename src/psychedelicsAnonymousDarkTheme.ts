@@ -46,7 +46,11 @@ export const typography = {
     },
 };
 
-export const createSimplePalette = (colorLight: string, colorMain: string, colorDark: string): SimplePaletteColorOptions => ({
+export const createSimplePalette = (
+    colorLight: string,
+    colorMain: string,
+    colorDark: string
+): SimplePaletteColorOptions => ({
     light: colorLight,
     main: colorMain,
     dark: colorDark,
@@ -105,6 +109,15 @@ export const PADarkTheme: ThemeOptions = {
         background: ThemeColors.background,
         text: ThemeColors.text,
         action: ThemeColors.action,
+    },
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 400,
+            md: 760,
+            lg: 1000,
+            xl: 1400,
+        },
     },
 
     overrides: {
@@ -230,7 +243,7 @@ export const PADarkTheme: ThemeOptions = {
                 color: WhiteText,
                 '&:hover': {
                     backgroundColor: ThemeColors.secondary.main,
-                    color: BlackText
+                    color: BlackText,
                 },
                 '&$disabled': {
                     borderWidth: 0,
