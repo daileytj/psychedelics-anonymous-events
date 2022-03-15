@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Mindfulness Monday",
-            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
-            "date": [2022, 2, 14, 17, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Taco Tuesday",
             "description": "Tea. Tacos. Texas Toast. Tyrannosaurus Rex. Tuesday.",
             "date": [2022, 2, 15, 17, 0, 0],
@@ -28,6 +22,12 @@
             "title": "Ric Flair Friday",
             "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
             "date": [2022, 2, 18, 17, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 2, 21, 17, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
