@@ -74,13 +74,16 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = (
           setTimeUntilEvent(calculateTimeLeft(date));
         }, 1000);
       
-        return (): void => clearTimeout(timer);
+        return (): void => {
+            
+            clearTimeout(timer);
+        }
       });
 
     return (
         <div className={classes.root}>
             {timeUntilEvent.days === 0 && timeUntilEvent.hours === 0 && timeUntilEvent.minutes === 0 && timeUntilEvent.seconds === 0 && (
-            <Typography variant={'h4'} style={{marginTop: 38}}>This Event Is Currently Running Or It Is Over</Typography>
+            <Typography variant={'h4'} style={{marginTop: 28, marginBottom: 10}}>You&apos;re late, run!</Typography>
             )}
             {!(timeUntilEvent.days === 0 && timeUntilEvent.hours === 0 && timeUntilEvent.minutes === 0 && timeUntilEvent.seconds === 0) && (
             <><div className={classes.timeComponent}>
