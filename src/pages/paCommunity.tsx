@@ -109,7 +109,7 @@ export const PACommunityEventsPage = (): JSX.Element => {
                             <EventCard
                                 title={item.title}
                                 description={item.description}
-                                date={new Date(item.date[0], item.date[1], item.date[2], item.date[3], item.date[4], item.date[5])}
+                                date={new Date(Date.UTC(item.date[0], item.date[1], item.date[2], item.date[3], item.date[4], item.date[5]))}
                                 twitterLink={item.twitterLink ? item.twitterLink : undefined}
                                 twitterRecordingLink={item.twitterRecordingLink ? item.twitterRecordingLink : undefined}
                                 iconColor={'yellow'}
