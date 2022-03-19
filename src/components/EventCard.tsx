@@ -125,7 +125,7 @@ export const EventCard: React.FC<EventCardProps> = (
                     <Avatar aria-label="PA Logo" className={classes.avatar} src={getIconByColor(iconColor)} classes={{ img: classes.avatarImage }} />
                 }
                 title={title}
-                subheader={`${date.toDateString()} ${date.toLocaleTimeString()}`}
+                subheader={`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}
                 classes={{ title: classes.title }}
             />
             <CardContent>
