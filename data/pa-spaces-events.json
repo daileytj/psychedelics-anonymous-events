@@ -1,14 +1,8 @@
 {
     "events": [
         {
-            "title": "Mindfulness Monday",
-            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
-            "date": [2022, 2, 21, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Taco Tuesday",
-            "description": "Tea. Tacos. Texas Toast. Tyrannosaurus Rex. Tuesday.",
+            "title": "PA Accelerator & web3 Chat",
+            "description": "Round 1 of accelerator submissions is closing & we want to discuss the process + people's Web3 passions. What gaps in Web3 need more attention? Let's hear from our small business owners & creatives! ",
             "date": [2022, 2, 22, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
@@ -40,6 +34,12 @@
             "title": "Easy like a Sunday Manno",
             "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
             "date": [2022, 2, 27, 16, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 2, 28, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
