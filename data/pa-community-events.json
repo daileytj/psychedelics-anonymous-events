@@ -1,3 +1,10 @@
 {
-    "events": []
+    "events": [
+        {
+            "title": "PA x Quirkies Community Meet & Greet",
+            "description": "PA x Quirkies Community Meet & Greet... join in!",
+            "date": [2022, 2, 23, 23, 0, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1eaKbNYymboKX?s=20"
+        }
+    ]
 }
