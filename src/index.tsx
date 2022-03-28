@@ -8,17 +8,19 @@
 import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CssBaseline, ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles'
+import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import { BrowserRouter } from 'react-router-dom';
 import * as BLUIThemes from '@brightlayer-ui/react-themes';
 import '@brightlayer-ui/react-themes/open-sans';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { PADarkTheme } from './psychedelicsAnonymousDarkTheme';
 
 ReactDOM.render(
     // <React.StrictMode>
-    <ThemeProvider theme={createMuiTheme(BLUIThemes.blue)}>
+    <ThemeProvider theme={createTheme({...BLUIThemes.blueDark, ...PADarkTheme})}>
         <BrowserRouter>
             <CssBaseline />
             <App />
