@@ -1,20 +1,14 @@
 {
     "events": [
         {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jothan & Levi",
-            "date": [2022, 2, 28, 21, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1OdKrByqrWqKX?s=20"
-        },
-        {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
+            "title": "First Official IRL Event // NFT LA",
+            "description": "Let's talk about PA's IRL event last night + NFT LA! 🖼🎉🎭",
             "date": [2022, 2, 29, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
+            "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
         },
         {
             "title": "Women Led Wednesday",
-            "description": "Women Led Wednesdays...",
+            "description": "Community member @BalouchSalman has graciously donated a @GirliesNFT to be given away during this week's Women Led Wednesday to close out Women's History Month & support women in the web3 space and PA.",
             "date": [2022, 2, 30, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
@@ -22,7 +16,7 @@
             "title": "Theory Thursday",
             "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
             "date": [2022, 2, 31, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces/status/1507060885516214273?s=20&t=xTTLMU2GF-guqpiWzfZ0Pw"
+            "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Ric Flair Friday",
@@ -40,6 +34,12 @@
             "title": "Easy like a Sunday Manno",
             "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
             "date": [2022, 3, 3, 16, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 3, 4, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
