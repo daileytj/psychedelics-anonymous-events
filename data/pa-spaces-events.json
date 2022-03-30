@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "First Official IRL Event // NFT LA",
-            "description": "Let's talk about PA's IRL event last night + NFT LA! 🖼🎉🎭",
-            "date": [2022, 2, 29, 21, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
-        },
-        {
             "title": "Women Led Wednesday",
             "description": "Community member @BalouchSalman has graciously donated a @GirliesNFT to be given away during this week's Women Led Wednesday to close out Women's History Month & support women in the web3 space and PA.",
             "date": [2022, 2, 30, 21, 0, 0],
@@ -41,6 +35,12 @@
             "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
             "date": [2022, 3, 4, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 3, 5, 21, 0, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
         }
     ]
 }
