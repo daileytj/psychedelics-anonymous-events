@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Women Led Wednesday",
-            "description": "Community member @BalouchSalman has graciously donated a @GirliesNFT to be given away during this week's Women Led Wednesday to close out Women's History Month & support women in the web3 space and PA.",
-            "date": [2022, 2, 30, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Theory Thursday",
             "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
             "date": [2022, 2, 31, 21, 0, 0],
@@ -41,6 +35,12 @@
             "description": "Taco bout it Tuesday",
             "date": [2022, 3, 5, 21, 0, 0],
             "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
+        },
+        {
+            "title": "Women Led Wednesday",
+            "description": "Women Led Wednesday",
+            "date": [2022, 3, 6, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
         }
     ]
 }
