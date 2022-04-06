@@ -1,24 +1,6 @@
 {
     "events": [
         {
-            "title": "Easy like a Sunday Manno",
-            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
-            "date": [2022, 3, 3, 16, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Mindfulness Monday",
-            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
-            "date": [2022, 3, 4, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
-            "date": [2022, 3, 5, 21, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
-        },
-        {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 3, 6, 21, 0, 0],
@@ -42,5 +24,23 @@
             "date": [2022, 3, 9, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
+        {
+            "title": "Easy like a Sunday Manno",
+            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
+            "date": [2022, 3, 10, 16, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 3, 11, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 3, 12, 21, 0, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
+        }
     ]
 }
