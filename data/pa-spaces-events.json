@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "Women Led Wednesday",
-            "description": "Women Led Wednesday",
-            "date": [2022, 3, 6, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Theory Thursday",
-            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
-            "date": [2022, 3, 7, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Ric Flair Friday",
             "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
             "date": [2022, 3, 8, 21, 0, 0],
@@ -41,6 +29,18 @@
             "description": "Taco bout it Tuesday",
             "date": [2022, 3, 12, 21, 0, 0],
             "twitterLink": "https://twitter.com/i/spaces/1rmxPgPgQmbJN?s=20"
+        },
+        {
+            "title": "Women Led Wednesday",
+            "description": "Women Led Wednesday",
+            "date": [2022, 3, 13, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Theory Thursday",
+            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
+            "date": [2022, 3, 14, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
         }
     ]
 }
