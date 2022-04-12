@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     AppBar,
     Hidden,
@@ -10,13 +10,11 @@ import {
     makeStyles,
     // useMediaQuery,
     useTheme,
-    Button,
-    Snackbar,
+    Grid,
+    useMediaQuery
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
-import { EmptyState } from '@brightlayer-ui/react-components/core/EmptyState';
-import AttachMoney from '@material-ui/icons/AttachMoney';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -40,21 +38,20 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
+        container: {
+            padding: theme.spacing(2),
+            flexGrow: 1,
+            justifyContent: 'center',
+            textAlign: 'center'
+        }
     })
 );
 
-export const DonationsPage = (): JSX.Element => {
+export const LoreTracksPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
-    const [snackbarOpen, setSnackbarOpen] = useState(false);
-    // const xs = useMediaQuery(theme.breakpoints.down('xs'));
-
-    const copyWalletAddress = (): any => {
-        navigator.clipboard.writeText('0xF90F8725237125ecefE5696cd2B54D9D6934D467').then(() => {
-            setSnackbarOpen(true);
-        });
-    };
+    const sm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div className={classes.pageBackground}>
@@ -95,31 +92,20 @@ export const DonationsPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Donations
+                        Lore Tracks
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div style={{ flex: '1 1 0px' }}>
-                <EmptyState
-                    icon={<AttachMoney fontSize={'inherit'} color={'secondary'} />}
-                    title={'Like what you see and want more features?!'}
-                    description={
-                        'Support the project by donating Ethereum to dailey.eth or 0xF90F8725237125ecefE5696cd2B54D9D6934D467 (note: this is my personal account and not the PA Community Events fund)'
-                    }
-                    actions={
-                        <Button variant={'contained'} color={'primary'} onClick={copyWalletAddress}>
-                            Copy Address
-                        </Button>
-                    }
-                    style={{maxWidth: '600px', margin: '0 auto'}}
-                />
+            <div className={classes.container}>
+                <Grid container spacing={2} alignItems={'stretch'}>
+                        <Grid item sm={12} md={12} xl={12} style={{width: '100%', maxWidth: '100%', overflow: 'scroll'}}>
+                             <iframe width={sm ? "364" : "560"} height={sm ? "204.75" : "315"} src="https://www.youtube.com/embed/XTLwkCydegc" title="We Are The Night" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        </Grid>
+                        <Grid item sm={12} md={12} xl={12} style={{width: '100%', maxWidth: '100%', overflow: 'scroll'}}>
+                             <iframe width={sm ? "364" : "560"} height={sm ? "204.75" : "315"} src="https://www.youtube.com/embed/F7u-B8YgA6U" title="The Connection" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>         
+                        </Grid>
+                </Grid>
             </div>
-            <Snackbar
-                open={snackbarOpen}
-                autoHideDuration={3000}
-                onClose={(): void => setSnackbarOpen(false)}
-                message="Wallet address copied to clipboard"
-            />
         </div>
     );
 };
