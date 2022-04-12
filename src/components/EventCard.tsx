@@ -21,6 +21,7 @@ export type PAEvent = {
     twitterLink?: string;
     twitterRecordingLink?: string;
     eventLink?: string;
+    backgroundImage?: string;
 }
 
 export type EventCardProps = {
@@ -33,13 +34,19 @@ export type EventCardProps = {
     twitterLink?: string;
     twitterRecordingLink?: string;
     eventLink?: string;
+    backgroundImage?: string;
 };
 
 const useStyles = makeStyles<Theme, EventCardProps>((theme) =>
     createStyles({
         root: {
             borderRadius: 0,
-            height: '100%'
+            height: '100%',
+            backgroundImage: (props): string | undefined => props.backgroundImage ? `url(${props.backgroundImage})` : undefined,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPositionX: 'center',
+            backgroundBlendMode: 'soft-light'
         },
         title: {
             color: (props): string => props.titleColor || '#FFFF00',

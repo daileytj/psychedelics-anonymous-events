@@ -1,45 +1,88 @@
 {
     "events": [
         {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jothan & Levi",
-            "date": [2022, 2, 28, 21, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1OdKrByqrWqKX?s=20"
-        },
-        {
-            "title": "Taco Tuesday",
-            "description": "",
-            "date": [2022, 2, 29, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
+            "title": "PA X Rebels",
+            "description": "Meet and greet with the Psychedelics Anonymous and Rebels communities. Hosted by @miamimalek",
+            "date": [2022, 3, 12, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces",
+            "backgroundImage": "https://pbs.twimg.com/media/FQFgC1FWYAACMOr?format=jpg&name=large"
         },
         {
             "title": "Women Led Wednesday",
-            "description": "Women Led Wednesdays. We will also be announcing another giveaway to support Women in NFTs -donated by the amazing @BalouchSalman All are welcome.",
-            "date": [2022, 2, 30, 21, 0, 0],
+            "description": "Women Led Wednesday",
+            "date": [2022, 3, 13, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Theory Thursday",
             "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
-            "date": [2022, 2, 31, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces/status/1507060885516214273?s=20&t=xTTLMU2GF-guqpiWzfZ0Pw"
+            "date": [2022, 3, 14, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Ric Flair Friday",
             "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
-            "date": [2022, 3, 1, 21, 0, 0],
+            "date": [2022, 3, 15, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Secure the Bag Saturdays",
             "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
-            "date": [2022, 3, 2, 21, 0, 0],
+            "date": [2022, 3, 16, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Easy like a Sunday Manno",
             "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
-            "date": [2022, 3, 3, 16, 0, 0],
+            "date": [2022, 3, 17, 16, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Mindfulness Monday",
+            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
+            "date": [2022, 3, 18, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 3, 19, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Women Led Wednesday",
+            "description": "Women Led Wednesday",
+            "date": [2022, 3, 20, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Theory Thursday",
+            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
+            "date": [2022, 3, 21, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
+            "date": [2022, 3, 22, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Secure the Bag Saturdays",
+            "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
+            "date": [2022, 3, 23, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Easy like a Sunday Manno",
+            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
+            "date": [2022, 3, 24, 16, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Sports talk with Jotham & Levi",
+            "description": "Mixing it up and talking sports with Jothan & Levi",
+            "date": [2022, 3, 25, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]

@@ -2,7 +2,8 @@ import Event from '@material-ui/icons/Event';
 import People from '@material-ui/icons/People';
 import Mic from '@material-ui/icons/Mic';
 import AttachMoney from '@material-ui/icons/AttachMoney';
-import { DonationsPage, PACommunityEventsPage, PAOfficialEventsPage, PASpacesPage } from '../pages';
+import MusicNote from '@material-ui/icons/MusicNote';
+import { DonationsPage, LoreTracksPage, PACommunityEventsPage, PAOfficialEventsPage, PASpacesPage } from '../pages';
 
 export const PAGES = [
     {
@@ -22,6 +23,12 @@ export const PAGES = [
         route: '/daily-spaces',
         component: PASpacesPage,
         icon: Mic,
+    },
+    {
+        title: 'Lore Tracks',
+        route: '/lore-tracks',
+        component: LoreTracksPage,
+        icon: MusicNote,
     },
     {
         title: 'Donations',
