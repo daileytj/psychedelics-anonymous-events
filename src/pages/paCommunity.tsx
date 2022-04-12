@@ -115,6 +115,7 @@ export const PACommunityEventsPage = (): JSX.Element => {
                                 iconColor={'yellow'}
                                 avatarBackgroundColor={theme.palette.background.default}
                                 titleColor={theme.palette.primary.main}
+                                backgroundImage={item.backgroundImage ? item.backgroundImage : undefined}
                             />
                         </Grid>
                     ))}

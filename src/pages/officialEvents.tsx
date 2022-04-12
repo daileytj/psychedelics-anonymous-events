@@ -115,6 +115,7 @@ export const PAOfficialEventsPage = (): JSX.Element => {
                                 date={new Date(Date.UTC(item.date[0], item.date[1], item.date[2], item.date[3], item.date[4], item.date[5]))}
                                 twitterLink={item.twitterLink ? item.twitterLink : undefined}
                                 twitterRecordingLink={item.twitterRecordingLink ? item.twitterRecordingLink : undefined}
+                                backgroundImage={item.backgroundImage ? item.backgroundImage : undefined}
                             />
                         </Grid>
                     ))}
