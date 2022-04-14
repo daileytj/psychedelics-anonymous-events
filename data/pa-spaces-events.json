@@ -1,19 +1,6 @@
 {
     "events": [
         {
-            "title": "PA X Rebels",
-            "description": "Meet and greet with the Psychedelics Anonymous and Rebels communities. Hosted by @miamimalek",
-            "date": [2022, 3, 12, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces",
-            "backgroundImage": "https://pbs.twimg.com/media/FQFgC1FWYAACMOr?format=jpg&name=large"
-        },
-        {
-            "title": "Women Led Wednesday",
-            "description": "Women Led Wednesday",
-            "date": [2022, 3, 13, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Theory Thursday",
             "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
             "date": [2022, 3, 14, 21, 0, 0],
