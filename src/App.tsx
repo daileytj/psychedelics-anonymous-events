@@ -4,6 +4,7 @@ import { NavigationDrawer } from './router/drawer';
 import { MainRouter } from './router/main';
 import { DrawerLayout } from '@brightlayer-ui/react-components';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from 'firebase/analytics';
 
@@ -33,6 +34,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 export const App = (): JSX.Element => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [showDisclaimer, setShowDisclaimer] = useState(false);
+ 
 
     const triggerDisclaimer = (): void => {
         setShowDisclaimer(true);

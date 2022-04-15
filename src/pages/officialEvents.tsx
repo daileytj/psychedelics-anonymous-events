@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { getPAEvents } from '../api';
 import { EventCard, PAEvent } from '../components/EventCard';
+import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -45,6 +46,7 @@ export const PAOfficialEventsPage = (): JSX.Element => {
     // const xs = useMediaQuery(theme.breakpoints.down('xs'));
     const [events, setEvents] = useState<PAEvent[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    useGoogleAnalyticsPageView();
 
      useEffect(() => {
         let isMounted = true;

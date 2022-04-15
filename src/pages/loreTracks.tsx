@@ -15,6 +15,7 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
+import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -52,6 +53,7 @@ export const LoreTracksPage = (): JSX.Element => {
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
+    useGoogleAnalyticsPageView();
 
     return (
         <div className={classes.pageBackground}>

@@ -17,6 +17,14 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { PADarkTheme } from './psychedelicsAnonymousDarkTheme';
+import ReactGA from 'react-ga';
+
+const TRACKING_ID_UA = "UA-106774838-2";
+// const TRACKING_ID_G4 = "G-330DPH9VRV";
+// const TRACKING_ID_G = "G-VD0NBTS9VE";
+
+ReactGA.initialize(TRACKING_ID_UA);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
     // <React.StrictMode>

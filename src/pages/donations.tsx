@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { EmptyState } from '@brightlayer-ui/react-components/core/EmptyState';
 import AttachMoney from '@material-ui/icons/AttachMoney';
+import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -48,6 +49,7 @@ export const DonationsPage = (): JSX.Element => {
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const [snackbarOpen, setSnackbarOpen] = useState(false);
+    useGoogleAnalyticsPageView();
     // const xs = useMediaQuery(theme.breakpoints.down('xs'));
 
     const copyWalletAddress = (): any => {

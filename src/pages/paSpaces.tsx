@@ -16,6 +16,7 @@ import Menu from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { EventCard, PAEvent } from '../components/EventCard';
 import { getPAEvents } from '../api';
+import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -43,6 +44,7 @@ export const PASpacesPage = (): JSX.Element => {
     const { setDrawerOpen } = useDrawer();
     const [events, setEvents] = useState<PAEvent[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    useGoogleAnalyticsPageView();
 
     useEffect(() => {
         let isMounted = true;
