@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Mindfulness Monday",
-            "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
-            "date": [2022, 3, 18, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Taco Tuesday",
             "description": "Taco bout it Tuesday",
             "date": [2022, 3, 19, 21, 0, 0],

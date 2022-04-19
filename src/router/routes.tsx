@@ -3,7 +3,17 @@ import People from '@material-ui/icons/People';
 import Mic from '@material-ui/icons/Mic';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import MusicNote from '@material-ui/icons/MusicNote';
-import { DonationsPage, LoreTracksPage, PACommunityEventsPage, PAOfficialEventsPage, PASpacesPage } from '../pages';
+import Lock from '@material-ui/icons/Lock';
+import InsertPhoto from '@material-ui/icons/InsertPhoto';
+import {
+    DonationsPage,
+    GenesisDownloadPage,
+    LoreTracksPage,
+    PACommunityEventsPage,
+    PAOfficialEventsPage,
+    PASpacesPage,
+    SecurityPage,
+} from '../pages';
 
 export const PAGES = [
     {
@@ -23,6 +33,18 @@ export const PAGES = [
         route: '/daily-spaces',
         component: PASpacesPage,
         icon: Mic,
+    },
+    {
+        title: 'Hi-Res Downloader',
+        route: '/hi-res-genesis-downloader',
+        component: GenesisDownloadPage,
+        icon: InsertPhoto,
+    },
+    {
+        title: 'Security',
+        route: '/security',
+        component: SecurityPage,
+        icon: Lock,
     },
     {
         title: 'Lore Tracks',
