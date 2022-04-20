@@ -3,7 +3,7 @@ import { PAEvent } from '../components/EventCard';
 
 export const GenesisMetadata = axios.create({
     baseURL: 'https://ipfs.io/ipfs/QmdRAvWJa2Ck3pQPVni1DhYHc1zZNvJnZWAacS3vfWuDYA/',
-    timeout: 5000,
+    timeout: 10000,
 });
 
 export const getGenesisMetadata = async (id: number): Promise<any> => {

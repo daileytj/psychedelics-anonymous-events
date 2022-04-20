@@ -12,7 +12,9 @@ import {
     Button,
     CircularProgress,
     useMediaQuery,
+    Snackbar,
 } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
@@ -20,6 +22,7 @@ import { getGenesisMetadata } from '../api';
 import Search from '@material-ui/icons/Search';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
+import PIconBlue from '../assets/p-icon-blue.svg';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -83,17 +86,15 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.down('xs')]: {
                 width: 300,
             },
-            [`$textField fieldset`]: {
-                borderRadius: 0,
-            },
         },
         textField: {
             height: 72,
             width: '100%',
             flex: 4,
-        },
-        textFieldRoot: {
-            borderRadius: 0,
+            [`& .MuiFilledInput-root`]: {
+                borderTopRightRadius: 0,
+                borderTopLeftRadius: 0,
+            },
         },
         button: {
             flex: 1,
@@ -109,6 +110,9 @@ export const GenesisDownloadPage = (): JSX.Element => {
     const { setDrawerOpen } = useDrawer();
     const [metadata, setMetadata] = useState<any>({});
     const [isLoading, setIsLoading] = useState(false);
+    const [imageRendered, setImageRendered] = useState(false);
+    const [metadataRetrievalError, setMetadataRetrievalError] = useState('');
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [genesisId, setGenesisId] = useState(Math.floor(Math.random() * (9595 - 1 + 1) + 1));
     useGoogleAnalyticsPageView();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
@@ -121,9 +125,20 @@ export const GenesisDownloadPage = (): JSX.Element => {
     };
 
     const fetchMetadata = (): void => {
+        setImageRendered(false);
+        setMetadataRetrievalError('');
         setIsLoading(true);
         const loadMetadata = async (): Promise<void> => {
             const data = await getGenesisMetadata(genesisId);
+
+            if (typeof data === 'undefined') {
+                setMetadataRetrievalError(
+                    'There was an error retrieving your Genesis metadata and image. This is likely an issue with IPFS. Please try again later.'
+                );
+                setSnackbarOpen(true);
+                setIsLoading(false);
+                setImageRendered(true);
+            }
 
             setMetadata(data || {});
             setTimeout((): void => setIsLoading(false), 5000);
@@ -180,10 +195,18 @@ export const GenesisDownloadPage = (): JSX.Element => {
             </AppBar>
             <div className={classes.container}>
                 <div className={classes.imageContainer}>
-                    {isLoading && <CircularProgress style={{ width: 80, height: 80 }} />}
+                    {(isLoading || !imageRendered) && <CircularProgress style={{ width: 80, height: 80 }} />}
                     {!isLoading && metadata.image && (
                         <img
                             src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
+                            alt="Psychedelics Anonymous Genesis"
+                            style={{ height: 'inherit', width: 'inherit', display: imageRendered ? 'block' : 'none' }}
+                            onLoad={(): void => setImageRendered(true)}
+                        />
+                    )}
+                    {!isLoading && !metadata.image && (
+                        <img
+                            src={PIconBlue}
                             alt="Psychedelics Anonymous Genesis"
                             style={{ height: 'inherit', width: 'inherit' }}
                         />
@@ -193,9 +216,6 @@ export const GenesisDownloadPage = (): JSX.Element => {
                     <TextField
                         required
                         className={classes.textField}
-                        classes={{
-                            root: classes.textFieldRoot,
-                        }}
                         value={genesisId}
                         label={'Genesis ID'}
                         variant={'filled'}
@@ -225,6 +245,16 @@ export const GenesisDownloadPage = (): JSX.Element => {
                     </Button>
                 </div>
             </div>
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={5000}
+                onClose={(): void => {
+                    setSnackbarOpen(false);
+                    setMetadataRetrievalError('');
+                }}
+            >
+                <Alert severity="error">{metadataRetrievalError}</Alert>
+            </Snackbar>
         </div>
     );
 };
