@@ -1,25 +1,6 @@
 {
     "events": [
         {
-            "title": "Women Led Wednesday",
-            "description": "Women Led Wednesday",
-            "date": [2022, 3, 20, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA x Dour Darcels Community Meet & Greet!",
-            "description": "Join Malek for this special cross community PA x Dour Darcels meet & greet.",
-            "date": [2022, 3, 20, 24, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1vOxwyNMpBWGB?s=20",
-            "backgroundImage": "https://pbs.twimg.com/media/FQ0Fl4_XEAYE-c4?format=jpg&name=large"
-        },
-        {
-            "title": "Theory Thursday",
-            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
-            "date": [2022, 3, 21, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Ric Flair Friday",
             "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
             "date": [2022, 3, 22, 21, 0, 0],
