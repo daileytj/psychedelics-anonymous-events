@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jothan & Levi",
-            "date": [2022, 3, 25, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Taco Tuesday",
             "description": "Taco bout it Tuesday",
             "date": [2022, 3, 26, 21, 0, 0],
@@ -54,7 +48,7 @@
             "date": [2022, 4, 3, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
-         {
+        {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 4, 4, 21, 0, 0],
