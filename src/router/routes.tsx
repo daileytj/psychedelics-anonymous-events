@@ -5,7 +5,10 @@ import AttachMoney from '@material-ui/icons/AttachMoney';
 import MusicNote from '@material-ui/icons/MusicNote';
 import Lock from '@material-ui/icons/Lock';
 import InsertPhoto from '@material-ui/icons/InsertPhoto';
+import ExposureZero from '@material-ui/icons/ExposureZero';
+import Portrait from '@material-ui/icons/Portrait';
 import {
+    AugmentedRealityPrintsPage,
     DonationsPage,
     GenesisDownloadPage,
     LoreTracksPage,
@@ -13,6 +16,7 @@ import {
     PAOfficialEventsPage,
     PASpacesPage,
     SecurityPage,
+    DicklebuttsCounterPage,
 } from '../pages';
 
 export const PAGES = [
@@ -41,6 +45,12 @@ export const PAGES = [
         icon: InsertPhoto,
     },
     {
+        title: 'AR Prints',
+        route: '/augmented-reality-prints',
+        component: AugmentedRealityPrintsPage,
+        icon: Portrait,
+    },
+    {
         title: 'Security',
         route: '/security',
         component: SecurityPage,
@@ -51,6 +61,12 @@ export const PAGES = [
         route: '/lore-tracks',
         component: LoreTracksPage,
         icon: MusicNote,
+    },
+    {
+        title: 'Dicklebutts Counter',
+        route: '/juniors-dicklebutt-incident-counter',
+        component: DicklebuttsCounterPage,
+        icon: ExposureZero,
     },
     {
         title: 'Donations',

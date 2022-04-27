@@ -5,3 +5,5 @@ export * from './donations';
 export * from './loreTracks';
 export * from './security';
 export * from './genesisDownloader';
+export * from './augmentedRealityPrints';
+export * from './juniorsDicklebuttCounter';
