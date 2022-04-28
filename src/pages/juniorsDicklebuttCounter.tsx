@@ -93,7 +93,7 @@ export const DicklebuttsCounterPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Donations
+                        Dicklebutts Counter
                     </Typography>
                 </Toolbar>
             </AppBar>
