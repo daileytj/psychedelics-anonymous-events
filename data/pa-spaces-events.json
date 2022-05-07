@@ -1,25 +1,6 @@
 {
     "events": [
         {
-            "title": "Theory Thursday",
-            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
-            "date": [2022, 4, 5, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Security Talk with @Ledger",
-            "description": "The #PACommunity welcomes @Mo_RELS with @Ledger for Spaces dedicated to NFT Security! This Friday, May 6th @ 12pm EST @paspaces x @Ledger w/ @Mo_REL Hosted by: @Jay4nft & @jothamLICSW ",
-            "date": [2022, 4, 6, 16, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces",
-            "backgroundImage": "https://pbs.twimg.com/media/FR83MMwXIAA_z34?format=jpg&name=medium"
-        },
-        {
-            "title": "Ric Flair Friday",
-            "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
-            "date": [2022, 4, 6, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Secure the Bag Saturdays",
             "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
             "date": [2022, 4, 7, 21, 0, 0],
@@ -96,6 +77,18 @@
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 4, 18, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Theory Thursday",
+            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
+            "date": [2022, 4, 19, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
+            "date": [2022, 4, 20, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
