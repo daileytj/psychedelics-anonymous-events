@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Easy like a Sunday Manno",
-            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
-            "date": [2022, 4, 8, 16, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Sports talk with Jotham & Levi",
             "description": "Mixing it up and talking sports with Jothan & Levi",
             "date": [2022, 4, 9, 21, 0, 0],
@@ -89,6 +83,12 @@
             "title": "Secure the Bag Saturdays",
             "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
             "date": [2022, 4, 21, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Easy like a Sunday Manno",
+            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
+            "date": [2022, 4, 22, 16, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
