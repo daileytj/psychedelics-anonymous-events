@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jothan & Levi",
-            "date": [2022, 4, 9, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Taco Tuesday",
             "description": "Taco bout it Tuesday",
             "date": [2022, 4, 10, 21, 0, 0],
@@ -93,7 +87,7 @@
         },
         {
             "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jothan & Levi",
+            "description": "Mixing it up and talking sports with Jotham & Levi",
             "date": [2022, 4, 23, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
