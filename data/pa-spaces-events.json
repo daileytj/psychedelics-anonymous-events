@@ -1,15 +1,9 @@
 {
     "events": [
         {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
-            "date": [2022, 4, 10, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Women Led Wednesday",
-            "description": "Women Led Wednesday",
-            "date": [2022, 4, 11, 21, 0, 0],
+            "description": "Women Led Wednesday post Psilocybin Update",
+            "date": [2022, 4, 11, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
