@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Easy like a Sunday Manno",
-            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
-            "date": [2022, 4, 15, 16, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Mindfulness Monday",
             "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
             "date": [2022, 4, 16, 21, 0, 0],
@@ -82,6 +76,12 @@
             "title": "Secure the Bag Saturdays",
             "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
             "date": [2022, 4, 28, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Easy like a Sunday Manno",
+            "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
+            "date": [2022, 4, 29, 16, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
