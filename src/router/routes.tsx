@@ -22,7 +22,7 @@ import {
 export const PAGES = [
     {
         title: 'Official Events',
-        route: '/',
+        route: '/official-events',
         component: PAOfficialEventsPage,
         icon: Event,
     },

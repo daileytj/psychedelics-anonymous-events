@@ -1,16 +1,22 @@
 {
     "events": [
         {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
+            "title": "DeFi Education Ep. 1: Course Introduction",
+            "description": "DeFi Education Ep. 1: Course Introduction",
             "date": [2022, 4, 17, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
+            "twitterLink": "https://twitter.com/i/spaces/1vAxRkyWANgKl?s=20"
         },
         {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 4, 18, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA x Boomer Squad Community Meet & Greet! @boomersquadnft1",
+            "description": "PA x Boomer Squad Community Meet & Greet! @boomersquadnft1",
+            "date": [2022, 4, 19, 0, 0, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1DXxyDaNpjPJM?s=20"
         },
         {
             "title": "Theory Thursday",
