@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Secure the Bag Saturdays",
-            "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
-            "date": [2022, 4, 21, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Easy like a Sunday Manno",
             "description": "Take it easy with Sunday Manno from 12pm est to 2pm est assuming he doesn't sleep in like a sleepy Manno.",
             "date": [2022, 4, 22, 16, 0, 0],
@@ -83,6 +77,12 @@
             "title": "Ric Flair Friday",
             "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
             "date": [2022, 5, 3, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Secure the Bag Saturdays",
+            "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
+            "date": [2022, 5, 4, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
