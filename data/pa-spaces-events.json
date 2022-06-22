@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jotham & Levi",
-            "date": [2022, 5, 20, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
-            "date": [2022, 5, 21, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 5, 22, 21, 0, 0],
@@ -70,6 +58,18 @@
             "title": "Secure the Bag Saturdays",
             "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
             "date": [2022, 6, 2, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Sports talk with Jotham & Levi",
+            "description": "Mixing it up and talking sports with Jotham & Levi",
+            "date": [2022, 6, 4, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 6, 5, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
