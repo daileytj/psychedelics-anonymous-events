@@ -7,8 +7,10 @@ import Lock from '@material-ui/icons/Lock';
 import InsertPhoto from '@material-ui/icons/InsertPhoto';
 import ExposureZero from '@material-ui/icons/ExposureZero';
 import Portrait from '@material-ui/icons/Portrait';
+import ChildCare from '@material-ui/icons/ChildCare';
 import {
     AugmentedRealityPrintsPage,
+    BeginnersGuidePage,
     DonationsPage,
     GenesisDownloadPage,
     LoreTracksPage,
@@ -20,6 +22,12 @@ import {
 } from '../pages';
 
 export const PAGES = [
+    {
+        title: "Beginner's Guide",
+        route: '/beginners-guide',
+        component: BeginnersGuidePage,
+        icon: ChildCare,
+    },
     {
         title: 'Official Events',
         route: '/official-events',

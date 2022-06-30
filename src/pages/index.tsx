@@ -7,3 +7,4 @@ export * from './security';
 export * from './genesisDownloader';
 export * from './augmentedRealityPrints';
 export * from './juniorsDicklebuttCounter';
+export * from './beginnersGuide';

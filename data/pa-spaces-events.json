@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
-            "date": [2022, 5, 28, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Women Led Wednesday",
-            "description": "Women Led Wednesday",
-            "date": [2022, 5, 29, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Theory Thursday",
             "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
             "date": [2022, 5, 30, 21, 0, 0],
@@ -71,6 +59,18 @@
             "title": "Mindfulness Monday",
             "description": "Mindfulness practice, meet new fam, and celebrating together. Come join us in this recorded spaces.",
             "date": [2022, 6, 10, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 6, 11, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Women Led Wednesday",
+            "description": "Women Led Wednesday",
+            "date": [2022, 6, 12, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
