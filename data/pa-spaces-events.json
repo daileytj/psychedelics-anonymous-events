@@ -1,36 +1,11 @@
 {
     "events": [
         {
-            "title": "Theory Thursday",
-            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
-            "date": [2022, 5, 30, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Ric Flair Friday",
-            "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
-            "date": [2022, 6, 1, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Secure the Bag Saturdays",
-            "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
-            "date": [2022, 6, 2, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Sports talk with Jotham & Levi",
-            "description": "Mixing it up and talking sports with Jotham & Levi",
-            "date": [2022, 6, 4, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Taco Tuesday",
             "description": "Taco bout it Tuesday",
             "date": [2022, 6, 5, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
-
         {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
@@ -71,6 +46,30 @@
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 6, 12, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Theory Thursday",
+            "description": "Theory Thursday, iron your tinfoil hats and get ready for a deep dive into C3, PAPP, Meta Pass, IRL merch claim, and much more!",
+            "date": [2022, 6, 13, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hear Junior Whooo! Play some 'rock, paper, scissors' and have fun having other PA related discussions.",
+            "date": [2022, 6, 14, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Secure the Bag Saturdays",
+            "description": "Something is happening... you'll probably wan't to hear about it... and it's happening here.",
+            "date": [2022, 6, 15, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Sports talk with Jotham & Levi",
+            "description": "Mixing it up and talking sports with Jotham & Levi",
+            "date": [2022, 6, 17, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
