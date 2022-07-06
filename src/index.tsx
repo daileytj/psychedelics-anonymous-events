@@ -8,7 +8,7 @@
 import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import { BrowserRouter } from 'react-router-dom';
 import * as BLUIThemes from '@brightlayer-ui/react-themes';
@@ -18,8 +18,9 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { PADarkTheme } from './psychedelicsAnonymousDarkTheme';
 import ReactGA from 'react-ga';
+import 'babel-polyfill';
 
-const TRACKING_ID_UA = "UA-106774838-2";
+const TRACKING_ID_UA = 'UA-106774838-2';
 // const TRACKING_ID_G4 = "G-330DPH9VRV";
 // const TRACKING_ID_G = "G-VD0NBTS9VE";
 
@@ -28,7 +29,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
     // <React.StrictMode>
-    <ThemeProvider theme={createTheme({...BLUIThemes.blueDark, ...PADarkTheme})}>
+    <ThemeProvider theme={createTheme({ ...BLUIThemes.blueDark, ...PADarkTheme })}>
         <BrowserRouter>
             <CssBaseline />
             <App />

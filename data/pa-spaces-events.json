@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Taco Tuesday",
-            "description": "Taco bout it Tuesday",
-            "date": [2022, 6, 5, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Women Led Wednesday",
             "description": "Women Led Wednesday",
             "date": [2022, 6, 6, 21, 0, 0],
@@ -70,6 +64,12 @@
             "title": "Sports talk with Jotham & Levi",
             "description": "Mixing it up and talking sports with Jotham & Levi",
             "date": [2022, 6, 17, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Taco Tuesday",
+            "description": "Taco bout it Tuesday",
+            "date": [2022, 6, 18, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
