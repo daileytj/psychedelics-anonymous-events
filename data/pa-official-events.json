@@ -1,10 +1,10 @@
 {
-    "events": [ {
-        "title": "Announcements // Staking // Mycelia",
-        "description": "Mycelia Opening Ceremony.
-
-Welcome to Season 2.",
-        "date": [2022, 6, 9, 22, 0, 0],
-        "twitterLink": "https://twitter.com/i/spaces/1mnGeddkEAPKX?s=20"
-    }]
+    "events": [
+        {
+            "title": "Announcements // Staking // Mycelia",
+            "description": "Mycelia Opening Ceremony. Welcome to Season 2.",
+            "date": [2022, 6, 9, 22, 0, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1mnGeddkEAPKX?s=20"
+        }
+    ]
 }
