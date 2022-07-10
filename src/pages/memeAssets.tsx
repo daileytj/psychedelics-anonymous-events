@@ -58,6 +58,10 @@ import Spider from '../assets/meme-assets/other/spider.png';
 import Sunglasses from '../assets/meme-assets/other/sunglasses.png';
 import VoltFullApe from '../assets/meme-assets/other/volt_ape.jpeg';
 import VoltOfWallStreet from '../assets/meme-assets/other/volt_of_wall_street.png';
+import TimmyTrumpet from '../assets/meme-assets/other/faqt_timmy.png';
+import GenesisGunHands from '../assets/meme-assets/other/genesis_gun_hands.png';
+import MunchyPizza from '../assets/meme-assets/other/munchy_pizza.png';
+import PANerfGun from '../assets/meme-assets/other/PA_nerf_gun.png';
 
 type MemeAsset = {
     name: string;
@@ -101,6 +105,10 @@ const otherAssets: MemeAsset[] = [
     { name: 'Sunglasses', source: Sunglasses },
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
+    { name: 'Timmy Trumpet', source: TimmyTrumpet },
+    { name: 'Genesis Gun Hands', source: GenesisGunHands },
+    { name: 'Munchy Pizza', source: MunchyPizza },
+    { name: 'PA Nerf Gun', source: PANerfGun },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -211,7 +219,7 @@ export const MemeAssetsPage = (): JSX.Element => {
             <TabPanel value={'Other'}>Item Three</TabPanel> */}
             <div className={classes.container}>
                 <Grid container spacing={2} alignItems={'stretch'}>
-                    {brandAssets.map((asset: MemeAsset, index: number) => (
+                    {otherAssets.map((asset: MemeAsset, index: number) => (
                         <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
                             <Card
                                 style={{
@@ -275,7 +283,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                             </Card>
                         </Grid>
                     ))}
-                    {otherAssets.map((asset: MemeAsset, index: number) => (
+                    {brandAssets.map((asset: MemeAsset, index: number) => (
                         <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
                             <Card
                                 style={{
