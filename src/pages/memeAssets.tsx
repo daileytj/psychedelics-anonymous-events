@@ -78,7 +78,7 @@ const TabPanel = (props: { [x: string]: any; children: any; value: any; index: a
             {...other}
         >
             {value === index && (
-                <div style={{ padding: 24 }}>
+                <div>
                     <Typography>{children}</Typography>
                 </div>
             )}
@@ -256,6 +256,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                         backgroundColor: 'transparent',
                                         display: 'flex',
                                         flexDirection: 'column',
+                                        borderRadius: 0,
                                     }}
                                     elevation={4}
                                 >
@@ -270,7 +271,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                             onClick={(): void => downloadImage(asset)}
                                         >
                                             <Typography
-                                                variant="body1"
+                                                variant="body2"
                                                 style={{ padding: 8, textOverflow: 'ellipsis' }}
                                             >
                                                 {asset.name}
@@ -297,6 +298,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                         backgroundColor: 'transparent',
                                         display: 'flex',
                                         flexDirection: 'column',
+                                        borderRadius: 0,
                                     }}
                                     elevation={4}
                                 >
@@ -311,7 +313,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                             onClick={(): void => downloadImage(asset)}
                                         >
                                             <Typography
-                                                variant="body1"
+                                                variant="body2"
                                                 style={{ padding: 8, textOverflow: 'ellipsis' }}
                                             >
                                                 {asset.name}
@@ -338,6 +340,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                         backgroundColor: 'transparent',
                                         display: 'flex',
                                         flexDirection: 'column',
+                                        borderRadius: 0,
                                     }}
                                     elevation={4}
                                 >
@@ -352,7 +355,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                                             onClick={(): void => downloadImage(asset)}
                                         >
                                             <Typography
-                                                variant="body1"
+                                                variant="body2"
                                                 style={{ padding: 8, textOverflow: 'ellipsis' }}
                                             >
                                                 {asset.name}
