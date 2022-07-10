@@ -26,6 +26,9 @@ import Shoegate from '../assets/meme-assets/Shoegate.png';
 import Junior6858 from '../assets/meme-assets/6858.png';
 import JBMutant from '../assets/meme-assets/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/1130.png';
+import PALogoYellow from '../assets/meme-assets/PA_logo_yellow.png';
+import PALogoWhite from '../assets/meme-assets/PA_logo_white.png';
+import PALogoBlack from '../assets/meme-assets/PA_logo_black.png';
 
 type MemeAsset = {
     name: string;
@@ -34,6 +37,9 @@ type MemeAsset = {
 
 // just update this with new assets and they will populate
 const memeAssets: MemeAsset[] = [
+    { name: 'Yellow PA Logo', source: PALogoYellow },
+    { name: 'White PA Logo', source: PALogoWhite },
+    { name: 'Black PA Logo', source: PALogoBlack },
     { name: "JB's Mutant", source: JBMutant },
     { name: 'Dailey 1130', source: Dailey1130 },
     { name: 'Yellow PA Avatar', source: PAYellowAvatar },
