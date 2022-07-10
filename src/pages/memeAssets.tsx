@@ -12,15 +12,14 @@ import {
     useMediaQuery,
     Grid,
     Card,
-    // Tab,
-    // Tabs,
+    Tab,
+    Tabs,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
-// import { TabPanel } from '@material-ui/lab';
 
 // meme-assets
 
@@ -35,12 +34,14 @@ import PSYLogo2 from '../assets/meme-assets/brand/PSY_Logo_Circle.png';
 
 // heads
 import VoltHead from '../assets/meme-assets/heads/volt_head.png';
+import VoltNYC from '../assets/meme-assets/heads/NYC_Volt.png';
 import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
 import Junior6858 from '../assets/meme-assets/heads/6858.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
+import Ezu3 from '../assets/meme-assets/heads/ezu_head_3.png';
 import GaryHead from '../assets/meme-assets/heads/gary_head.png';
 import KevinHead from '../assets/meme-assets/heads/kevin_head.png';
 import KlossHead from '../assets/meme-assets/heads/kloss.png';
@@ -62,6 +63,28 @@ import TimmyTrumpet from '../assets/meme-assets/other/faqt_timmy.png';
 import GenesisGunHands from '../assets/meme-assets/other/genesis_gun_hands.png';
 import MunchyPizza from '../assets/meme-assets/other/munchy_pizza.png';
 import PANerfGun from '../assets/meme-assets/other/PA_nerf_gun.png';
+import AttackMode from '../assets/meme-assets/other/attack_mode.png';
+import GaryVCNBC from '../assets/meme-assets/other/gary_v_on_cnbc.png';
+
+const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <div style={{ padding: 24 }}>
+                    <Typography>{children}</Typography>
+                </div>
+            )}
+        </div>
+    );
+};
 
 type MemeAsset = {
     name: string;
@@ -71,6 +94,7 @@ type MemeAsset = {
 // just update this with new assets and they will populate
 const headsAssets: MemeAsset[] = [
     { name: 'Voltura Head', source: VoltHead },
+    { name: 'Voltura NYC', source: VoltNYC },
     { name: "JB's Mutant", source: JBMutant },
     { name: 'Kloss', source: KlossHead },
     { name: 'Malek', source: MalekHead },
@@ -80,6 +104,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
     { name: 'Ezu Vapor', source: Ezu2 },
+    { name: 'Ezu Liquid', source: Ezu3 },
     { name: 'Gary V', source: GaryHead },
     { name: 'Kevin', source: KevinHead },
     { name: 'Nicole', source: Nicole },
@@ -109,6 +134,8 @@ const otherAssets: MemeAsset[] = [
     { name: 'Genesis Gun Hands', source: GenesisGunHands },
     { name: 'Munchy Pizza', source: MunchyPizza },
     { name: 'PA Nerf Gun', source: PANerfGun },
+    { name: 'Attack Mode', source: AttackMode },
+    { name: 'Gary V on CNBC', source: GaryVCNBC },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -153,16 +180,18 @@ export const MemeAssetsPage = (): JSX.Element => {
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
-    // const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(0);
     useGoogleAnalyticsPageView();
 
     const downloadImage = (image: MemeAsset): void => {
         saveAs(`${image.source}`, `${image.name}`);
     };
 
-    // const handleChange = (event: any, newValue: any): void => {
-    //     setValue(newValue);
-    // };
+    const handleChange = (event: any, newValue: any): void => {
+        // eslint-disable-next-line no-console
+        console.log(newValue);
+        setValue(newValue);
+    };
 
     return (
         <div className={classes.pageBackground}>
@@ -203,120 +232,140 @@ export const MemeAssetsPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Meme Assets
+                        Meme Bank
                     </Typography>
                 </Toolbar>
             </AppBar>
-            {/* <AppBar position="static">
+            <AppBar position="static">
                 <Tabs value={value} onChange={handleChange}>
                     <Tab label="Brand" />
                     <Tab label="Heads" />
                     <Tab label="Other" />
                 </Tabs>
             </AppBar>
-            <TabPanel value={'Brand'}>Item One</TabPanel>
-            <TabPanel value={'Heads'}>Item Two</TabPanel>
-            <TabPanel value={'Other'}>Item Three</TabPanel> */}
-            <div className={classes.container}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    {otherAssets.map((asset: MemeAsset, index: number) => (
-                        <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
-                            <Card
-                                style={{
-                                    maxWidth: '100%',
-                                    minHeight: '100%',
-                                    overflow: 'hidden',
-                                    backgroundColor: 'transparent',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                }}
-                                elevation={4}
-                            >
-                                <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
-                                    <img src={asset.source} style={{ width: '100%', padding: 8 }} />
-                                </div>
-                                <div style={{ display: 'flex', overflow: 'hidden' }}>
-                                    <Button
-                                        className={classes.button}
-                                        variant={'contained'}
-                                        color={'primary'}
-                                        onClick={(): void => downloadImage(asset)}
-                                    >
-                                        <Typography variant="body1" style={{ padding: 8, textOverflow: 'ellipsis' }}>
-                                            {asset.name}
-                                        </Typography>
-                                        <CloudDownload />
-                                    </Button>
-                                </div>
-                            </Card>
-                        </Grid>
-                    ))}
-                    {headsAssets.map((asset: MemeAsset, index: number) => (
-                        <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
-                            <Card
-                                style={{
-                                    maxWidth: '100%',
-                                    minHeight: '100%',
-                                    overflow: 'hidden',
-                                    backgroundColor: 'transparent',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                }}
-                                elevation={4}
-                            >
-                                <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
-                                    <img src={asset.source} style={{ width: '100%', padding: 8 }} />
-                                </div>
-                                <div style={{ display: 'flex', overflow: 'hidden' }}>
-                                    <Button
-                                        className={classes.button}
-                                        variant={'contained'}
-                                        color={'primary'}
-                                        onClick={(): void => downloadImage(asset)}
-                                    >
-                                        <Typography variant="body1" style={{ padding: 8, textOverflow: 'ellipsis' }}>
-                                            {asset.name}
-                                        </Typography>
-                                        <CloudDownload />
-                                    </Button>
-                                </div>
-                            </Card>
-                        </Grid>
-                    ))}
-                    {brandAssets.map((asset: MemeAsset, index: number) => (
-                        <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
-                            <Card
-                                style={{
-                                    maxWidth: '100%',
-                                    minHeight: '100%',
-                                    overflow: 'hidden',
-                                    backgroundColor: 'transparent',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                }}
-                                elevation={4}
-                            >
-                                <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
-                                    <img src={asset.source} style={{ width: '100%', padding: 8 }} />
-                                </div>
-                                <div style={{ display: 'flex', overflow: 'hidden' }}>
-                                    <Button
-                                        className={classes.button}
-                                        variant={'contained'}
-                                        color={'primary'}
-                                        onClick={(): void => downloadImage(asset)}
-                                    >
-                                        <Typography variant="body1" style={{ padding: 8, textOverflow: 'ellipsis' }}>
-                                            {asset.name}
-                                        </Typography>
-                                        <CloudDownload />
-                                    </Button>
-                                </div>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </div>
+            <TabPanel value={value} index={0}>
+                <div className={classes.container}>
+                    <Grid container spacing={2} alignItems={'stretch'}>
+                        {brandAssets.map((asset: MemeAsset, index: number) => (
+                            <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
+                                <Card
+                                    style={{
+                                        maxWidth: '100%',
+                                        minHeight: '100%',
+                                        overflow: 'hidden',
+                                        backgroundColor: 'transparent',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                    elevation={4}
+                                >
+                                    <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                        <img src={asset.source} style={{ width: '100%', padding: 8 }} />
+                                    </div>
+                                    <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                        <Button
+                                            className={classes.button}
+                                            variant={'contained'}
+                                            color={'primary'}
+                                            onClick={(): void => downloadImage(asset)}
+                                        >
+                                            <Typography
+                                                variant="body1"
+                                                style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                            >
+                                                {asset.name}
+                                            </Typography>
+                                            <CloudDownload />
+                                        </Button>
+                                    </div>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+                <div className={classes.container}>
+                    <Grid container spacing={2} alignItems={'stretch'}>
+                        {headsAssets.map((asset: MemeAsset, index: number) => (
+                            <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
+                                <Card
+                                    style={{
+                                        maxWidth: '100%',
+                                        minHeight: '100%',
+                                        overflow: 'hidden',
+                                        backgroundColor: 'transparent',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                    elevation={4}
+                                >
+                                    <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                        <img src={asset.source} style={{ width: '100%', padding: 8 }} />
+                                    </div>
+                                    <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                        <Button
+                                            className={classes.button}
+                                            variant={'contained'}
+                                            color={'primary'}
+                                            onClick={(): void => downloadImage(asset)}
+                                        >
+                                            <Typography
+                                                variant="body1"
+                                                style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                            >
+                                                {asset.name}
+                                            </Typography>
+                                            <CloudDownload />
+                                        </Button>
+                                    </div>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <div className={classes.container}>
+                    <Grid container spacing={2} alignItems={'stretch'}>
+                        {otherAssets.map((asset: MemeAsset, index: number) => (
+                            <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
+                                <Card
+                                    style={{
+                                        maxWidth: '100%',
+                                        minHeight: '100%',
+                                        overflow: 'hidden',
+                                        backgroundColor: 'transparent',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                    elevation={4}
+                                >
+                                    <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                        <img src={asset.source} style={{ width: '100%', padding: 8 }} />
+                                    </div>
+                                    <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                        <Button
+                                            className={classes.button}
+                                            variant={'contained'}
+                                            color={'primary'}
+                                            onClick={(): void => downloadImage(asset)}
+                                        >
+                                            <Typography
+                                                variant="body1"
+                                                style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                            >
+                                                {asset.name}
+                                            </Typography>
+                                            <CloudDownload />
+                                        </Button>
+                                    </div>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </TabPanel>
         </div>
     );
 };
