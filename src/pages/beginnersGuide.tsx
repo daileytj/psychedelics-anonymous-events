@@ -9,11 +9,14 @@ import {
     makeStyles,
     useMediaQuery,
     useTheme,
-    Grid,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import BeginnerGuide1 from '../assets/beginners_guide_1.jpeg';
+import BeginnerGuide2 from '../assets/beginners_guide_2.jpeg';
+import BeginnerGuide3 from '../assets/beginners_guide_3.jpeg';
+import BeginnerGuide4 from '../assets/beginners_guide_4.jpeg';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,16 +40,18 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
-        container: {
-            padding: theme.spacing(2),
-            flexGrow: 1,
-            justifyContent: 'center',
-            textAlign: 'center',
+        link: {
+            color: '#61dafb',
+            textDecoration: 'none',
+            '&:visited': { color: '#61dafb' },
+        },
+        image: {
+            maxWidth: '100%',
         },
     })
 );
 
-export const LoreTracksPage = (): JSX.Element => {
+export const BeginnersGuidePage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -92,35 +97,21 @@ export const LoreTracksPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Lore Tracks
+                        Beginner&apos;s Guide
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.container}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/XTLwkCydegc"
-                            title="We Are The Night"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/F7u-B8YgA6U"
-                            title="The Connection"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                </Grid>
+            <div style={{ flex: '1 1 0px' }}>
+                <Typography variant={'h5'} style={{ margin: '32px', textAlign: 'center' }}>
+                    Content graciously provided by{' '}
+                    <a href="https://twitter.com/kloss_eth" className={classes.link}>
+                        @kloss_eth
+                    </a>
+                </Typography>
+                <img src={BeginnerGuide1} className={classes.image} />
+                <img src={BeginnerGuide2} className={classes.image} />
+                <img src={BeginnerGuide3} className={classes.image} />
+                <img src={BeginnerGuide4} className={classes.image} />
             </div>
         </div>
     );

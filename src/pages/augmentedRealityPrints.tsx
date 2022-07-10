@@ -7,13 +7,17 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
     useTheme,
-    Grid,
+    Button,
+    Card,
+    Divider,
+    useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import ARPromo from '../assets/soundwave-art-nft-promo.jpeg';
+import { Spacer } from '@brightlayer-ui/react-components';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,16 +41,43 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
-        container: {
+        contentContainer: {
             padding: theme.spacing(2),
-            flexGrow: 1,
-            justifyContent: 'center',
-            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+        },
+        productCard: {
+            display: 'flex',
+            padding: theme.spacing(2),
+            [theme.breakpoints.down('md')]: {
+                flexDirection: 'column',
+                height: 'auto',
+            },
+        },
+        productImage: {
+            maxWidth: '65%',
+            height: 'auto',
+            [theme.breakpoints.down('md')]: {
+                maxWidth: '100%',
+            },
+        },
+        productInfo: {
+            display: 'flex',
+            flexDirection: 'column',
+            marginLeft: theme.spacing(2),
+            [theme.breakpoints.down('md')]: {
+                marginLeft: 'auto',
+                marginTop: theme.spacing(2),
+            },
+        },
+        productButton: {
+            marginTop: theme.spacing(2),
         },
     })
 );
 
-export const LoreTracksPage = (): JSX.Element => {
+export const AugmentedRealityPrintsPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -92,35 +123,38 @@ export const LoreTracksPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Lore Tracks
+                        AR Prints
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.container}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/XTLwkCydegc"
-                            title="We Are The Night"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/F7u-B8YgA6U"
-                            title="The Connection"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                </Grid>
+            <div className={classes.contentContainer}>
+                <Card className={classes.productCard}>
+                    <img src={ARPromo} className={classes.productImage} />
+                    <div className={classes.productInfo}>
+                        <Typography variant={'h6'}>Soundwave Art</Typography>
+                        <Divider style={{ marginTop: theme.spacing(), marginBottom: theme.spacing() }} />
+                        <Typography variant={'body1'}>
+                            Print your NFT, display it on your wall. Even make them playable! Soundwave Art™ has been
+                            creating and printing art since 2012. We offer Standard Prints which are meant for you to
+                            frame yourself and Prints adhered to aluminum which come ready to hang. By adding our
+                            augmented reality feature (see example video below) you can enhance your art using an audio
+                            file or even a video, making your printed NFT playable by merging the digital and physical
+                            world. We&apos;ve built relationships with manufactures around the world giving us the
+                            ability to offer FREE shipping to over 50 Countries! Choose a product to learn more about
+                            it.
+                        </Typography>
+                        <Spacer />
+                        <Button
+                            className={classes.productButton}
+                            variant={'contained'}
+                            color={'primary'}
+                            target="_blank"
+                            href={'https://soundwaveart.com/nft'}
+                        >
+                            Buy Now
+                        </Button>
+                    </div>
+                </Card>
             </div>
         </div>
     );

@@ -7,13 +7,17 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
     useTheme,
-    Grid,
+    Button,
+    Card,
+    Divider,
+    useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import Ledger from '../assets/ledger-promo.png';
+import { Spacer } from '@brightlayer-ui/react-components';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,16 +41,44 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
-        container: {
+        contentContainer: {
             padding: theme.spacing(2),
-            flexGrow: 1,
-            justifyContent: 'center',
-            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+        },
+        productCard: {
+            display: 'flex',
+            height: '400px',
+            padding: theme.spacing(2),
+            [theme.breakpoints.down('xs')]: {
+                flexDirection: 'column',
+                height: 'auto',
+            },
+        },
+        productImage: {
+            [theme.breakpoints.down('xs')]: {
+                maxWidth: '50%',
+            },
+        },
+        productInfo: {
+            display: 'flex',
+            flexDirection: 'column',
+            marginLeft: theme.spacing(2),
+            [theme.breakpoints.down('xs')]: {
+                marginLeft: 'auto',
+                marginTop: theme.spacing(2),
+            },
+        },
+        productButton: {
+            [theme.breakpoints.down('xs')]: {
+                marginTop: theme.spacing(2),
+            },
         },
     })
 );
 
-export const LoreTracksPage = (): JSX.Element => {
+export const SecurityPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -92,35 +124,32 @@ export const LoreTracksPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Lore Tracks
+                        Security
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.container}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/XTLwkCydegc"
-                            title="We Are The Night"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/F7u-B8YgA6U"
-                            title="The Connection"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                </Grid>
+            <div className={classes.contentContainer}>
+                <Card className={classes.productCard}>
+                    <img src={Ledger} className={classes.productImage} />
+                    <div className={classes.productInfo}>
+                        <Typography variant={'h6'}>Ledger</Typography>
+                        <Divider style={{ marginTop: theme.spacing(), marginBottom: theme.spacing() }} />
+                        <Typography variant={'body1'}>
+                            Secure your valuable assets with Ledger hardware products, then manage and grow them with
+                            the Ledger Live app. It&apos;s simple to get started.
+                        </Typography>
+                        <Spacer />
+                        <Button
+                            className={classes.productButton}
+                            variant={'contained'}
+                            color={'primary'}
+                            target="_blank"
+                            href={'https://shop.ledger.com?r=be84164cfba2'}
+                        >
+                            Buy Now
+                        </Button>
+                    </div>
+                </Card>
             </div>
         </div>
     );

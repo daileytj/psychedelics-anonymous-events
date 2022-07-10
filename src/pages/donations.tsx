@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import {
     AppBar,
-    Hidden,
     IconButton,
     Theme,
     Toolbar,
     Typography,
     createStyles,
     makeStyles,
-    // useMediaQuery,
+    useMediaQuery,
     useTheme,
     Button,
     Snackbar,
@@ -17,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { EmptyState } from '@brightlayer-ui/react-components/core/EmptyState';
 import AttachMoney from '@material-ui/icons/AttachMoney';
+import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -48,7 +48,8 @@ export const DonationsPage = (): JSX.Element => {
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const [snackbarOpen, setSnackbarOpen] = useState(false);
-    // const xs = useMediaQuery(theme.breakpoints.down('xs'));
+    const sm = useMediaQuery(theme.breakpoints.down('sm'));
+    useGoogleAnalyticsPageView();
 
     const copyWalletAddress = (): any => {
         navigator.clipboard.writeText('0xF90F8725237125ecefE5696cd2B54D9D6934D467').then(() => {
@@ -60,7 +61,7 @@ export const DonationsPage = (): JSX.Element => {
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    <Hidden mdUp={true}>
+                    {sm && (
                         <IconButton
                             color={'inherit'}
                             onClick={(): void => {
@@ -71,7 +72,7 @@ export const DonationsPage = (): JSX.Element => {
                         >
                             <MenuIcon />
                         </IconButton>
-                    </Hidden>
+                    )}
                     <Typography
                         variant={'h6'}
                         style={{
@@ -111,7 +112,7 @@ export const DonationsPage = (): JSX.Element => {
                             Copy Address
                         </Button>
                     }
-                    style={{maxWidth: '600px', margin: '0 auto'}}
+                    style={{ maxWidth: '600px', margin: '0 auto' }}
                 />
             </div>
             <Snackbar

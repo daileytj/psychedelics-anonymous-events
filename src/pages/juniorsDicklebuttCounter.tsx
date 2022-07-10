@@ -9,11 +9,12 @@ import {
     makeStyles,
     useMediaQuery,
     useTheme,
-    Grid,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
+import { EmptyState } from '@brightlayer-ui/react-components/core/EmptyState';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import Dicklebutt from '../assets/dicklebutt3594.png';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,16 +38,16 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
-        container: {
-            padding: theme.spacing(2),
-            flexGrow: 1,
-            justifyContent: 'center',
-            textAlign: 'center',
+        dicklebuttsImage: { height: '300px', width: '300px', pointerEvents: 'none' },
+        dicklebuttsLink: {
+            color: '#61dafb',
+            textDecoration: 'none',
+            '&:visited': { color: '#61dafb' },
         },
     })
 );
 
-export const LoreTracksPage = (): JSX.Element => {
+export const DicklebuttsCounterPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -92,35 +93,26 @@ export const LoreTracksPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Lore Tracks
+                        Dicklebutts Counter
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.container}>
-                <Grid container spacing={2} alignItems={'stretch'}>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/XTLwkCydegc"
-                            title="We Are The Night"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
-                        <iframe
-                            width={sm ? '364' : '560'}
-                            height={sm ? '204.75' : '315'}
-                            src="https://www.youtube.com/embed/F7u-B8YgA6U"
-                            title="The Connection"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </Grid>
-                </Grid>
+            <div style={{ flex: '1 1 0px' }}>
+                <EmptyState
+                    icon={<img src={Dicklebutt} className={classes.dicklebuttsImage} />}
+                    title={'Dicklebutts Counter'}
+                    description={
+                        <Typography variant={'body1'}>
+                            Days since Junior last mentioned{' '}
+                            <a href="https://twitter.com/Dicklebutts" className={classes.dicklebuttsLink}>
+                                @Dicklebutts
+                            </a>{' '}
+                            on spaces:
+                        </Typography>
+                    }
+                    actions={<Typography variant={'h3'}>0</Typography>}
+                    style={{ maxWidth: '600px', margin: '0 auto' }}
+                />
             </div>
         </div>
     );
