@@ -41,7 +41,6 @@ import JuniorProper from '../assets/meme-assets/heads/Junior.png';
 import Junior6858 from '../assets/meme-assets/heads/6858.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
-// import Ezu3 from '../assets/meme-assets/heads/ezu_head_3.png';
 import GaryHead from '../assets/meme-assets/heads/gary_head.png';
 import KevinHead from '../assets/meme-assets/heads/kevin_head.png';
 import KlossHead from '../assets/meme-assets/heads/kloss.png';
@@ -77,11 +76,7 @@ const TabPanel = (props: { [x: string]: any; children: any; value: any; index: a
             aria-labelledby={`simple-tab-${index}`}
             {...other}
         >
-            {value === index && (
-                <div>
-                    <Typography>{children}</Typography>
-                </div>
-            )}
+            {value === index && <div>{children}</div>}
         </div>
     );
 };
@@ -104,7 +99,6 @@ const headsAssets: MemeAsset[] = [
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
     { name: 'Ezu Vapor', source: Ezu2 },
-    // { name: 'Ezu Liquid', source: Ezu3 },
     { name: 'Gary V', source: GaryHead },
     { name: 'Kevin', source: KevinHead },
     { name: 'Nicole', source: Nicole },
@@ -144,7 +138,7 @@ const useStyles = makeStyles((theme: Theme) =>
             backgroundColor: theme.palette.background.default,
             display: 'flex',
             flexDirection: 'column',
-            height: '100%',
+            flex: 1,
         },
         body: {
             minHeight: `calc(100vh - ${theme.spacing(8)}px)`,
