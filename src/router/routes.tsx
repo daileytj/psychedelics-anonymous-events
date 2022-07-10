@@ -7,7 +7,8 @@ import Lock from '@material-ui/icons/Lock';
 import InsertPhoto from '@material-ui/icons/InsertPhoto';
 import ExposureZero from '@material-ui/icons/ExposureZero';
 import Portrait from '@material-ui/icons/Portrait';
-import ChildCare from '@material-ui/icons/ChildCare';
+import FiberNew from '@material-ui/icons/FiberNew';
+import RecentActors from '@material-ui/icons/RecentActors';
 import {
     AugmentedRealityPrintsPage,
     BeginnersGuidePage,
@@ -19,6 +20,7 @@ import {
     PASpacesPage,
     SecurityPage,
     DicklebuttsCounterPage,
+    MemeAssetsPage,
 } from '../pages';
 
 export const PAGES = [
@@ -26,7 +28,7 @@ export const PAGES = [
         title: "Beginner's Guide",
         route: '/beginners-guide',
         component: BeginnersGuidePage,
-        icon: ChildCare,
+        icon: FiberNew,
     },
     {
         title: 'Official Events',
@@ -45,6 +47,12 @@ export const PAGES = [
         route: '/daily-spaces',
         component: PASpacesPage,
         icon: Mic,
+    },
+    {
+        title: 'Meme Assets',
+        route: '/meme-assets-downloader',
+        component: MemeAssetsPage,
+        icon: RecentActors,
     },
     {
         title: 'Hi-Res Downloader',

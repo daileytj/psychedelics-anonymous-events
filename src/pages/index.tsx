@@ -8,3 +8,4 @@ export * from './genesisDownloader';
 export * from './augmentedRealityPrints';
 export * from './juniorsDicklebuttCounter';
 export * from './beginnersGuide';
+export * from './memeAssets';
