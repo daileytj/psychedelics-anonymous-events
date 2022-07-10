@@ -41,7 +41,7 @@ import JuniorProper from '../assets/meme-assets/heads/Junior.png';
 import Junior6858 from '../assets/meme-assets/heads/6858.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
-import Ezu3 from '../assets/meme-assets/heads/ezu_head_3.png';
+// import Ezu3 from '../assets/meme-assets/heads/ezu_head_3.png';
 import GaryHead from '../assets/meme-assets/heads/gary_head.png';
 import KevinHead from '../assets/meme-assets/heads/kevin_head.png';
 import KlossHead from '../assets/meme-assets/heads/kloss.png';
@@ -104,7 +104,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
     { name: 'Ezu Vapor', source: Ezu2 },
-    { name: 'Ezu Liquid', source: Ezu3 },
+    // { name: 'Ezu Liquid', source: Ezu3 },
     { name: 'Gary V', source: GaryHead },
     { name: 'Kevin', source: KevinHead },
     { name: 'Nicole', source: Nicole },
@@ -188,8 +188,6 @@ export const MemeAssetsPage = (): JSX.Element => {
     };
 
     const handleChange = (event: any, newValue: any): void => {
-        // eslint-disable-next-line no-console
-        console.log(newValue);
         setValue(newValue);
     };
 
@@ -235,13 +233,13 @@ export const MemeAssetsPage = (): JSX.Element => {
                         Meme Bank
                     </Typography>
                 </Toolbar>
-            </AppBar>
-            <AppBar position="static">
-                <Tabs value={value} onChange={handleChange}>
-                    <Tab label="Brand" />
-                    <Tab label="Heads" />
-                    <Tab label="Other" />
-                </Tabs>
+                <Toolbar>
+                    <Tabs value={value} onChange={handleChange}>
+                        <Tab label="Brand" />
+                        <Tab label="Heads" />
+                        <Tab label="Other" />
+                    </Tabs>
+                </Toolbar>
             </AppBar>
             <TabPanel value={value} index={0}>
                 <div className={classes.container}>
