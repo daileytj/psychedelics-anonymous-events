@@ -54,6 +54,7 @@ import KlossHead from '../assets/meme-assets/heads/kloss.png';
 import MalekHead from '../assets/meme-assets/heads/malek.png';
 import MikeHead from '../assets/meme-assets/heads/Mike.png';
 import Nicole from '../assets/meme-assets/heads/Nicole.png';
+import JustineHead from '../assets/meme-assets/heads/justine.png';
 
 // the good stuff
 import Shoegate from '../assets/meme-assets/other/Shoegate.png';
@@ -103,6 +104,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Voltura Head', source: VoltHead },
     { name: 'Voltura NYC', source: VoltNYC },
     { name: "JB's Mutant", source: JBMutant },
+    { name: 'Justine', source: JustineHead },
     { name: 'Kloss', source: KlossHead },
     { name: 'Malek', source: MalekHead },
     { name: 'Dailey 1130', source: Dailey1130 },
