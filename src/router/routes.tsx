@@ -49,8 +49,8 @@ export const PAGES = [
         icon: Mic,
     },
     {
-        title: 'Meme Assets',
-        route: '/meme-assets-downloader',
+        title: 'Meme Bank',
+        route: '/meme-bank',
         component: MemeAssetsPage,
         icon: RecentActors,
     },
