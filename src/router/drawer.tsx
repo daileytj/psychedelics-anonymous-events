@@ -9,14 +9,20 @@ import { PAGES } from './routes';
 const useStyles = makeStyles(() =>
     createStyles({
         title: {
-            fontWeight: 500, letterSpacing: '5px', textTransform: 'uppercase'
+            fontWeight: 500,
+            letterSpacing: '5px',
+            textTransform: 'uppercase',
         },
         subtitle: {
-            fontWeight: 200, letterSpacing: '5px', textTransform: 'uppercase'
+            fontWeight: 200,
+            letterSpacing: '5px',
+            textTransform: 'uppercase',
         },
         navItemTitle: {
-            fontWeight: 400, letterSpacing: '2px', textTransform: 'uppercase'
-        }
+            fontWeight: 400,
+            letterSpacing: '2px',
+            textTransform: 'uppercase',
+        },
     })
 );
 
@@ -50,8 +56,8 @@ export const NavigationDrawer: React.FC = () => {
             width={'20.75rem'}
         >
             <DrawerHeader
-                title={'PA'}
-                subtitle={'Events Tracker'}
+                title={'PA Fam'}
+                subtitle={'Community Site'}
                 icon={<Menu />}
                 onIconClick={(): void => {
                     setDrawerOpen(!drawerOpen);
@@ -67,22 +73,31 @@ export const NavigationDrawer: React.FC = () => {
                             itemID={page.route || ''}
                             key={page.title}
                             icon={<Icon />}
-                            onClick={page.route
-                                ? (): void => {
-                                    navigate(page.route);
-                                    if (isMobile) setDrawerOpen(false);
-                                }
-                                : undefined}
+                            onClick={
+                                page.route
+                                    ? (): void => {
+                                          navigate(page.route);
+                                          if (isMobile) setDrawerOpen(false);
+                                      }
+                                    : undefined
+                            }
                             classes={{ title: classes.navItemTitle }}
-                        />);
+                        />
+                    );
                 })}
             </DrawerBody>
             <DrawerFooter divider={false}>
-                <Button 
+                <Button
                     color={'primary'}
                     style={{ width: '100%', height: 48, fontWeight: 200, letterSpacing: 2 }}
                     target="_blank"
-                    href={"https://twitter.com/daileytj"}><Typography color={'secondary'} style={{ fontWeight: 200, letterSpacing: 2, marginRight: 4 }}>/</Typography>built and maintained by @daileytj</Button>
+                    href={'https://twitter.com/daileytj'}
+                >
+                    <Typography color={'secondary'} style={{ fontWeight: 200, letterSpacing: 2, marginRight: 4 }}>
+                        /
+                    </Typography>
+                    built and maintained by @daileytj
+                </Button>
             </DrawerFooter>
         </Drawer>
     );
