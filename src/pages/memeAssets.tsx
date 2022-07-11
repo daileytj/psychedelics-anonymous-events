@@ -38,6 +38,7 @@ import VoltNYC from '../assets/meme-assets/heads/NYC_Volt.png';
 import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
+import JuniorShades from '../assets/meme-assets/heads/Junior_Head_Shades.png';
 import Junior6858 from '../assets/meme-assets/heads/6858.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
@@ -95,6 +96,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Malek', source: MalekHead },
     { name: 'Dailey 1130', source: Dailey1130 },
     { name: 'Junior Proper', source: JuniorProper },
+    { name: 'Junior Shades', source: JuniorShades },
     { name: 'Junior 6858', source: Junior6858 },
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
