@@ -33,6 +33,7 @@ import PALogoBlack from '../assets/meme-assets/brand/PA_logo_black.png';
 import PALogoAmerican from '../assets/meme-assets/brand/PA_logo_america.png';
 import PSYLogo1 from '../assets/meme-assets/brand/PSY_Logo.png';
 import PSYLogo2 from '../assets/meme-assets/brand/PSY_Logo_Circle.png';
+import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
 import EzuTextWhite from '../assets/meme-assets/brand/ezu_text_logo_white.png';
 import EzuTextBlack from '../assets/meme-assets/brand/ezu_text.png';
 
@@ -77,6 +78,8 @@ import CucumberGT from '../assets/meme-assets/other/cucumber_g_and_t.png';
 import MortalKombat from '../assets/meme-assets/other/mortal_kombat.png';
 import PAAvengers from '../assets/meme-assets/other/PA_avengers.png';
 import PAWolfPack from '../assets/meme-assets/other/wolf_pack.png';
+import Eggplant from '../assets/meme-assets/other/eggplant.png';
+import GucciSneaks from '../assets/meme-assets/other/gucci_sneaks.png';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -130,6 +133,7 @@ const brandAssets: MemeAsset[] = [
     { name: '$PSY Logo Avatar', source: PSYLogo2 },
     { name: 'Yellow PA Avatar', source: PAYellowAvatar },
     { name: 'Blue PA Avatar', source: PABlueAvatar },
+    { name: 'Ezu Logo', source: EzuLogo },
     { name: 'Ezu Text Black', source: EzuTextBlack },
     { name: 'Ezu Text White', source: EzuTextWhite },
 ];
@@ -144,6 +148,7 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Sunglasses', source: Sunglasses },
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
+    { name: 'Gucci Sneaks', source: GucciSneaks },
     { name: 'Timmy Trumpet', source: TimmyTrumpet },
     { name: 'Mortal Kombat', source: MortalKombat },
     { name: 'PA Avengers', source: PAAvengers },
@@ -155,6 +160,7 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Gary V on CNBC', source: GaryVCNBC },
     { name: 'Bat Signal', source: BatSignal },
     { name: 'Cucumber G & T', source: CucumberGT },
+    { name: 'Eggplant', source: Eggplant },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
