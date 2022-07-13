@@ -9,3 +9,4 @@ export * from './augmentedRealityPrints';
 export * from './juniorsDicklebuttCounter';
 export * from './beginnersGuide';
 export * from './memeAssets';
+export * from './feedback';
