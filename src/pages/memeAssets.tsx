@@ -90,6 +90,11 @@ import Shades from '../assets/meme-assets/other/shades.png';
 import SingleGun from '../assets/meme-assets/other/single_gun.png';
 import SprayPaint from '../assets/meme-assets/other/spray_paint.png';
 
+// audio
+import WeAreTheNight from '../assets/meme-assets/audio/we-are-the-night.mp3';
+import TheConnection from '../assets/meme-assets/audio/the-connection.mp3';
+import TheTravelers from '../assets/meme-assets/audio/ezu_the_travelers.mp3';
+
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
 
@@ -179,6 +184,12 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Shades', source: Shades },
     { name: 'Single Gun', source: SingleGun },
     { name: 'Spray Paint', source: SprayPaint },
+];
+
+const audioAssets: MemeAsset[] = [
+    { name: 'PA - We Are The Night', source: WeAreTheNight },
+    { name: 'PA - The Connection', source: TheConnection },
+    { name: 'Ezu - The Travelers', source: TheTravelers },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -304,6 +315,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                         <Tab label="Heads" />
                         <Tab label="The Good Stuff" />
                         <Tab label="Meme Starter Kit" />
+                        <Tab label="Audio" />
                     </Tabs>
                 </Toolbar>
             </AppBar>
@@ -500,6 +512,52 @@ export const MemeAssetsPage = (): JSX.Element => {
                         >
                             Superimpose
                         </Button>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                    <div className={classes.container}>
+                        <Grid container spacing={2} alignItems={'stretch'}>
+                            {audioAssets.map((asset: MemeAsset, index: number) => (
+                                <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index} style={{ width: '100%' }}>
+                                    <Card
+                                        style={{
+                                            maxWidth: '100%',
+                                            minHeight: '100%',
+                                            overflow: 'hidden',
+                                            backgroundColor: 'transparent',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            borderRadius: 0,
+                                        }}
+                                        elevation={4}
+                                    >
+                                        <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                            <audio controls style={{ margin: 16, width: '100%' }}>
+                                                <source src={asset.source} type="audio/mp3" />
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                            {/* <img src={asset.source} style={{ width: '100%', padding: 8 }} /> */}
+                                        </div>
+                                        <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                            <Button
+                                                className={classes.button}
+                                                variant={'contained'}
+                                                color={'primary'}
+                                                onClick={(): void => downloadImage(asset)}
+                                            >
+                                                <Typography
+                                                    variant="body2"
+                                                    style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                                >
+                                                    {asset.name}
+                                                </Typography>
+                                                <CloudDownload />
+                                            </Button>
+                                        </div>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
                     </div>
                 </TabPanel>
             </SwipeableViews>
