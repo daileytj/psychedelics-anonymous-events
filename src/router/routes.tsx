@@ -8,7 +8,7 @@ import InsertPhoto from '@material-ui/icons/InsertPhoto';
 import ExposureZero from '@material-ui/icons/ExposureZero';
 import Portrait from '@material-ui/icons/Portrait';
 import FiberNew from '@material-ui/icons/FiberNew';
-import RecentActors from '@material-ui/icons/RecentActors';
+import AccountBalance from '@material-ui/icons/AccountBalance';
 import {
     AugmentedRealityPrintsPage,
     BeginnersGuidePage,
@@ -52,7 +52,7 @@ export const PAGES = [
         title: 'Meme Bank',
         route: '/meme-bank',
         component: MemeAssetsPage,
-        icon: RecentActors,
+        icon: AccountBalance,
     },
     {
         title: 'Hi-Res Downloader',

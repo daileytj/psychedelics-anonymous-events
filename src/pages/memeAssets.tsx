@@ -31,6 +31,9 @@ import PALogoYellow from '../assets/meme-assets/brand/PA_logo_yellow.png';
 import PALogoWhite from '../assets/meme-assets/brand/PA_logo_white.png';
 import PALogoBlack from '../assets/meme-assets/brand/PA_logo_black.png';
 import PALogoAmerican from '../assets/meme-assets/brand/PA_logo_america.png';
+import PALogoAus1 from '../assets/meme-assets/brand/pa_logo_aus_1.png';
+import PALogoAus2 from '../assets/meme-assets/brand/pa_logo_aus_2.png';
+import PALogoAus3 from '../assets/meme-assets/brand/pa_logo_aus_3.png';
 import PSYLogo1 from '../assets/meme-assets/brand/PSY_Logo.png';
 import PSYLogo2 from '../assets/meme-assets/brand/PSY_Logo_Circle.png';
 import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
@@ -80,6 +83,12 @@ import PAAvengers from '../assets/meme-assets/other/PA_avengers.png';
 import PAWolfPack from '../assets/meme-assets/other/wolf_pack.png';
 import Eggplant from '../assets/meme-assets/other/eggplant.png';
 import GucciSneaks from '../assets/meme-assets/other/gucci_sneaks.png';
+import ThugLife from '../assets/meme-assets/other/thuglife.png';
+import Blunt from '../assets/meme-assets/other/blunt.png';
+import Copium from '../assets/meme-assets/other/copium.png';
+import Shades from '../assets/meme-assets/other/shades.png';
+import SingleGun from '../assets/meme-assets/other/single_gun.png';
+import SprayPaint from '../assets/meme-assets/other/spray_paint.png';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -129,6 +138,9 @@ const brandAssets: MemeAsset[] = [
     { name: 'White PA Logo', source: PALogoWhite },
     { name: 'Black PA Logo', source: PALogoBlack },
     { name: 'American PA Logo', source: PALogoAmerican },
+    { name: 'Aus PA Logo 1', source: PALogoAus1 },
+    { name: 'Aus PA Logo 2', source: PALogoAus2 },
+    { name: 'Aus PA Logo 3', source: PALogoAus3 },
     { name: '$PSY logo', source: PSYLogo1 },
     { name: '$PSY Logo Avatar', source: PSYLogo2 },
     { name: 'Yellow PA Avatar', source: PAYellowAvatar },
@@ -148,6 +160,7 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Sunglasses', source: Sunglasses },
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
+    { name: 'Thug Life', source: ThugLife },
     { name: 'Gucci Sneaks', source: GucciSneaks },
     { name: 'Timmy Trumpet', source: TimmyTrumpet },
     { name: 'Mortal Kombat', source: MortalKombat },
@@ -161,6 +174,11 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Bat Signal', source: BatSignal },
     { name: 'Cucumber G & T', source: CucumberGT },
     { name: 'Eggplant', source: Eggplant },
+    { name: 'Blunt', source: Blunt },
+    { name: 'Copium', source: Copium },
+    { name: 'Shades', source: Shades },
+    { name: 'Single Gun', source: SingleGun },
+    { name: 'Spray Paint', source: SprayPaint },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -454,6 +472,33 @@ export const MemeAssetsPage = (): JSX.Element => {
                             target="_blank"
                         >
                             Photoshop Express
+                        </Button>
+                        <Button
+                            className={classes.starterKitLink}
+                            variant={'contained'}
+                            color={'primary'}
+                            href={'https://www.videoleapapp.com/'}
+                            target="_blank"
+                        >
+                            Videoleap
+                        </Button>
+                        <Button
+                            className={classes.starterKitLink}
+                            variant={'contained'}
+                            color={'primary'}
+                            href={'https://www.bazaart.me/'}
+                            target="_blank"
+                        >
+                            Bazaart
+                        </Button>
+                        <Button
+                            className={classes.starterKitLink}
+                            variant={'contained'}
+                            color={'primary'}
+                            href={'http://www.superimposeapp.com/'}
+                            target="_blank"
+                        >
+                            Superimpose
                         </Button>
                     </div>
                 </TabPanel>

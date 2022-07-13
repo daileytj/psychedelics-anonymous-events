@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA NFTuesday",
-            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
-            "date": [2022, 6, 12, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Women Led Wednesday",
             "description": "Hosted by @Stay_Salty1963 and @JFKlawyer",
             "date": [2022, 6, 13, 21, 0, 0],
@@ -52,6 +46,18 @@
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 6, 22, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Medical Monday",
+            "description": "Hosted by @Brainb0tt and @HamiltonCordon",
+            "date": [2022, 6, 25, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA NFTuesday",
+            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
+            "date": [2022, 6, 26, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
