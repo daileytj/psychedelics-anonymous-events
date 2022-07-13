@@ -8,7 +8,8 @@ import InsertPhoto from '@material-ui/icons/InsertPhoto';
 import ExposureZero from '@material-ui/icons/ExposureZero';
 import Portrait from '@material-ui/icons/Portrait';
 import FiberNew from '@material-ui/icons/FiberNew';
-import RecentActors from '@material-ui/icons/RecentActors';
+import AccountBalance from '@material-ui/icons/AccountBalance';
+import ReportProblem from '@material-ui/icons/ReportProblem';
 import {
     AugmentedRealityPrintsPage,
     BeginnersGuidePage,
@@ -21,6 +22,7 @@ import {
     SecurityPage,
     DicklebuttsCounterPage,
     MemeAssetsPage,
+    FeedbackPage,
 } from '../pages';
 
 export const PAGES = [
@@ -52,7 +54,7 @@ export const PAGES = [
         title: 'Meme Bank',
         route: '/meme-bank',
         component: MemeAssetsPage,
-        icon: RecentActors,
+        icon: AccountBalance,
     },
     {
         title: 'Hi-Res Downloader',
@@ -85,9 +87,15 @@ export const PAGES = [
         icon: ExposureZero,
     },
     {
-        title: 'Donations',
+        title: 'Tips / Donations',
         route: '/donations',
         component: DonationsPage,
         icon: AttachMoney,
+    },
+    {
+        title: 'Submit Feedback',
+        route: '/feedback',
+        component: FeedbackPage,
+        icon: ReportProblem,
     },
 ];
