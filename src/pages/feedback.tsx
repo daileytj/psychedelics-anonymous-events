@@ -95,7 +95,7 @@ export const FeedbackPage = (): JSX.Element => {
             <div style={{ flex: '1 1 0px' }}>
                 <EmptyState
                     icon={<ReportProblem fontSize={'inherit'} color={'secondary'} />}
-                    title={'Having an issue, feedback, or want a new feature?!'}
+                    title={'Have an issue, feedback, or want a new feature?!'}
                     description={'Submit a formal request using the form linked below'}
                     actions={
                         <Button
