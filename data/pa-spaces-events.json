@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Women Led Wednesday",
-            "description": "Hosted by @Stay_Salty1963 and @JFKlawyer",
-            "date": [2022, 6, 14, 0, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
             "date": [2022, 6, 14, 21, 0, 0],
@@ -33,7 +27,7 @@
         {
             "title": "PA Wednesday",
             "description": "Hosted by @Stay_Salty1963",
-            "date": [2022, 6, 20, 21, 0, 0],
+            "date": [2022, 6, 20, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
@@ -58,6 +52,12 @@
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
             "date": [2022, 6, 26, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Women Led Wednesday",
+            "description": "Hosted by @Stay_Salty1963 and @JFKlawyer",
+            "date": [2022, 6, 27, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
