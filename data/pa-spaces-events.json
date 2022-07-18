@@ -2,9 +2,9 @@
     "events": [
         {
             "title": "PA Medical Monday",
-            "description": "Hosted by @Brainb0tt and @HamiltonCordon",
+            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Plant Medicine Advocate - @sagelygreen",
             "date": [2022, 6, 18, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
+            "twitterLink": "https://twitter.com/i/spaces/1ynJOZaPvvrGR?s=20"
         },
         {
             "title": "PA NFTuesday",
@@ -32,7 +32,7 @@
         },
         {
             "title": "PA Medical Monday",
-            "description": "Hosted by @Brainb0tt and @HamiltonCordon",
+            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Psychiatrist - @TxPABC",
             "date": [2022, 6, 25, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
@@ -58,6 +58,12 @@
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 6, 29, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Medical Monday",
+            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Ketamine Expert and Anesthesiologist - @Alejandrodizzle",
+            "date": [2022, 7, 1, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
