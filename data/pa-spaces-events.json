@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Medical Monday",
-            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Plant Medicine Advocate - @sagelygreen",
-            "date": [2022, 6, 18, 21, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1ynJOZaPvvrGR?s=20"
-        },
-        {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
             "date": [2022, 6, 19, 21, 0, 0],

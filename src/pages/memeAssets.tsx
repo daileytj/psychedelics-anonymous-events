@@ -47,7 +47,6 @@ import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
 import JuniorShades from '../assets/meme-assets/heads/Junior_Head_Shades.png';
-import Junior6858 from '../assets/meme-assets/heads/6858.png';
 import MJ from '../assets/meme-assets/heads/mj_3876.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
@@ -60,6 +59,9 @@ import MalekHead from '../assets/meme-assets/heads/malek.png';
 import MikeHead from '../assets/meme-assets/heads/Mike.png';
 import Nicole from '../assets/meme-assets/heads/Nicole.png';
 import JustineHead from '../assets/meme-assets/heads/justine.png';
+import PACHead1 from '../assets/meme-assets/heads/PAC_Head_1.png';
+import PACHead2 from '../assets/meme-assets/heads/PAC_Head_2.png';
+import PACHead3 from '../assets/meme-assets/heads/PAC_Head_3.png';
 
 // the good stuff
 import Shoegate from '../assets/meme-assets/other/Shoegate.png';
@@ -129,11 +131,13 @@ const headsAssets: MemeAsset[] = [
     { name: 'MJ', source: MJ },
     { name: 'Junior Proper', source: JuniorProper },
     { name: 'Junior Shades', source: JuniorShades },
-    { name: 'Junior 6858', source: Junior6858 },
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
     { name: 'Ezu Vapor', source: Ezu2 },
     { name: 'Ezu Liquid', source: Ezu3 },
+    { name: 'PAC Head 1', source: PACHead1 },
+    { name: 'PAC Head 2', source: PACHead2 },
+    { name: 'PAC Head 3', source: PACHead3 },
     { name: 'Gary V', source: GaryHead },
     { name: 'Smoking Elon', source: SmokingElon },
     { name: 'Kevin', source: KevinHead },
