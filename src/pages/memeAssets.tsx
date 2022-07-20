@@ -92,6 +92,7 @@ import Copium from '../assets/meme-assets/other/copium.png';
 import Shades from '../assets/meme-assets/other/shades.png';
 import SingleGun from '../assets/meme-assets/other/single_gun.png';
 import SprayPaint from '../assets/meme-assets/other/spray_paint.png';
+import KMoney from '../assets/meme-assets/other/Kmoney.png';
 
 // audio
 import WeAreTheNight from '../assets/meme-assets/audio/we-are-the-night.mp3';
@@ -169,6 +170,7 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'PA Rocket', source: PARocket },
     { name: 'Spider', source: Spider },
     { name: 'Sunglasses', source: Sunglasses },
+    { name: 'KMoney Build Hands', source: KMoney },
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
     { name: 'Thug Life', source: ThugLife },
