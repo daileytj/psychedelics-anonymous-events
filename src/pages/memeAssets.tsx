@@ -39,6 +39,9 @@ import PSYLogo2 from '../assets/meme-assets/brand/PSY_Logo_Circle.png';
 import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
 import EzuTextWhite from '../assets/meme-assets/brand/ezu_text_logo_white.png';
 import EzuTextBlack from '../assets/meme-assets/brand/ezu_text.png';
+import PASweatshirt from '../assets/meme-assets/brand/PA_Denim_Jacket.png';
+import PASweatpants from '../assets/meme-assets/brand/PA_Sweatpants.png';
+import PADenimJacket from '../assets/meme-assets/brand/PA_Sweatshirt.png';
 
 // heads
 import VoltHead from '../assets/meme-assets/heads/volt_head.png';
@@ -46,6 +49,7 @@ import VoltNYC from '../assets/meme-assets/heads/NYC_Volt.png';
 import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
+import Junior7764 from '../assets/meme-assets/heads/7764.png';
 import JuniorShades from '../assets/meme-assets/heads/Junior_Head_Shades.png';
 import MJ from '../assets/meme-assets/heads/mj_3876.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
@@ -131,6 +135,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Dailey 1130', source: Dailey1130 },
     { name: 'MJ', source: MJ },
     { name: 'Junior Proper', source: JuniorProper },
+    { name: 'Junior 7764', source: Junior7764 },
     { name: 'Junior Shades', source: JuniorShades },
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
@@ -160,6 +165,9 @@ const brandAssets: MemeAsset[] = [
     { name: 'Ezu Logo', source: EzuLogo },
     { name: 'Ezu Text Black', source: EzuTextBlack },
     { name: 'Ezu Text White', source: EzuTextWhite },
+    { name: 'Genesis Sweatshirt', source: PASweatshirt },
+    { name: 'Genesis Sweatpants', source: PASweatpants },
+    { name: 'Genesis Denim Jacket', source: PADenimJacket },
 ];
 
 const theGoodStuffAssets: MemeAsset[] = [
