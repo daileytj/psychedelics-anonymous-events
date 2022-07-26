@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Medical Monday",
-            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Psychiatrist - @TxPABC",
-            "date": [2022, 6, 25, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
             "date": [2022, 6, 26, 21, 0, 0],
