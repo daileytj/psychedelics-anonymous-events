@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Women Led Wednesday",
-            "description": "Hosted by @Stay_Salty1963 and @JFKlawyer",
-            "date": [2022, 6, 27, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
             "date": [2022, 6, 28, 21, 0, 0],
@@ -33,7 +27,7 @@
         {
             "title": "PA Wednesday",
             "description": "Hosted by @Stay_Salty1963",
-            "date": [2022, 7, 3, 21, 0, 0],
+            "date": [2022, 7, 3, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
@@ -46,6 +40,36 @@
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 7, 5, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Medical Monday",
+            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Ketamine Expert and Anesthesiologist - @Alejandrodizzle",
+            "date": [2022, 7, 8, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA NFTuesday",
+            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
+            "date": [2022, 7, 9, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Wednesday",
+            "description": "Hosted by @Stay_Salty1963",
+            "date": [2022, 7, 10, 22, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Theory Thursday",
+            "description": "Hosted by @miamimalek and @kloss_eth",
+            "date": [2022, 7, 11, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
+            "date": [2022, 7, 12, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
