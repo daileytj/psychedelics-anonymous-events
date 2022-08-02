@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "Ric Flair Friday",
-            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
-            "date": [2022, 6, 29, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA Medical Monday",
-            "description": "Hosted by @Brainb0tt and @HamiltonCordon with guest speaker - Ketamine Expert and Anesthesiologist - @Alejandrodizzle",
-            "date": [2022, 7, 1, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
             "date": [2022, 7, 2, 21, 0, 0],
