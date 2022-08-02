@@ -42,10 +42,14 @@ import EzuTextBlack from '../assets/meme-assets/brand/ezu_text.png';
 import PASweatshirt from '../assets/meme-assets/brand/PA_Denim_Jacket.png';
 import PASweatpants from '../assets/meme-assets/brand/PA_Sweatpants.png';
 import PADenimJacket from '../assets/meme-assets/brand/PA_Sweatshirt.png';
+import MELogo from '../assets/meme-assets/brand/ME_logo.png';
+import MELogoWhite from '../assets/meme-assets/brand/ME_logo_white.png';
+import MELogoBlack from '../assets/meme-assets/brand/ME_logo_black.png';
 
 // heads
 import VoltHead from '../assets/meme-assets/heads/volt_head.png';
 import VoltNYC from '../assets/meme-assets/heads/NYC_Volt.png';
+import TimmyTrumpet from '../assets/meme-assets/heads/Timmy_Trumpet.png';
 import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
@@ -77,7 +81,8 @@ import Spider from '../assets/meme-assets/other/spider.png';
 import Sunglasses from '../assets/meme-assets/other/sunglasses.png';
 import VoltFullApe from '../assets/meme-assets/other/volt_ape.jpeg';
 import VoltOfWallStreet from '../assets/meme-assets/other/volt_of_wall_street.png';
-import TimmyTrumpet from '../assets/meme-assets/other/faqt_timmy.png';
+import TimmyTrumpetFat from '../assets/meme-assets/other/fat_timmy.png';
+import Stonks from '../assets/meme-assets/other/stonks.png';
 import GenesisGunHands from '../assets/meme-assets/other/genesis_gun_hands.png';
 import MunchyPizza from '../assets/meme-assets/other/munchy_pizza.png';
 import PANerfGun from '../assets/meme-assets/other/PA_nerf_gun.png';
@@ -129,6 +134,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Voltura Head', source: VoltHead },
     { name: 'Voltura NYC', source: VoltNYC },
     { name: "JB's Mutant", source: JBMutant },
+    { name: 'Timmy Trumpet', source: TimmyTrumpet },
     { name: 'Justine', source: JustineHead },
     { name: 'Kloss', source: KlossHead },
     { name: 'Malek', source: MalekHead },
@@ -158,6 +164,9 @@ const brandAssets: MemeAsset[] = [
     { name: 'Aus PA Logo 1', source: PALogoAus1 },
     { name: 'Aus PA Logo 2', source: PALogoAus2 },
     { name: 'Aus PA Logo 3', source: PALogoAus3 },
+    { name: 'Magic Eden Logo', source: MELogo },
+    { name: 'Magic Eden Logo White', source: MELogoWhite },
+    { name: 'Magic Eden Logo Black', source: MELogoBlack },
     { name: '$PSY logo', source: PSYLogo1 },
     { name: '$PSY Logo Avatar', source: PSYLogo2 },
     { name: 'Yellow PA Avatar', source: PAYellowAvatar },
@@ -182,8 +191,9 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
     { name: 'Thug Life', source: ThugLife },
+    { name: 'Stonks', source: Stonks },
     { name: 'Gucci Sneaks', source: GucciSneaks },
-    { name: 'Timmy Trumpet', source: TimmyTrumpet },
+    { name: 'Timmy Trumpet', source: TimmyTrumpetFat },
     { name: 'Mortal Kombat', source: MortalKombat },
     { name: 'PA Avengers', source: PAAvengers },
     { name: 'Wolf Pack', source: PAWolfPack },
