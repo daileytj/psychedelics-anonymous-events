@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA NFTuesday",
-            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
-            "date": [2022, 7, 2, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Wednesday",
             "description": "Hosted by @Stay_Salty1963",
             "date": [2022, 7, 3, 22, 0, 0],
