@@ -73,6 +73,7 @@ import PACHead3 from '../assets/meme-assets/heads/PAC_Head_3.png';
 
 // the good stuff
 import Shoegate from '../assets/meme-assets/other/Shoegate.png';
+import WalkingBillboard from '../assets/meme-assets/other/walking_billboard.png';
 import GoldGirl from '../assets/meme-assets/other/gold_girl.png';
 import Hendricks from '../assets/meme-assets/other/hendricks.png';
 import Kangaroo from '../assets/meme-assets/other/kangaroo.png';
@@ -181,6 +182,7 @@ const brandAssets: MemeAsset[] = [
 
 const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Shoegate', source: Shoegate },
+    { name: 'Walking Billboard', source: WalkingBillboard },
     { name: 'Gold Girl', source: GoldGirl },
     { name: 'Hendricks', source: Hendricks },
     { name: 'Kangaroo', source: Kangaroo },
