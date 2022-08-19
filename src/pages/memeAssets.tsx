@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     AppBar,
     IconButton,
@@ -21,6 +21,7 @@ import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView'
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
 import SwipeableViews from 'react-swipeable-views';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // meme-assets
 
@@ -108,6 +109,7 @@ import KMoney from '../assets/meme-assets/other/Kmoney.png';
 import WeAreTheNight from '../assets/meme-assets/audio/we-are-the-night.mp3';
 import TheConnection from '../assets/meme-assets/audio/the-connection.mp3';
 import TheTravelers from '../assets/meme-assets/audio/ezu_the_travelers.mp3';
+import TheChangelings from '../assets/meme-assets/audio/ezu_the_changelings.mp3';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -218,6 +220,7 @@ const audioAssets: MemeAsset[] = [
     { name: 'PA - We Are The Night', source: WeAreTheNight },
     { name: 'PA - The Connection', source: TheConnection },
     { name: 'Ezu - The Travelers', source: TheTravelers },
+    { name: 'Ezu - The Changelings', source: TheChangelings },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -270,9 +273,31 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
+const getTabNumber = (location: string): number => {
+    const pathname = location.split('/')[2];
+    if (!pathname) return 0;
+
+    switch (pathname) {
+        case 'brand':
+            return 0;
+        case 'heads':
+            return 1;
+        case 'the-good-stuff':
+            return 2;
+        case 'meme-starter-kit':
+            return 3;
+        case 'audio':
+            return 4;
+        default:
+            return 0;
+    }
+};
+
 export const MemeAssetsPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
+    const navigate = useNavigate();
+    const location = useLocation();
     const { setDrawerOpen } = useDrawer();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
     const [value, setValue] = React.useState(0);
@@ -282,13 +307,41 @@ export const MemeAssetsPage = (): JSX.Element => {
         saveAs(`${image.source}`, `${image.name}`);
     };
 
-    const handleChange = (event: any, newValue: any): void => {
-        setValue(newValue);
+    const handleChange = (event: any, newValue: number): void => {
+        navigate(
+            `/meme-bank/${
+                newValue === 1
+                    ? 'heads'
+                    : newValue === 2
+                    ? 'the-good-stuff'
+                    : newValue === 3
+                    ? 'meme-starter-kit'
+                    : newValue === 4
+                    ? 'audio'
+                    : 'brand'
+            }`
+        );
     };
 
     const handleChangeIndex = (index: number): void => {
-        setValue(index);
+        navigate(
+            `/meme-bank/${
+                index === 1
+                    ? 'heads'
+                    : index === 2
+                    ? 'the-good-stuff'
+                    : index === 3
+                    ? 'meme-starter-kit'
+                    : index === 4
+                    ? 'audio'
+                    : 'brand'
+            }`
+        );
     };
+
+    useEffect(() => {
+        setValue(getTabNumber(location?.pathname));
+    }, [location]);
 
     return (
         <div className={classes.pageBackground}>
