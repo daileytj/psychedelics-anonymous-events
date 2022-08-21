@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "Ric Flair Friday",
-            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
-            "date": [2022, 7, 19, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Medical Monday",
             "description": "Hosted by @Brainb0tt and @HamiltonCordon",
             "date": [2022, 7, 22, 21, 0, 0],
