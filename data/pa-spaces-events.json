@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Wednesday",
-            "description": "Hosted by @Stay_Salty1963",
-            "date": [2022, 7, 24, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA Theory Thursday",
-            "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 7, 25, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 7, 26, 21, 0, 0],
