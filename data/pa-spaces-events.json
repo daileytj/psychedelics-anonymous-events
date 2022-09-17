@@ -1,24 +1,6 @@
 {
     "events": [
         {
-            "title": "Update 7 Debrief",
-            "description": "Update 7 Debrief w/ Volt",
-            "date": [2022, 8, 14, 23, 0, 0],
-            "twitterLink": "https://twitter.com/i/spaces/1BRJjZpevZoJw?s=20"
-        },
-        {
-            "title": "PA Theory Thursday",
-            "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 8, 15, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Ric Flair Friday",
-            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
-            "date": [2022, 8, 16, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Medical Monday",
             "description": "Hosted by @Brainb0tt and @HamiltonCordon",
             "date": [2022, 8, 19, 22, 0, 0],
