@@ -22,6 +22,7 @@ import Search from '@material-ui/icons/Search';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
 import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -99,6 +100,12 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: 1,
             height: 56,
             boxShadow: 'none',
+            '&:hover $buttonIcon': {
+                fill: BLUIColors.black[500],
+            },
+        },
+        buttonIcon: {
+            fill: BLUIColors.white[50],
         },
     })
 );
@@ -208,14 +215,17 @@ export const EzuDownloadPage = (): JSX.Element => {
                     <TextField
                         required
                         className={classes.textField}
-                        value={ezuId}
+                        value={ezuId.toString().replace(/^0+/, '')}
                         label={'Ezu ID'}
                         variant={'filled'}
-                        onChange={(e): void => setEzuId(formatIdFromInput(e.target.value))}
+                        onChange={(e): void => setEzuId(formatIdFromInput(e.target.value.replace(/^0+/, '')))}
                         InputLabelProps={{ required: false }}
                         id={'ezu-id-field'}
                         type={'number'}
                         inputProps={{ inputMode: 'numeric', pattern: '[0-9]*', maxLength: 4 }}
+                        onKeyDown={(e): void => {
+                            if (e.key === 'Enter') fetchMetadata();
+                        }}
                     />
                     <Button
                         className={classes.button}
@@ -224,7 +234,7 @@ export const EzuDownloadPage = (): JSX.Element => {
                         disabled={ezuId < 1 || ezuId > 15000}
                         onClick={fetchMetadata}
                     >
-                        <Search />
+                        <Search className={classes.buttonIcon} />
                     </Button>
                     <Button
                         className={classes.button}
@@ -233,7 +243,7 @@ export const EzuDownloadPage = (): JSX.Element => {
                         disabled={!metadata.image}
                         onClick={downloadImage}
                     >
-                        <CloudDownload />
+                        <CloudDownload className={classes.buttonIcon} />
                     </Button>
                 </div>
             </div>

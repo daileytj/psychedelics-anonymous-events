@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Button, createStyles, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, createStyles, makeStyles, Typography } from '@material-ui/core';
 import { useLocation, useNavigate } from 'react-router';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import Menu from '@material-ui/icons/Menu';
@@ -28,10 +28,10 @@ const useStyles = makeStyles(() =>
 
 export const NavigationDrawer: React.FC = () => {
     const { drawerOpen, setDrawerOpen } = useDrawer();
-    const theme = useTheme();
+    // const theme = useTheme();
     const navigate = useNavigate();
     const location = useLocation();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [selected, setSelected] = useState(location.pathname);
     const classes = useStyles();
 
@@ -77,7 +77,7 @@ export const NavigationDrawer: React.FC = () => {
                                 page.route
                                     ? (): void => {
                                           history(page.route);
-                                          if (isMobile) setDrawerOpen(false);
+                                          setDrawerOpen(false);
                                       }
                                     : undefined
                             }

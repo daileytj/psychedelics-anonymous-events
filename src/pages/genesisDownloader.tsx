@@ -22,6 +22,7 @@ import Search from '@material-ui/icons/Search';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
 import PIconBlue from '../assets/p-icon-blue.svg';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -99,6 +100,12 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: 1,
             height: 56,
             boxShadow: 'none',
+            '&:hover $buttonIcon': {
+                fill: BLUIColors.black[500],
+            },
+        },
+        buttonIcon: {
+            fill: BLUIColors.white[50],
         },
     })
 );
@@ -212,14 +219,17 @@ export const GenesisDownloadPage = (): JSX.Element => {
                     <TextField
                         required
                         className={classes.textField}
-                        value={genesisId}
+                        value={genesisId.toString().replace(/^0+/, '')}
                         label={'Genesis ID'}
                         variant={'filled'}
-                        onChange={(e): void => setGenesisId(formatIdFromInput(e.target.value))}
+                        onChange={(e): void => setGenesisId(formatIdFromInput(e.target.value.replace(/^0+/, '')))}
                         InputLabelProps={{ required: false }}
                         id={'genesis-id-field'}
                         type={'number'}
                         inputProps={{ inputMode: 'numeric', pattern: '[0-9]*', maxLength: 4 }}
+                        onKeyDown={(e): void => {
+                            if (e.key === 'Enter') fetchMetadata();
+                        }}
                     />
                     <Button
                         className={classes.button}
@@ -228,7 +238,7 @@ export const GenesisDownloadPage = (): JSX.Element => {
                         disabled={genesisId < 1 || genesisId > 9595}
                         onClick={fetchMetadata}
                     >
-                        <Search />
+                        <Search className={classes.buttonIcon} />
                     </Button>
                     <Button
                         className={classes.button}
@@ -237,7 +247,7 @@ export const GenesisDownloadPage = (): JSX.Element => {
                         disabled={!metadata.image}
                         onClick={downloadImage}
                     >
-                        <CloudDownload />
+                        <CloudDownload className={classes.buttonIcon} />
                     </Button>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import PIconWhite from '../assets/p-icon-white.svg';
@@ -22,7 +22,7 @@ export type PAEvent = {
     twitterRecordingLink?: string;
     eventLink?: string;
     backgroundImage?: string;
-}
+};
 
 export type EventCardProps = {
     title: string;
@@ -42,26 +42,27 @@ const useStyles = makeStyles<Theme, EventCardProps>((theme) =>
         root: {
             borderRadius: 0,
             height: '100%',
-            backgroundImage: (props): string | undefined => props.backgroundImage ? `url(${props.backgroundImage})` : undefined,
+            backgroundImage: (props): string | undefined =>
+                props.backgroundImage ? `url(${props.backgroundImage})` : undefined,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             backgroundPositionX: 'center',
-            backgroundBlendMode: 'soft-light'
+            backgroundBlendMode: 'soft-light',
         },
         title: {
             color: (props): string => props.titleColor || '#FFFF00',
             fontSize: '1rem',
-            fontWeight: 600
+            fontWeight: 600,
         },
         avatar: {
             width: 48,
             height: 48,
-            backgroundColor: (props): string => props.avatarBackgroundColor || theme.palette.primary.main
+            backgroundColor: (props): string => props.avatarBackgroundColor || theme.palette.primary.main,
         },
         avatarImage: {
             width: 24,
             height: 24,
-            paddingLeft: 2
+            paddingLeft: 2,
         },
         divider: {
             marginTop: theme.spacing(2),
@@ -69,10 +70,7 @@ const useStyles = makeStyles<Theme, EventCardProps>((theme) =>
         },
         descriptionContainer: {
             height: '60px',
-            overflow: 'scroll'
-        },
-        twitterLink: {
-            width: '100%'
+            overflow: 'scroll',
         },
         twitterIcon: {
             width: '1.25rem',
@@ -80,12 +78,15 @@ const useStyles = makeStyles<Theme, EventCardProps>((theme) =>
             marginRight: 8,
             fill: BLUIColors.white[50],
         },
-        twitterIconHover: {
-            width: '1.25rem',
-            height: '1.25rem',
-            marginRight: 8,
-            fill: BLUIColors.black[500],
-        }
+        twitterLink: {
+            width: '100%',
+            '&:hover': {
+                fill: BLUIColors.black[500],
+                '& $twitterIcon': {
+                    fill: BLUIColors.black[500],
+                },
+            },
+        },
     })
 );
 
@@ -108,28 +109,22 @@ const getIconByColor = (color: string): string => {
     }
 
     return icon;
-}
+};
 
-export const EventCard: React.FC<EventCardProps> = (
-    props: EventCardProps
-) => {
-    const {
-        title,
-        description,
-        date,
-        iconColor = 'white',
-        twitterLink,
-        twitterRecordingLink,
-        eventLink
-    } = props;
+export const EventCard: React.FC<EventCardProps> = (props: EventCardProps) => {
+    const { title, description, date, iconColor = 'white', twitterLink, twitterRecordingLink, eventLink } = props;
     const classes = useStyles(props);
-    const [isTwitterButtonHovered, setIsTwitterButtonHovered] = useState(false);
 
     return (
         <Card className={classes.root}>
             <CardHeader
                 avatar={
-                    <Avatar aria-label="PA Logo" className={classes.avatar} src={getIconByColor(iconColor)} classes={{ img: classes.avatarImage }} />
+                    <Avatar
+                        aria-label="PA Logo"
+                        className={classes.avatar}
+                        src={getIconByColor(iconColor)}
+                        classes={{ img: classes.avatarImage }}
+                    />
                 }
                 title={title}
                 subheader={`${date.toLocaleDateString()} ${date.toLocaleTimeString()}`}
@@ -152,14 +147,11 @@ export const EventCard: React.FC<EventCardProps> = (
                         color={'primary'}
                         target="_blank"
                         href={twitterLink}
-                        onMouseOver={(): void => { setIsTwitterButtonHovered(true) }}
-                        onMouseOut={(): void => { setIsTwitterButtonHovered(false) }}
                     >
-                        <TwitterIcon
-                            className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
-                            fill='inherit' />
+                        <TwitterIcon className={classes.twitterIcon} fill="inherit" />
                         Twitter
-                    </Button>)}
+                    </Button>
+                )}
                 {twitterRecordingLink && (
                     <Button
                         className={classes.twitterLink}
@@ -167,14 +159,11 @@ export const EventCard: React.FC<EventCardProps> = (
                         color={'primary'}
                         target="_blank"
                         href={twitterRecordingLink}
-                        onMouseOver={(): void => { setIsTwitterButtonHovered(true) }}
-                        onMouseOut={(): void => { setIsTwitterButtonHovered(false) }}
                     >
-                        <TwitterIcon
-                            className={isTwitterButtonHovered ? classes.twitterIconHover : classes.twitterIcon}
-                            fill='inherit' />
+                        <TwitterIcon className={classes.twitterIcon} fill="inherit" />
                         Go To Recording
-                    </Button>)}
+                    </Button>
+                )}
                 {eventLink && (
                     <Button
                         className={classes.twitterLink}
@@ -184,7 +173,8 @@ export const EventCard: React.FC<EventCardProps> = (
                         href={eventLink}
                     >
                         View Event
-                    </Button>)}
+                    </Button>
+                )}
             </CardActions>
         </Card>
     );
