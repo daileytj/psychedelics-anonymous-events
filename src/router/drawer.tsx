@@ -51,7 +51,7 @@ export const NavigationDrawer: React.FC = () => {
                     setDrawerOpen(false);
                 },
             }}
-            variant={isMobile ? 'temporary' : 'persistent'}
+            variant={'temporary'}
             activeItem={selected}
             width={'20.75rem'}
         >

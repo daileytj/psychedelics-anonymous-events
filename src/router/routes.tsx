@@ -1,5 +1,5 @@
 import Event from '@material-ui/icons/Event';
-import People from '@material-ui/icons/People';
+// import People from '@material-ui/icons/People';
 import Mic from '@material-ui/icons/Mic';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import MusicNote from '@material-ui/icons/MusicNote';
@@ -16,13 +16,14 @@ import {
     DonationsPage,
     GenesisDownloadPage,
     LoreTracksPage,
-    PACommunityEventsPage,
+    // PACommunityEventsPage,
     PAOfficialEventsPage,
     PASpacesPage,
     SecurityPage,
     DicklebuttsCounterPage,
     MemeAssetsPage,
     FeedbackPage,
+    EzuDownloadPage,
 } from '../pages';
 
 export const PAGES = [
@@ -38,12 +39,12 @@ export const PAGES = [
         component: PAOfficialEventsPage,
         icon: Event,
     },
-    {
-        title: 'Community Events',
-        route: '/community-events',
-        component: PACommunityEventsPage,
-        icon: People,
-    },
+    // {
+    //     title: 'Community Events',
+    //     route: '/community-events',
+    //     component: PACommunityEventsPage,
+    //     icon: People,
+    // },
     {
         title: 'Daily Spaces',
         route: '/daily-spaces',
@@ -60,6 +61,12 @@ export const PAGES = [
         title: 'Hi-Res Downloader',
         route: '/hi-res-genesis-downloader',
         component: GenesisDownloadPage,
+        icon: InsertPhoto,
+    },
+    {
+        title: 'Ezu Hi-Res Downloader',
+        route: '/hi-res-ezu-downloader',
+        component: EzuDownloadPage,
         icon: InsertPhoto,
     },
     {

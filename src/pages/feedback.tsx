@@ -7,7 +7,6 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
     useTheme,
     Button,
 } from '@material-ui/core';
@@ -46,25 +45,22 @@ export const FeedbackPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
-    const sm = useMediaQuery(theme.breakpoints.down('sm'));
     useGoogleAnalyticsPageView();
 
     return (
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{

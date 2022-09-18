@@ -33,8 +33,8 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 
 export const App = (): JSX.Element => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [isDisclaimerDismissed, setIsDisclaimerDismissed] = useState<string | null>('false');
     const [showDisclaimer, setShowDisclaimer] = useState(false);
- 
 
     const triggerDisclaimer = (): void => {
         setShowDisclaimer(true);
@@ -42,9 +42,12 @@ export const App = (): JSX.Element => {
 
     const handleClose = (): void => {
         setShowDisclaimer(false);
+        setIsDisclaimerDismissed('true');
+        localStorage.setItem('disclaimerRead', 'true');
     };
 
     useEffect(() => {
+        setIsDisclaimerDismissed(localStorage.getItem('disclaimerRead'));
         triggerDisclaimer();
     }, []);
 
@@ -57,7 +60,7 @@ export const App = (): JSX.Element => {
         >
             <DrawerLayout drawer={<NavigationDrawer />} style={{ height: '100%' }}>
                 <Dialog
-                    open={showDisclaimer}
+                    open={isDisclaimerDismissed === 'true' && showDisclaimer}
                     onClose={handleClose}
                     aria-labelledby="alert-dialog-title"
                     aria-describedby="alert-dialog-description"

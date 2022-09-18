@@ -7,7 +7,6 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
     useTheme,
     CircularProgress,
     Grid,
@@ -42,7 +41,6 @@ export const PAOfficialEventsPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
-    const sm = useMediaQuery(theme.breakpoints.down('sm'));
     const [events, setEvents] = useState<PAEvent[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     useGoogleAnalyticsPageView();
@@ -68,18 +66,16 @@ export const PAOfficialEventsPage = (): JSX.Element => {
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{

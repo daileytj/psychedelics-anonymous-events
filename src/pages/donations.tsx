@@ -7,7 +7,6 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
     useTheme,
     Button,
     Snackbar,
@@ -48,7 +47,6 @@ export const DonationsPage = (): JSX.Element => {
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const [snackbarOpen, setSnackbarOpen] = useState(false);
-    const sm = useMediaQuery(theme.breakpoints.down('sm'));
     useGoogleAnalyticsPageView();
 
     const copyWalletAddress = (): any => {
@@ -61,18 +59,16 @@ export const DonationsPage = (): JSX.Element => {
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{

@@ -57,18 +57,16 @@ export const LoreTracksPage = (): JSX.Element => {
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{
@@ -98,24 +96,42 @@ export const LoreTracksPage = (): JSX.Element => {
             </AppBar>
             <div className={classes.container}>
                 <Grid container spacing={2} alignItems={'stretch'}>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
+                    <Grid item sm={12} lg={6} xl={6} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
                         <iframe
                             width={sm ? '364' : '560'}
                             height={sm ? '204.75' : '315'}
                             src="https://www.youtube.com/embed/XTLwkCydegc"
                             title="We Are The Night"
-                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
                     </Grid>
-                    <Grid item sm={12} md={12} xl={12} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
+                    <Grid item sm={12} lg={6} xl={6} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
                         <iframe
                             width={sm ? '364' : '560'}
                             height={sm ? '204.75' : '315'}
                             src="https://www.youtube.com/embed/F7u-B8YgA6U"
                             title="The Connection"
-                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </Grid>
+                    <Grid item sm={12} lg={6} xl={6} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
+                        <iframe
+                            width={sm ? '364' : '560'}
+                            height={sm ? '204.75' : '315'}
+                            src="https://www.youtube.com/embed/jRW_NI223z0"
+                            title="The Travelers [ l i g h t ]"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </Grid>
+                    <Grid item sm={12} lg={6} xl={6} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
+                        <iframe
+                            width={sm ? '364' : '560'}
+                            height={sm ? '204.75' : '315'}
+                            src="https://www.youtube.com/embed/pWzNhK7BNYc"
+                            title="The Changelings [ v a p o r ]"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
