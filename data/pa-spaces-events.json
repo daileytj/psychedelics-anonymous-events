@@ -1,63 +1,63 @@
 {
     "events": [
         {
-            "title": "PA Women Led Wednesday",
-            "description": "Hosted by @Stay_Salty1963 and @JFKlawyer",
-            "date": [2022, 6, 13, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA Theory Thursday",
-            "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 6, 14, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "Ric Flair Friday",
-            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
-            "date": [2022, 6, 15, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Medical Monday",
             "description": "Hosted by @Brainb0tt and @HamiltonCordon",
-            "date": [2022, 6, 18, 21, 0, 0],
+            "date": [2022, 8, 19, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
-            "date": [2022, 6, 19, 21, 0, 0],
+            "date": [2022, 8, 20, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "PA Wednesday",
             "description": "Hosted by @Stay_Salty1963",
-            "date": [2022, 6, 20, 21, 0, 0],
+            "date": [2022, 8, 21, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 6, 21, 21, 0, 0],
+            "date": [2022, 8, 22, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
-            "date": [2022, 6, 22, 21, 0, 0],
+            "date": [2022, 8, 23, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "PA Medical Monday",
             "description": "Hosted by @Brainb0tt and @HamiltonCordon",
-            "date": [2022, 6, 25, 21, 0, 0],
+            "date": [2022, 8, 26, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
-            "date": [2022, 6, 26, 21, 0, 0],
+            "date": [2022, 8, 27, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Wednesday",
+            "description": "Hosted by @Stay_Salty1963",
+            "date": [2022, 8, 28, 22, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Theory Thursday",
+            "description": "Hosted by @miamimalek and @kloss_eth",
+            "date": [2022, 8, 29, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
+            "date": [2022, 8, 30, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { Button, createStyles, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
-import { useHistory, useLocation } from 'react-router';
+import { Button, createStyles, makeStyles, Typography } from '@material-ui/core';
+import { useLocation, useNavigate } from 'react-router';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import Menu from '@material-ui/icons/Menu';
 import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerNavItem } from '@brightlayer-ui/react-components';
@@ -28,19 +28,19 @@ const useStyles = makeStyles(() =>
 
 export const NavigationDrawer: React.FC = () => {
     const { drawerOpen, setDrawerOpen } = useDrawer();
-    const theme = useTheme();
-    const history = useHistory();
+    // const theme = useTheme();
+    const navigate = useNavigate();
     const location = useLocation();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [selected, setSelected] = useState(location.pathname);
     const classes = useStyles();
 
-    const navigate = useCallback(
+    const history = useCallback(
         (id: string): void => {
-            history.push(id);
+            navigate(id);
             setSelected(id);
         },
-        [history, setSelected]
+        [navigate, setSelected]
     );
 
     return (
@@ -51,7 +51,7 @@ export const NavigationDrawer: React.FC = () => {
                     setDrawerOpen(false);
                 },
             }}
-            variant={isMobile ? 'temporary' : 'persistent'}
+            variant={'temporary'}
             activeItem={selected}
             width={'20.75rem'}
         >
@@ -76,8 +76,8 @@ export const NavigationDrawer: React.FC = () => {
                             onClick={
                                 page.route
                                     ? (): void => {
-                                          navigate(page.route);
-                                          if (isMobile) setDrawerOpen(false);
+                                          history(page.route);
+                                          setDrawerOpen(false);
                                       }
                                     : undefined
                             }

@@ -17,11 +17,11 @@ import Alert from '@material-ui/lab/Alert';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
-import { getGenesisMetadata } from '../api';
+import { getEzuMetadata } from '../api';
 import Search from '@material-ui/icons/Search';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
-import PIconBlue from '../assets/p-icon-blue.svg';
+import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
 import * as BLUIColors from '@brightlayer-ui/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export const GenesisDownloadPage = (): JSX.Element => {
+export const EzuDownloadPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
@@ -119,10 +119,10 @@ export const GenesisDownloadPage = (): JSX.Element => {
     const [imageRendered, setImageRendered] = useState(false);
     const [metadataRetrievalError, setMetadataRetrievalError] = useState('');
     const [snackbarOpen, setSnackbarOpen] = useState(false);
-    const [genesisId, setGenesisId] = useState(Math.floor(Math.random() * (9595 - 1 + 1) + 1));
+    const [ezuId, setEzuId] = useState(Math.floor(Math.random() * (1500 - 1 + 1) + 1));
     useGoogleAnalyticsPageView();
 
-    const formatIdFromInput = (id: string): number => +id.slice(0, 4);
+    const formatIdFromInput = (id: string): number => +id.slice(0, 5);
 
     const downloadImage = (): void => {
         const source = metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/');
@@ -134,11 +134,11 @@ export const GenesisDownloadPage = (): JSX.Element => {
         setMetadataRetrievalError('');
         setIsLoading(true);
         const loadMetadata = async (): Promise<void> => {
-            const data = await getGenesisMetadata(genesisId);
+            const data = await getEzuMetadata(ezuId);
 
             if (typeof data === 'undefined') {
                 setMetadataRetrievalError(
-                    'There was an error retrieving your Genesis metadata and image. This is likely an issue with IPFS. Please try again later.'
+                    'There was an error retrieving your Ezu metadata and image. This is likely an issue with IPFS. Please try again later.'
                 );
                 setSnackbarOpen(true);
                 setIsLoading(false);
@@ -192,7 +192,7 @@ export const GenesisDownloadPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Hi-Res Downloader
+                        EZU Hi-Res Downloader
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -202,29 +202,25 @@ export const GenesisDownloadPage = (): JSX.Element => {
                     {!isLoading && metadata.image && (
                         <img
                             src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
-                            alt="Psychedelics Anonymous Genesis"
+                            alt="Ezu"
                             style={{ height: 'inherit', width: 'inherit', display: imageRendered ? 'block' : 'none' }}
                             onLoad={(): void => setImageRendered(true)}
                         />
                     )}
                     {!isLoading && !metadata.image && (
-                        <img
-                            src={PIconBlue}
-                            alt="Psychedelics Anonymous Genesis"
-                            style={{ height: 'inherit', width: 'inherit' }}
-                        />
+                        <img src={EzuLogo} alt="Ezu" style={{ height: 'inherit', width: 'inherit', padding: 32 }} />
                     )}
                 </div>
                 <div className={classes.formRow}>
                     <TextField
                         required
                         className={classes.textField}
-                        value={genesisId.toString().replace(/^0+/, '')}
-                        label={'Genesis ID'}
+                        value={ezuId.toString().replace(/^0+/, '')}
+                        label={'Ezu ID'}
                         variant={'filled'}
-                        onChange={(e): void => setGenesisId(formatIdFromInput(e.target.value.replace(/^0+/, '')))}
+                        onChange={(e): void => setEzuId(formatIdFromInput(e.target.value.replace(/^0+/, '')))}
                         InputLabelProps={{ required: false }}
-                        id={'genesis-id-field'}
+                        id={'ezu-id-field'}
                         type={'number'}
                         inputProps={{ inputMode: 'numeric', pattern: '[0-9]*', maxLength: 4 }}
                         onKeyDown={(e): void => {
@@ -235,7 +231,7 @@ export const GenesisDownloadPage = (): JSX.Element => {
                         className={classes.button}
                         variant={'contained'}
                         color={'primary'}
-                        disabled={genesisId < 1 || genesisId > 9595}
+                        disabled={ezuId < 1 || ezuId > 15000}
                         onClick={fetchMetadata}
                     >
                         <Search className={classes.buttonIcon} />

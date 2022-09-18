@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     AppBar,
     IconButton,
@@ -21,6 +21,7 @@ import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView'
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
 import SwipeableViews from 'react-swipeable-views';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // meme-assets
 
@@ -39,15 +40,23 @@ import PSYLogo2 from '../assets/meme-assets/brand/PSY_Logo_Circle.png';
 import EzuLogo from '../assets/meme-assets/brand/ezu_logo.png';
 import EzuTextWhite from '../assets/meme-assets/brand/ezu_text_logo_white.png';
 import EzuTextBlack from '../assets/meme-assets/brand/ezu_text.png';
+import PASweatshirt from '../assets/meme-assets/brand/PA_Sweatshirt.png';
+import PASweatpants from '../assets/meme-assets/brand/PA_Sweatpants.png';
+import PADenimJacket from '../assets/meme-assets/brand/PA_Denim_Jacket.png';
+import MELogo from '../assets/meme-assets/brand/ME_logo.png';
+import MELogoWhite from '../assets/meme-assets/brand/ME_logo_white.png';
+import MELogoBlack from '../assets/meme-assets/brand/ME_logo_black.png';
 
 // heads
 import VoltHead from '../assets/meme-assets/heads/volt_head.png';
 import VoltNYC from '../assets/meme-assets/heads/NYC_Volt.png';
+import TimmyTrumpet from '../assets/meme-assets/heads/Timmy_Trumpet.png';
 import JBMutant from '../assets/meme-assets/heads/JB_Mutant.png';
 import Dailey1130 from '../assets/meme-assets/heads/1130.png';
 import JuniorProper from '../assets/meme-assets/heads/Junior.png';
+import Junior7764 from '../assets/meme-assets/heads/7764.png';
 import JuniorShades from '../assets/meme-assets/heads/Junior_Head_Shades.png';
-import Junior6858 from '../assets/meme-assets/heads/6858.png';
+import BrainGang from '../assets/meme-assets/heads/brain_gang.png';
 import Ezu1 from '../assets/meme-assets/heads/ezu_head_1.png';
 import Ezu2 from '../assets/meme-assets/heads/ezu_head_2.png';
 import Ezu3 from '../assets/meme-assets/heads/ezu_head_3.png';
@@ -59,9 +68,13 @@ import MalekHead from '../assets/meme-assets/heads/malek.png';
 import MikeHead from '../assets/meme-assets/heads/Mike.png';
 import Nicole from '../assets/meme-assets/heads/Nicole.png';
 import JustineHead from '../assets/meme-assets/heads/justine.png';
+import PACHead1 from '../assets/meme-assets/heads/PAC_Head_1.png';
+import PACHead2 from '../assets/meme-assets/heads/PAC_Head_2.png';
+import PACHead3 from '../assets/meme-assets/heads/PAC_Head_3.png';
 
 // the good stuff
 import Shoegate from '../assets/meme-assets/other/Shoegate.png';
+import WalkingBillboard from '../assets/meme-assets/other/walking_billboard.png';
 import GoldGirl from '../assets/meme-assets/other/gold_girl.png';
 import Hendricks from '../assets/meme-assets/other/hendricks.png';
 import Kangaroo from '../assets/meme-assets/other/kangaroo.png';
@@ -70,7 +83,8 @@ import Spider from '../assets/meme-assets/other/spider.png';
 import Sunglasses from '../assets/meme-assets/other/sunglasses.png';
 import VoltFullApe from '../assets/meme-assets/other/volt_ape.jpeg';
 import VoltOfWallStreet from '../assets/meme-assets/other/volt_of_wall_street.png';
-import TimmyTrumpet from '../assets/meme-assets/other/faqt_timmy.png';
+import TimmyTrumpetFat from '../assets/meme-assets/other/fat_timmy.png';
+import Stonks from '../assets/meme-assets/other/stonks.png';
 import GenesisGunHands from '../assets/meme-assets/other/genesis_gun_hands.png';
 import MunchyPizza from '../assets/meme-assets/other/munchy_pizza.png';
 import PANerfGun from '../assets/meme-assets/other/PA_nerf_gun.png';
@@ -89,6 +103,13 @@ import Copium from '../assets/meme-assets/other/copium.png';
 import Shades from '../assets/meme-assets/other/shades.png';
 import SingleGun from '../assets/meme-assets/other/single_gun.png';
 import SprayPaint from '../assets/meme-assets/other/spray_paint.png';
+import KMoney from '../assets/meme-assets/other/Kmoney.png';
+
+// audio
+import WeAreTheNight from '../assets/meme-assets/audio/we-are-the-night.mp3';
+import TheConnection from '../assets/meme-assets/audio/the-connection.mp3';
+import TheTravelers from '../assets/meme-assets/audio/ezu_the_travelers.mp3';
+import TheChangelings from '../assets/meme-assets/audio/ezu_the_changelings.mp3';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -116,17 +137,22 @@ const headsAssets: MemeAsset[] = [
     { name: 'Voltura Head', source: VoltHead },
     { name: 'Voltura NYC', source: VoltNYC },
     { name: "JB's Mutant", source: JBMutant },
+    { name: 'Timmy Trumpet', source: TimmyTrumpet },
     { name: 'Justine', source: JustineHead },
     { name: 'Kloss', source: KlossHead },
     { name: 'Malek', source: MalekHead },
     { name: 'Dailey 1130', source: Dailey1130 },
+    { name: 'Brain Gang', source: BrainGang },
     { name: 'Junior Proper', source: JuniorProper },
+    { name: 'Junior 7764', source: Junior7764 },
     { name: 'Junior Shades', source: JuniorShades },
-    { name: 'Junior 6858', source: Junior6858 },
     { name: 'Mike', source: MikeHead },
     { name: 'Ezu Light', source: Ezu1 },
     { name: 'Ezu Vapor', source: Ezu2 },
     { name: 'Ezu Liquid', source: Ezu3 },
+    { name: 'PAC Head 1', source: PACHead1 },
+    { name: 'PAC Head 2', source: PACHead2 },
+    { name: 'PAC Head 3', source: PACHead3 },
     { name: 'Gary V', source: GaryHead },
     { name: 'Smoking Elon', source: SmokingElon },
     { name: 'Kevin', source: KevinHead },
@@ -141,6 +167,9 @@ const brandAssets: MemeAsset[] = [
     { name: 'Aus PA Logo 1', source: PALogoAus1 },
     { name: 'Aus PA Logo 2', source: PALogoAus2 },
     { name: 'Aus PA Logo 3', source: PALogoAus3 },
+    { name: 'Magic Eden Logo', source: MELogo },
+    { name: 'Magic Eden Logo White', source: MELogoWhite },
+    { name: 'Magic Eden Logo Black', source: MELogoBlack },
     { name: '$PSY logo', source: PSYLogo1 },
     { name: '$PSY Logo Avatar', source: PSYLogo2 },
     { name: 'Yellow PA Avatar', source: PAYellowAvatar },
@@ -148,21 +177,27 @@ const brandAssets: MemeAsset[] = [
     { name: 'Ezu Logo', source: EzuLogo },
     { name: 'Ezu Text Black', source: EzuTextBlack },
     { name: 'Ezu Text White', source: EzuTextWhite },
+    { name: 'Genesis Sweatshirt', source: PASweatshirt },
+    { name: 'Genesis Sweatpants', source: PASweatpants },
+    { name: 'Genesis Denim Jacket', source: PADenimJacket },
 ];
 
 const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Shoegate', source: Shoegate },
+    { name: 'Walking Billboard', source: WalkingBillboard },
     { name: 'Gold Girl', source: GoldGirl },
     { name: 'Hendricks', source: Hendricks },
     { name: 'Kangaroo', source: Kangaroo },
     { name: 'PA Rocket', source: PARocket },
     { name: 'Spider', source: Spider },
     { name: 'Sunglasses', source: Sunglasses },
+    { name: 'KMoney Build Hands', source: KMoney },
     { name: 'Volt Full Ape', source: VoltFullApe },
     { name: 'Volt Of Wall Street', source: VoltOfWallStreet },
     { name: 'Thug Life', source: ThugLife },
+    { name: 'Stonks', source: Stonks },
     { name: 'Gucci Sneaks', source: GucciSneaks },
-    { name: 'Timmy Trumpet', source: TimmyTrumpet },
+    { name: 'Timmy Trumpet', source: TimmyTrumpetFat },
     { name: 'Mortal Kombat', source: MortalKombat },
     { name: 'PA Avengers', source: PAAvengers },
     { name: 'Wolf Pack', source: PAWolfPack },
@@ -179,6 +214,13 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Shades', source: Shades },
     { name: 'Single Gun', source: SingleGun },
     { name: 'Spray Paint', source: SprayPaint },
+];
+
+const audioAssets: MemeAsset[] = [
+    { name: 'PA - We Are The Night', source: WeAreTheNight },
+    { name: 'PA - The Connection', source: TheConnection },
+    { name: 'Ezu - The Travelers', source: TheTravelers },
+    { name: 'Ezu - The Changelings', source: TheChangelings },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -231,9 +273,31 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
+const getTabNumber = (location: string): number => {
+    const pathname = location.split('/')[2];
+    if (!pathname) return 0;
+
+    switch (pathname) {
+        case 'brand':
+            return 0;
+        case 'heads':
+            return 1;
+        case 'the-good-stuff':
+            return 2;
+        case 'meme-starter-kit':
+            return 3;
+        case 'audio':
+            return 4;
+        default:
+            return 0;
+    }
+};
+
 export const MemeAssetsPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
+    const navigate = useNavigate();
+    const location = useLocation();
     const { setDrawerOpen } = useDrawer();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
     const [value, setValue] = React.useState(0);
@@ -243,30 +307,56 @@ export const MemeAssetsPage = (): JSX.Element => {
         saveAs(`${image.source}`, `${image.name}`);
     };
 
-    const handleChange = (event: any, newValue: any): void => {
-        setValue(newValue);
+    const handleChange = (event: any, newValue: number): void => {
+        navigate(
+            `/meme-bank/${
+                newValue === 1
+                    ? 'heads'
+                    : newValue === 2
+                    ? 'the-good-stuff'
+                    : newValue === 3
+                    ? 'meme-starter-kit'
+                    : newValue === 4
+                    ? 'audio'
+                    : 'brand'
+            }`
+        );
     };
 
     const handleChangeIndex = (index: number): void => {
-        setValue(index);
+        navigate(
+            `/meme-bank/${
+                index === 1
+                    ? 'heads'
+                    : index === 2
+                    ? 'the-good-stuff'
+                    : index === 3
+                    ? 'meme-starter-kit'
+                    : index === 4
+                    ? 'audio'
+                    : 'brand'
+            }`
+        );
     };
+
+    useEffect(() => {
+        setValue(getTabNumber(location?.pathname));
+    }, [location]);
 
     return (
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{
@@ -304,6 +394,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                         <Tab label="Heads" />
                         <Tab label="The Good Stuff" />
                         <Tab label="Meme Starter Kit" />
+                        <Tab label="Audio" />
                     </Tabs>
                 </Toolbar>
             </AppBar>
@@ -500,6 +591,52 @@ export const MemeAssetsPage = (): JSX.Element => {
                         >
                             Superimpose
                         </Button>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                    <div className={classes.container}>
+                        <Grid container spacing={2} alignItems={'stretch'}>
+                            {audioAssets.map((asset: MemeAsset, index: number) => (
+                                <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index} style={{ width: '100%' }}>
+                                    <Card
+                                        style={{
+                                            maxWidth: '100%',
+                                            minHeight: '100%',
+                                            overflow: 'hidden',
+                                            backgroundColor: 'transparent',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            borderRadius: 0,
+                                        }}
+                                        elevation={4}
+                                    >
+                                        <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                            <audio controls style={{ margin: 16, width: '100%' }}>
+                                                <source src={asset.source} type="audio/mp3" />
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                            {/* <img src={asset.source} style={{ width: '100%', padding: 8 }} /> */}
+                                        </div>
+                                        <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                            <Button
+                                                className={classes.button}
+                                                variant={'contained'}
+                                                color={'primary'}
+                                                onClick={(): void => downloadImage(asset)}
+                                            >
+                                                <Typography
+                                                    variant="body2"
+                                                    style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                                >
+                                                    {asset.name}
+                                                </Typography>
+                                                <CloudDownload />
+                                            </Button>
+                                        </div>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
                     </div>
                 </TabPanel>
             </SwipeableViews>

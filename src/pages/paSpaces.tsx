@@ -10,7 +10,6 @@ import {
     useTheme,
     Grid,
     CircularProgress,
-    useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
@@ -44,7 +43,6 @@ export const PASpacesPage = (): JSX.Element => {
     const { setDrawerOpen } = useDrawer();
     const [events, setEvents] = useState<PAEvent[]>([]);
     const [isLoading, setIsLoading] = useState(false);
-    const sm = useMediaQuery(theme.breakpoints.down('sm'));
     useGoogleAnalyticsPageView();
 
     useEffect(() => {
@@ -68,18 +66,16 @@ export const PASpacesPage = (): JSX.Element => {
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <AppBar position={'sticky'}>
                 <Toolbar className={classes.toolbar}>
-                    {sm && (
-                        <IconButton
-                            color={'inherit'}
-                            onClick={(): void => {
-                                setDrawerOpen(true);
-                            }}
-                            edge={'start'}
-                            style={{ marginRight: theme.spacing(1) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    )}
+                    <IconButton
+                        color={'inherit'}
+                        onClick={(): void => {
+                            setDrawerOpen(true);
+                        }}
+                        edge={'start'}
+                        style={{ marginRight: theme.spacing(1) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant={'h6'}
                         style={{

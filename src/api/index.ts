@@ -20,6 +20,25 @@ export const getGenesisMetadata = async (id: number): Promise<any> => {
     }
 };
 
+export const EzuMetadata = axios.create({
+    baseURL: 'https://ipfs.io/ipfs/QmSf8HCqs5RCHebuyoRYMa7Wn1GTNaKTmkdSxWkicyokYe/',
+    timeout: 10000,
+});
+
+export const getEzuMetadata = async (id: number): Promise<any> => {
+    try {
+        const response = await EzuMetadata.get(`${id}.json`);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};
+
 export const PAEvents = axios.create({
     baseURL: 'https://raw.githubusercontent.com/daileytj/psychedelics-anonymous-events/dev/data/',
     timeout: 5000,
@@ -47,7 +66,7 @@ export const IRLPassCheck = axios.create({
 });
 
 export const checkIRLPass = async (passId: number): Promise<any> => {
-    const body = {token: passId};
+    const body = { token: passId };
 
     try {
         const response = await IRLPassCheck.post(IRLPassCheckBaseURL, body);
