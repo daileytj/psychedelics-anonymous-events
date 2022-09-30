@@ -110,6 +110,7 @@ import WeAreTheNight from '../assets/meme-assets/audio/we-are-the-night.mp3';
 import TheConnection from '../assets/meme-assets/audio/the-connection.mp3';
 import TheTravelers from '../assets/meme-assets/audio/ezu_the_travelers.mp3';
 import TheChangelings from '../assets/meme-assets/audio/ezu_the_changelings.mp3';
+import TheKeepers from '../assets/meme-assets/audio/ezu_the_keepers.mp3';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -219,8 +220,9 @@ const theGoodStuffAssets: MemeAsset[] = [
 const audioAssets: MemeAsset[] = [
     { name: 'PA - We Are The Night', source: WeAreTheNight },
     { name: 'PA - The Connection', source: TheConnection },
-    { name: 'Ezu - The Travelers', source: TheTravelers },
-    { name: 'Ezu - The Changelings', source: TheChangelings },
+    { name: 'Ezu - The Travelers [ l i g h t ]', source: TheTravelers },
+    { name: 'Ezu - The Changelings [ v a p o r ]', source: TheChangelings },
+    { name: 'Ezu - The Keepers [ e a r t h ]', source: TheKeepers },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>
