@@ -21,7 +21,7 @@ export const getGenesisMetadata = async (id: number): Promise<any> => {
 };
 
 export const EzuMetadata = axios.create({
-    baseURL: 'https://ipfs.io/ipfs/QmSf8HCqs5RCHebuyoRYMa7Wn1GTNaKTmkdSxWkicyokYe/',
+    baseURL: 'https://ipfs.io/ipfs/QmbBZqA1QdbMtXDHUeC7Qnb5TSiNvJn6AqJDreaQHipx3k/',
     timeout: 10000,
 });
 
