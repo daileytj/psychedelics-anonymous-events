@@ -1,24 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Monday",
-            "description": "Hosted by BTabs(@Psilocybrain) and H20Bill(@HamiltonCordon)",
-            "date": [2022, 9, 17, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA NFTuesday",
-            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
-            "date": [2022, 9, 18, 21, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA Wednesday",
-            "description": "Hosted by TBD",
-            "date": [2022, 9, 19, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
             "date": [2022, 9, 20, 21, 0, 0],
