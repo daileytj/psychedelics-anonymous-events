@@ -1,12 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Monday",
-            "description": "Hosted by BTabs(@Psilocybrain) and H20Bill(@HamiltonCordon)",
-            "date": [2022, 9, 24, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA NFTuesday",
             "description": "Hosted by @ROZNDawson and @DCoopOfficial",
             "date": [2022, 9, 25, 21, 0, 0],
@@ -15,7 +9,7 @@
         {
             "title": "PA Wednesday",
             "description": "Hosted by TBD",
-            "date": [2022, 9, 26, 22, 0, 0],
+            "date": [2022, 9, 26, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
@@ -28,6 +22,36 @@
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 9, 28, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Monday",
+            "description": "Hosted by BTabs(@Psilocybrain) and H20Bill(@HamiltonCordon)",
+            "date": [2022, 9, 31, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA NFTuesday",
+            "description": "Hosted by @ROZNDawson and @DCoopOfficial",
+            "date": [2022, 10, 1, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Wednesday",
+            "description": "Hosted by TBD",
+            "date": [2022, 10, 2, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Theory Thursday",
+            "description": "Hosted by @miamimalek and @kloss_eth",
+            "date": [2022, 10, 3, 21, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
+            "date": [2022, 10, 4, 21, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
