@@ -10,6 +10,7 @@ import Portrait from '@material-ui/icons/Portrait';
 import FiberNew from '@material-ui/icons/FiberNew';
 import AccountBalance from '@material-ui/icons/AccountBalance';
 import ReportProblem from '@material-ui/icons/ReportProblem';
+import Link from '@material-ui/icons/Link';
 import {
     AugmentedRealityPrintsPage,
     BeginnersGuidePage,
@@ -24,6 +25,7 @@ import {
     MemeAssetsPage,
     FeedbackPage,
     EzuDownloadPage,
+    LinksPage,
 } from '../pages';
 
 export const PAGES = [
@@ -32,6 +34,12 @@ export const PAGES = [
         route: '/beginners-guide',
         component: BeginnersGuidePage,
         icon: FiberNew,
+    },
+    {
+        title: 'Links',
+        route: '/links',
+        component: LinksPage,
+        icon: Link,
     },
     {
         title: 'Official Events',
