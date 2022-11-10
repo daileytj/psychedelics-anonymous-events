@@ -1,15 +1,9 @@
 {
     "events": [
         {
-            "title": "PA Wednesday",
-            "description": "Hosted by TBD",
-            "date": [2022, 10, 9, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 10, 10, 22, 0, 0],
+            "date": [2022, 10, 10, 23, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
@@ -39,7 +33,7 @@
         {
             "title": "PA Theory Thursday",
             "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 10, 17, 22, 0, 0],
+            "date": [2022, 10, 17, 23, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         },
         {
