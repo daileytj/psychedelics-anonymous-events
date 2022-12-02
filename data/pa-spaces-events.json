@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Wednesday",
-            "description": "Hosted by TBD",
-            "date": [2022, 10, 30, 22, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA Theory Thursday",
-            "description": "Hosted by @miamimalek and @kloss_eth",
-            "date": [2022, 11, 1, 23, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 11, 2, 22, 0, 0],
@@ -46,6 +34,36 @@
             "title": "Ric Flair Friday",
             "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
             "date": [2022, 11, 9, 22, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Monday",
+            "description": "Hosted by BTabs(@Psilocybrain) and H20Bill(@HamiltonCordon)",
+            "date": [2022, 11, 12, 23, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA NFTuesday",
+            "description": "Hosted by @DCoopOfficial @what3verman",
+            "date": [2022, 11, 13, 23, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Wednesday",
+            "description": "Hosted by TBD",
+            "date": [2022, 11, 14, 22, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "PA Theory Thursday",
+            "description": "Hosted by @miamimalek and @kloss_eth",
+            "date": [2022, 11, 15, 23, 0, 0],
+            "twitterLink": "https://twitter.com/paspaces"
+        },
+        {
+            "title": "Ric Flair Friday",
+            "description": "Hosted by @tweetdeez757 and @REALLeviCooper",
+            "date": [2022, 11, 16, 22, 0, 0],
             "twitterLink": "https://twitter.com/paspaces"
         }
     ]
