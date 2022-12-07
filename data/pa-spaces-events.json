@@ -1,18 +1,6 @@
 {
     "events": [
         {
-            "title": "PA Monday",
-            "description": "Hosted by BTabs(@Psilocybrain) and H20Bill(@HamiltonCordon)",
-            "date": [2022, 11, 5, 23, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
-            "title": "PA NFTuesday",
-            "description": "Hosted by @DCoopOfficial @what3verman",
-            "date": [2022, 11, 6, 23, 0, 0],
-            "twitterLink": "https://twitter.com/paspaces"
-        },
-        {
             "title": "PA Wednesday",
             "description": "Hosted by TBD",
             "date": [2022, 11, 7, 22, 0, 0],
