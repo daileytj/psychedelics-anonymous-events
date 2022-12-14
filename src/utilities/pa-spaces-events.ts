@@ -32,7 +32,7 @@ function getNextThursdayShowtime(): number[] {
     const currentDay = d.getDay();
     const daysUntilThursday = (7 - currentDay + 4) % 7;
     d.setDate(d.getDate() + daysUntilThursday);
-    d.setHours(24, 0, 0); // 7pm EST
+    d.setHours(23, 0, 0); // 6pm EST
     return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
 }
 
