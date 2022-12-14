@@ -41,7 +41,7 @@ function getNextFridayShowtime(): number[] {
     const currentDay = d.getDay();
     const daysUntilFriday = (7 - currentDay + 5) % 7;
     d.setDate(d.getDate() + daysUntilFriday);
-    d.setHours(24, 0, 0); // 7pm EST
+    d.setHours(22, 0, 0); // 5pm EST
     return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
 }
 
