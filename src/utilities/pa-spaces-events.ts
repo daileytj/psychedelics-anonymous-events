@@ -2,47 +2,47 @@ import { PAEvent } from '../components/EventCard';
 
 function getNextMondayShowtime(): number[] {
     const d = new Date();
-    const currentDay = d.getDay();
+    const currentDay = d.getUTCDay();
     const daysUntilMonday = (7 - currentDay + 1) % 7;
-    d.setDate(d.getDate() + daysUntilMonday);
-    d.setHours(24, 0, 0); // 7pm EST
-    return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+    d.setDate(d.getUTCDate() + daysUntilMonday);
+    d.setHours(19, 0, 0); // 7pm EST
+    return [d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 }
 
 function getNextTuesdayShowtime(): number[] {
     const d = new Date();
-    const currentDay = d.getDay();
+    const currentDay = d.getUTCDay();
     const daysUntilTuesday = (7 - currentDay + 2) % 7;
-    d.setDate(d.getDate() + daysUntilTuesday);
-    d.setHours(23, 0, 0); // 6pm EST
-    return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+    d.setDate(d.getUTCDate() + daysUntilTuesday);
+    d.setHours(18, 0, 0); // 6pm EST
+    return [d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 }
 
 function getNextWednesdayShowtime(): number[] {
     const d = new Date();
-    const currentDay = d.getDay();
+    const currentDay = d.getUTCDay();
     const daysUntilWednesday = (7 - currentDay + 3) % 7;
-    d.setDate(d.getDate() + daysUntilWednesday);
-    d.setHours(22, 0, 0); // 5pm EST
-    return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+    d.setDate(d.getUTCDate() + daysUntilWednesday);
+    d.setHours(17, 0, 0); // 5pm EST
+    return [d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 }
 
 function getNextThursdayShowtime(): number[] {
     const d = new Date();
-    const currentDay = d.getDay();
+    const currentDay = d.getUTCDay();
     const daysUntilThursday = (7 - currentDay + 4) % 7;
-    d.setDate(d.getDate() + daysUntilThursday);
-    d.setHours(23, 0, 0); // 6pm EST
-    return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+    d.setDate(d.getUTCDate() + daysUntilThursday);
+    d.setHours(18, 0, 0); // 6pm EST
+    return [d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 }
 
 function getNextFridayShowtime(): number[] {
     const d = new Date();
-    const currentDay = d.getDay();
+    const currentDay = d.getUTCDay();
     const daysUntilFriday = (7 - currentDay + 5) % 7;
-    d.setDate(d.getDate() + daysUntilFriday);
-    d.setHours(22, 0, 0); // 5pm EST
-    return [d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()];
+    d.setDate(d.getUTCDate() + daysUntilFriday);
+    d.setHours(17, 0, 0); // 5pm EST
+    return [d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 }
 
 const getNextShowtime = (day: string): number[] => {
