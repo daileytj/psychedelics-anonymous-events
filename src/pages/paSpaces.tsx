@@ -14,8 +14,9 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { EventCard, PAEvent } from '../components/EventCard';
-import { getPAEvents } from '../api';
+// import { getPAEvents } from '../api';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import getPASpacesEvents from '../utilities/pa-spaces-events';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,29 +38,38 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
+const sortByDate = (events: PAEvent[]): PAEvent[] => {
+    // Sort the dates in ascending order
+    events.sort((event1: PAEvent, event2: PAEvent) => event1.date[2] - event2.date[2]);
+
+    // Return the sorted dates
+    return events;
+};
+
 export const PASpacesPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
     const [events, setEvents] = useState<PAEvent[]>([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const isLoading = false;
     useGoogleAnalyticsPageView();
 
     useEffect(() => {
-        let isMounted = true;
+        setEvents(sortByDate(getPASpacesEvents()));
+        // let isMounted = true;
 
-        setIsLoading(true);
-        const loadEvents = async (): Promise<void> => {
-            const data = await getPAEvents('pa-spaces-events');
-            if (isMounted) {
-                setEvents(data || []);
-            }
-            setIsLoading(false);
-        };
-        void loadEvents();
-        return (): void => {
-            isMounted = false;
-        };
+        // setIsLoading(true);
+        // const loadEvents = async (): Promise<void> => {
+        //     const data = await getPAEvents('pa-spaces-events');
+        //     if (isMounted) {
+        //         setEvents(data || []);
+        //     }
+        //     setIsLoading(false);
+        // };
+        // void loadEvents();
+        // return (): void => {
+        //     isMounted = false;
+        // };
     }, []);
 
     return (
