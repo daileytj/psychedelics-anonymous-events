@@ -1,3 +1,10 @@
 {
-    "events": []
+    "events": [
+        {
+            "title": "A New Dawn",
+            "description": "Don't Miss This",
+            "date": [2022, 11, 15, 20, 20, 0],
+            "twitterLink": "https://twitter.com/i/spaces/1vOxwMBRdrRGB?s=20"
+        }
+    ]
 }
