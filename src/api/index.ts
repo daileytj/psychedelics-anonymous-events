@@ -39,6 +39,25 @@ export const getEzuMetadata = async (id: number): Promise<any> => {
     }
 };
 
+export const IconzMetadata = axios.create({
+    baseURL: 'https://ipfs.io/ipfs/QmNncjXAoyQ6zRcxAXqrAN27meg797wsbHLxrTp9XPfFAR/',
+    timeout: 10000,
+});
+
+export const getIconzMetadata = async (id: number): Promise<any> => {
+    try {
+        const response = await IconzMetadata.get(`${id}.json`);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};
+
 export const PAEvents = axios.create({
     baseURL: 'https://raw.githubusercontent.com/daileytj/psychedelics-anonymous-events/dev/data/',
     timeout: 5000,
