@@ -99,3 +99,22 @@ export const checkIRLPass = async (passId: number): Promise<any> => {
         return undefined;
     }
 };
+
+export const PsychedelicsAnonymousTraits = axios.create({
+    baseURL: 'https://api.newdawn.xyz/v1/marketFilters',
+    timeout: 10000,
+});
+
+export const getPATraits = async (): Promise<any> => {
+    try {
+        const response = await PsychedelicsAnonymousTraits.get(`collectionId=0`);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};

@@ -27,6 +27,7 @@ import {
     EzuDownloadPage,
     LinksPage,
 } from '../pages';
+import { GenesisDEDownloadPage } from '../pages/genesisDownloaderDE';
 
 export const PAGES = [
     {
@@ -66,9 +67,15 @@ export const PAGES = [
         icon: AccountBalance,
     },
     {
-        title: 'Hi-Res Downloader',
+        title: 'Legacy Downloader',
         route: '/hi-res-genesis-downloader',
         component: GenesisDownloadPage,
+        icon: InsertPhoto,
+    },
+    {
+        title: 'DE Downloader',
+        route: '/hi-res--de-genesis-downloader',
+        component: GenesisDEDownloadPage,
         icon: InsertPhoto,
     },
     {
