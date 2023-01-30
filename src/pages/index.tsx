@@ -12,5 +12,6 @@ export * from './beginnersGuide';
 export * from './memeAssets';
 export * from './feedback';
 export * from './links';
+export * from './genesisDownloaderDE';
 
 export * from './iconzDownloader';

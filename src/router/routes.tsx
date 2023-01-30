@@ -74,7 +74,7 @@ export const PAGES = [
     },
     {
         title: 'DE Downloader',
-        route: '/hi-res--de-genesis-downloader',
+        route: '/hi-res-de-genesis-downloader',
         component: GenesisDEDownloadPage,
         icon: InsertPhoto,
     },
