@@ -66,7 +66,7 @@ import KevinHead from '../assets/meme-assets/heads/kevin_head.png';
 import KlossHead from '../assets/meme-assets/heads/kloss.png';
 import MalekHead from '../assets/meme-assets/heads/malek.png';
 import MikeHead from '../assets/meme-assets/heads/Mike.png';
-import Nicole from '../assets/meme-assets/heads/Nicole.png';
+// import Nicole from '../assets/meme-assets/heads/Nicole.png';
 // import JustineHead from '../assets/meme-assets/heads/justine.png';
 import PACHead1 from '../assets/meme-assets/heads/PAC_Head_1.png';
 import PACHead2 from '../assets/meme-assets/heads/PAC_Head_2.png';
@@ -157,7 +157,7 @@ const headsAssets: MemeAsset[] = [
     { name: 'Gary V', source: GaryHead },
     { name: 'Smoking Elon', source: SmokingElon },
     { name: 'Kevin', source: KevinHead },
-    { name: 'Nicole', source: Nicole },
+    // { name: 'Nicole', source: Nicole },
 ];
 
 const brandAssets: MemeAsset[] = [
@@ -382,7 +382,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Meme Bank
+                        Memes & Audio
                     </Typography>
                 </Toolbar>
                 <Toolbar style={{ paddingLeft: 8, paddingRight: 8 }}>

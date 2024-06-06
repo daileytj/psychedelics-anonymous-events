@@ -5,9 +5,13 @@ import { useDrawer } from '../contexts/drawerContextProvider';
 import Menu from '@material-ui/icons/Menu';
 import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerNavItem } from '@brightlayer-ui/react-components';
 import { PAGES } from './routes';
+import PAFAMLogo from '../assets/pafam-logo.png';
 
 const useStyles = makeStyles(() =>
     createStyles({
+        root: {
+            backgroundColor: '#1E1E1E',
+        },
         title: {
             fontWeight: 500,
             letterSpacing: '5px',
@@ -57,13 +61,14 @@ export const NavigationDrawer: React.FC = () => {
             width={'20.75rem'}
         >
             <DrawerHeader
-                title={'PA Fam'}
-                subtitle={'Community Site'}
+                // title={'PA Fam'}
+                // subtitle={'Community Site'}
+                titleContent={<img src={PAFAMLogo} alt={'PA Fam Logo'} style={{ width: 240, marginLeft: '16px' }} />}
                 icon={<Menu />}
                 onIconClick={(): void => {
                     setDrawerOpen(!drawerOpen);
                 }}
-                classes={{ title: classes.title, subtitle: classes.subtitle }}
+                classes={{ root: classes.root, title: classes.title, subtitle: classes.subtitle }}
             />
             <DrawerBody>
                 {PAGES.map((page) => {
@@ -90,7 +95,7 @@ export const NavigationDrawer: React.FC = () => {
             <DrawerFooter divider={false}>
                 <Button
                     color={'primary'}
-                    style={{ width: '100%', height: 48, fontWeight: 200, letterSpacing: 2 }}
+                    style={{ width: '100%', height: 48, fontWeight: 200, letterSpacing: 2, color: '#F3F5F7' }}
                     target="_blank"
                     href={'https://twitter.com/daileytj'}
                 >
