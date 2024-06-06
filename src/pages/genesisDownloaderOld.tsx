@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     AppBar,
     IconButton,
@@ -10,14 +10,18 @@ import {
     useTheme,
     TextField,
     Button,
+    CircularProgress,
     Snackbar,
 } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import { getGenesisMetadataOld } from '../api';
+import Search from '@material-ui/icons/Search';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
+import PIconBlue from '../assets/p-icon-blue.svg';
 import * as BLUIColors from '@brightlayer-ui/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -106,10 +110,13 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export const GenesisDownloadPage = (): JSX.Element => {
+export const GenesisOldDownloadPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
+    const [metadata, setMetadata] = useState<any>({});
+    const [isLoading, setIsLoading] = useState(false);
+    const [imageRendered, setImageRendered] = useState(false);
     const [metadataRetrievalError, setMetadataRetrievalError] = useState('');
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [genesisId, setGenesisId] = useState(Math.floor(Math.random() * (9595 - 1 + 1) + 1));
@@ -117,11 +124,36 @@ export const GenesisDownloadPage = (): JSX.Element => {
 
     const formatIdFromInput = (id: string): number => +id.slice(0, 4);
 
-    const downloadImage = (event: any): void => {
-        event.preventDefault();
-        const source = `https://pa-genesis-previews.b-cdn.net/${genesisId}.jpg`;
-        saveAs(source, `PA-${genesisId}`);
+    const downloadImage = (): void => {
+        const source = metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/');
+        saveAs(source, `${metadata.name}`);
     };
+
+    const fetchMetadata = (): void => {
+        setImageRendered(false);
+        setMetadataRetrievalError('');
+        setIsLoading(true);
+        const loadMetadata = async (): Promise<void> => {
+            const data = await getGenesisMetadataOld(genesisId);
+
+            if (typeof data === 'undefined') {
+                setMetadataRetrievalError(
+                    'There was an error retrieving your Genesis metadata and image. This is likely an issue with IPFS. Please try again later.'
+                );
+                setSnackbarOpen(true);
+                setIsLoading(false);
+                setImageRendered(true);
+            }
+
+            setMetadata(data || {});
+            setTimeout((): void => setIsLoading(false), 5000);
+        };
+        void loadMetadata();
+    };
+
+    useEffect(() => {
+        fetchMetadata();
+    }, []);
 
     return (
         <div className={classes.pageBackground}>
@@ -166,14 +198,21 @@ export const GenesisDownloadPage = (): JSX.Element => {
             </AppBar>
             <div className={classes.container}>
                 <div className={classes.imageContainer}>
-                    {genesisId ? (
+                    {(isLoading || !imageRendered) && <CircularProgress style={{ width: 80, height: 80 }} />}
+                    {!isLoading && metadata.image && (
                         <img
-                            src={`https://pa-genesis-previews.b-cdn.net/${genesisId}.jpg`}
+                            src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
                             alt="Psychedelics Anonymous Genesis"
-                            style={{ height: 'inherit', width: 'inherit', display: 'block' }}
+                            style={{ height: 'inherit', width: 'inherit', display: imageRendered ? 'block' : 'none' }}
+                            onLoad={(): void => setImageRendered(true)}
                         />
-                    ) : (
-                        <Typography variant={'body1'}>Enter A Valid Genesis Id</Typography>
+                    )}
+                    {!isLoading && !metadata.image && (
+                        <img
+                            src={PIconBlue}
+                            alt="Psychedelics Anonymous Genesis"
+                            style={{ height: 'inherit', width: 'inherit' }}
+                        />
                     )}
                 </div>
                 <div className={classes.formRow}>
@@ -188,12 +227,25 @@ export const GenesisDownloadPage = (): JSX.Element => {
                         id={'genesis-id-field'}
                         type={'number'}
                         inputProps={{ inputMode: 'numeric', pattern: '[0-9]*', maxLength: 4 }}
+                        onKeyDown={(e): void => {
+                            if (e.key === 'Enter') fetchMetadata();
+                        }}
                     />
                     <Button
                         className={classes.button}
                         variant={'contained'}
                         color={'primary'}
-                        onClick={(e): void => downloadImage(e)}
+                        disabled={genesisId < 1 || genesisId > 9595}
+                        onClick={fetchMetadata}
+                    >
+                        <Search className={classes.buttonIcon} />
+                    </Button>
+                    <Button
+                        className={classes.button}
+                        variant={'contained'}
+                        color={'primary'}
+                        disabled={!metadata.image}
+                        onClick={downloadImage}
                     >
                         <CloudDownload className={classes.buttonIcon} />
                     </Button>

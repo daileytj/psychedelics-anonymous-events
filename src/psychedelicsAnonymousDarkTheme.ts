@@ -1,7 +1,7 @@
 // --colors-paMid: #242424;
 // --colors-paDark: #1E1E1E;
 // --colors-paIce: #F3F5F7;
-// --colors-paLightGrey: #ACB6AE;
+// --colors-paLightGrey: #F3F5F7;
 // --colors-paYellow: #FFFF00;
 // --colors-paBlue: #4669FB;
 // --colors-paGrey: #4A555B;
@@ -14,9 +14,25 @@ import * as BLUIColors from '@brightlayer-ui/colors';
 import { SimplePaletteColorOptions, ThemeOptions } from '@material-ui/core';
 
 export const typography = {
-    fontFamily: '"Proxima Nova", "Open Sans", Helvetica, Roboto, sans-serif',
+    fontFamily: '"Inter Regular", "Open Sans", Helvetica, Roboto, sans-serif',
     fontWeightMedium: 600,
+    h1: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
+    },
+    h2: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
+    },
+    h3: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
+    },
+    h4: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
+    },
+    h5: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
+    },
     h6: {
+        fontFamily: '"Sawton Circular", "Open Sans", Helvetica, Roboto, sans-serif',
         fontWeight: 600,
     },
     subtitle1: {
@@ -62,7 +78,7 @@ const ThemeColors = {
     error: createSimplePalette('#FF0404', '#FF0404', '#FF0404'),
     success: createSimplePalette(BLUIColors.green[200], BLUIColors.green[400], BLUIColors.green[700]),
     info: createSimplePalette(BLUIColors.green[200], BLUIColors.green[400], BLUIColors.green[700]),
-    divider: Color('#ACB6AE').alpha(0.36).string(),
+    divider: Color('#F3F5F7').alpha(0.36).string(),
     warning: {
         light: BLUIColors.yellow[100],
         main: BLUIColors.yellow[300],
@@ -74,15 +90,15 @@ const ThemeColors = {
     },
     text: {
         primary: BLUIColors.black[50],
-        secondary: '#ACB6AE',
+        secondary: '#F3F5F7',
         disabled: Color(BLUIColors.black[300]).alpha(0.36).string(),
         hint: Color(BLUIColors.black[300]).alpha(0.36).string(),
     },
     action: {
         hover: Color(BLUIColors.black[50]).alpha(0.1).string(),
-        active: '#ACB6AE',
+        active: '#F3F5F7',
         disabled: Color(BLUIColors.black[300]).alpha(0.36).string(),
-        disabledBackground: Color('#ACB6AE').alpha(0.24).string(),
+        disabledBackground: Color('#F3F5F7').alpha(0.24).string(),
     },
 };
 const WhiteText = BLUIColors.white[50];
@@ -200,12 +216,12 @@ export const PADarkTheme: ThemeOptions = {
                 },
             },
             outlined: {
-                borderColor: '#ACB6AE',
+                borderColor: '#F3F5F7',
                 '&:hover': {
                     backgroundColor: Color(BLUIColors.black[50]).alpha(0.1).string(),
                 },
                 '&$disabled': {
-                    borderColor: Color('#ACB6AE').alpha(0.36).string(),
+                    borderColor: Color('#F3F5F7').alpha(0.36).string(),
                     color: ThemeColors.action.disabled,
                 },
             },
@@ -223,7 +239,7 @@ export const PADarkTheme: ThemeOptions = {
                     },
                 },
                 '&$disabled': {
-                    borderColor: Color('#ACB6AE').alpha(0.36).string(),
+                    borderColor: Color('#F3F5F7').alpha(0.36).string(),
                     color: ThemeColors.action.disabled,
                 },
             },
@@ -321,7 +337,7 @@ export const PADarkTheme: ThemeOptions = {
                 },
                 '&$disabled': {
                     opacity: 1,
-                    backgroundColor: Color('#ACB6AE').alpha(0.24).string(),
+                    backgroundColor: Color('#F3F5F7').alpha(0.24).string(),
                     color: BLUIColors.black[400],
                     '& $avatar': {
                         opacity: 0.5,
@@ -399,7 +415,7 @@ export const PADarkTheme: ThemeOptions = {
             },
             outlined: {
                 backgroundColor: ThemeColors.background.paper,
-                borderColor: Color('#ACB6AE').alpha(0.32).string(),
+                borderColor: Color('#F3F5F7').alpha(0.32).string(),
                 '&$clickable:hover': {
                     backgroundColor: BLUIColors.black[800],
                 },
@@ -425,7 +441,7 @@ export const PADarkTheme: ThemeOptions = {
                 },
                 '&$disabled': {
                     opacity: 1,
-                    borderColor: Color('#ACB6AE').alpha(0.36).string(),
+                    borderColor: Color('#F3F5F7').alpha(0.36).string(),
                     backgroundColor: 'transparent',
                     color: BLUIColors.black[400],
                 },
@@ -825,7 +841,7 @@ export const PADarkTheme: ThemeOptions = {
                 },
                 '&:not($disabled):hover:before': {
                     borderBottomWidth: 1,
-                    borderBottomColor: '#ACB6AE',
+                    borderBottomColor: '#F3F5F7',
                 },
                 '&:after': {
                     borderBottomColor: ThemeColors.primary.dark,
@@ -911,7 +927,7 @@ export const PADarkTheme: ThemeOptions = {
                     borderColor: ThemeColors.divider,
                 },
                 '&:hover $notchedOutline': {
-                    borderColor: '#ACB6AE',
+                    borderColor: '#F3F5F7',
                 },
                 '&$error$colorSecondary$focused $notchedOutline': {
                     borderColor: ThemeColors.error.dark,
@@ -980,7 +996,7 @@ export const PADarkTheme: ThemeOptions = {
             root: {
                 backgroundColor: ThemeColors.background.paper,
                 color: BLUIColors.gray[500],
-                borderColor: Color('#ACB6AE').alpha(0.32).string(),
+                borderColor: Color('#F3F5F7').alpha(0.32).string(),
                 '&$selected': {
                     backgroundColor: Color(ThemeColors.primary.dark).alpha(0.36).string(),
                     color: ThemeColors.primary.main,

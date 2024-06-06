@@ -1,14 +1,33 @@
 import axios from 'axios';
 import { PAEvent } from '../components/EventCard';
 
-export const GenesisMetadata = axios.create({
+export const GenesisMetadataDE = axios.create({
+    baseURL: 'https://api.newdawn.xyz/v1/collections/1/mt/',
+    timeout: 10000,
+});
+
+export const getGenesisMetadataDE = async (id: number): Promise<any> => {
+    try {
+        const response = await GenesisMetadataDE.get(`${id}`);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};
+
+export const GenesisMetadataOld = axios.create({
     baseURL: 'https://ipfs.io/ipfs/QmdRAvWJa2Ck3pQPVni1DhYHc1zZNvJnZWAacS3vfWuDYA/',
     timeout: 10000,
 });
 
-export const getGenesisMetadata = async (id: number): Promise<any> => {
+export const getGenesisMetadataOld = async (id: number): Promise<any> => {
     try {
-        const response = await GenesisMetadata.get(`${id}`);
+        const response = await GenesisMetadataOld.get(`${id}`);
         if (response && response.status === 200) return response.data;
         return undefined;
     } catch (thrown) {
@@ -21,13 +40,32 @@ export const getGenesisMetadata = async (id: number): Promise<any> => {
 };
 
 export const EzuMetadata = axios.create({
-    baseURL: 'https://ipfs.io/ipfs/QmSf8HCqs5RCHebuyoRYMa7Wn1GTNaKTmkdSxWkicyokYe/',
+    baseURL: 'https://ipfs.io/ipfs/QmbBZqA1QdbMtXDHUeC7Qnb5TSiNvJn6AqJDreaQHipx3k/',
     timeout: 10000,
 });
 
 export const getEzuMetadata = async (id: number): Promise<any> => {
     try {
         const response = await EzuMetadata.get(`${id}.json`);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};
+
+export const IconzMetadata = axios.create({
+    baseURL: 'https://ipfs.io/ipfs/QmNncjXAoyQ6zRcxAXqrAN27meg797wsbHLxrTp9XPfFAR/',
+    timeout: 10000,
+});
+
+export const getIconzMetadata = async (id: number): Promise<any> => {
+    try {
+        const response = await IconzMetadata.get(`${id}.json`);
         if (response && response.status === 200) return response.data;
         return undefined;
     } catch (thrown) {
@@ -70,6 +108,25 @@ export const checkIRLPass = async (passId: number): Promise<any> => {
 
     try {
         const response = await IRLPassCheck.post(IRLPassCheckBaseURL, body);
+        if (response && response.status === 200) return response.data;
+        return undefined;
+    } catch (thrown) {
+        if (axios.isCancel(thrown)) {
+            // request canceled
+            return undefined;
+        }
+        return undefined;
+    }
+};
+
+export const PsychedelicsAnonymousTraits = axios.create({
+    baseURL: 'https://api.newdawn.xyz/v1/marketFilters',
+    timeout: 10000,
+});
+
+export const getPATraits = async (): Promise<any> => {
+    try {
+        const response = await PsychedelicsAnonymousTraits.get(`collectionId=0`);
         if (response && response.status === 200) return response.data;
         return undefined;
     } catch (thrown) {

@@ -136,6 +136,16 @@ export const LoreTracksPage = (): JSX.Element => {
                             allowFullScreen
                         ></iframe>
                     </Grid>
+                    <Grid item sm={12} lg={6} xl={6} style={{ width: '100%', maxWidth: '100%', overflow: 'scroll' }}>
+                        <iframe
+                            width={sm ? '364' : '560'}
+                            height={sm ? '204.75' : '315'}
+                            src="https://www.youtube.com/embed/wEwxVcrn7ww"
+                            title="The Keepers [ e a r t h ]"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </Grid>
                 </Grid>
             </div>
         </div>
