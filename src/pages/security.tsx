@@ -8,15 +8,15 @@ import {
     createStyles,
     makeStyles,
     useTheme,
-    Button,
-    Card,
-    Divider,
+    // Button,
+    // Card,
+    // Divider,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
-import Ledger from '../assets/ledger-promo.png';
-import { Spacer } from '@brightlayer-ui/react-components';
+// import Ledger from '../assets/ledger-promo.png';
+// import { Spacer } from '@brightlayer-ui/react-components';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -124,7 +124,7 @@ export const SecurityPage = (): JSX.Element => {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <div className={classes.contentContainer}>
+            {/* <div className={classes.contentContainer}>
                 <Card className={classes.productCard}>
                     <img src={Ledger} className={classes.productImage} />
                     <div className={classes.productInfo}>
@@ -146,6 +146,11 @@ export const SecurityPage = (): JSX.Element => {
                         </Button>
                     </div>
                 </Card>
+            </div> */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <Typography variant={'h6'} color={'secondary'} style={{ textAlign: 'center', marginTop: '2rem' }}>
+                    Coming Soon
+                </Typography>
             </div>
         </div>
     );

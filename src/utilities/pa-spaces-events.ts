@@ -72,6 +72,7 @@ const getNextShowtime = (day: string): number[] => {
 };
 
 const getPASpacesEvents = (): PAEvent[] => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const events = [
         {
             title: 'PA Monday',
@@ -105,7 +106,8 @@ const getPASpacesEvents = (): PAEvent[] => {
         },
     ];
 
-    return events;
+    // return events;
+    return [];
 };
 
 export default getPASpacesEvents;
