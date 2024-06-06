@@ -2,40 +2,40 @@ import Event from '@material-ui/icons/Event';
 // import People from '@material-ui/icons/People';
 import Mic from '@material-ui/icons/Mic';
 import AttachMoney from '@material-ui/icons/AttachMoney';
-import MusicNote from '@material-ui/icons/MusicNote';
+// import MusicNote from '@material-ui/icons/MusicNote';
 import Lock from '@material-ui/icons/Lock';
 import InsertPhoto from '@material-ui/icons/InsertPhoto';
-import ExposureZero from '@material-ui/icons/ExposureZero';
+// import ExposureZero from '@material-ui/icons/ExposureZero';
 import Portrait from '@material-ui/icons/Portrait';
-import FiberNew from '@material-ui/icons/FiberNew';
+// import FiberNew from '@material-ui/icons/FiberNew';
 import AccountBalance from '@material-ui/icons/AccountBalance';
 import ReportProblem from '@material-ui/icons/ReportProblem';
 import Link from '@material-ui/icons/Link';
 import {
     AugmentedRealityPrintsPage,
-    BeginnersGuidePage,
+    // BeginnersGuidePage,
     DonationsPage,
     GenesisDownloadPage,
-    LoreTracksPage,
+    // LoreTracksPage,
     // PACommunityEventsPage,
     PAOfficialEventsPage,
     PASpacesPage,
     SecurityPage,
-    DicklebuttsCounterPage,
+    // DicklebuttsCounterPage,
     MemeAssetsPage,
     FeedbackPage,
-    EzuDownloadPage,
+    // EzuDownloadPage,
     LinksPage,
 } from '../pages';
 import { GenesisDEDownloadPage } from '../pages/genesisDownloaderDE';
 
 export const PAGES = [
-    {
-        title: "Beginner's Guide",
-        route: '/beginners-guide',
-        component: BeginnersGuidePage,
-        icon: FiberNew,
-    },
+    // {
+    //     title: "Beginner's Guide",
+    //     route: '/beginners-guide',
+    //     component: BeginnersGuidePage,
+    //     icon: FiberNew,
+    // },
     {
         title: 'Links',
         route: '/links',
@@ -61,8 +61,8 @@ export const PAGES = [
         icon: Mic,
     },
     {
-        title: 'Meme Bank',
-        route: '/meme-bank',
+        title: 'Memes & Music',
+        route: '/memes-and-music',
         component: MemeAssetsPage,
         icon: AccountBalance,
     },
@@ -78,12 +78,12 @@ export const PAGES = [
         component: GenesisDEDownloadPage,
         icon: InsertPhoto,
     },
-    {
-        title: 'Ezu Hi-Res Downloader',
-        route: '/hi-res-ezu-downloader',
-        component: EzuDownloadPage,
-        icon: InsertPhoto,
-    },
+    // {
+    //     title: 'Ezu Hi-Res Downloader',
+    //     route: '/hi-res-ezu-downloader',
+    //     component: EzuDownloadPage,
+    //     icon: InsertPhoto,
+    // },
     {
         title: 'AR Prints',
         route: '/augmented-reality-prints',
@@ -96,18 +96,18 @@ export const PAGES = [
         component: SecurityPage,
         icon: Lock,
     },
-    {
-        title: 'Lore Tracks',
-        route: '/lore-tracks',
-        component: LoreTracksPage,
-        icon: MusicNote,
-    },
-    {
-        title: 'Dicklebutts Counter',
-        route: '/juniors-dicklebutt-incident-counter',
-        component: DicklebuttsCounterPage,
-        icon: ExposureZero,
-    },
+    // {
+    //     title: 'Lore Tracks',
+    //     route: '/lore-tracks',
+    //     component: LoreTracksPage,
+    //     icon: MusicNote,
+    // },
+    // {
+    //     title: 'Dicklebutts Counter',
+    //     route: '/juniors-dicklebutt-incident-counter',
+    //     component: DicklebuttsCounterPage,
+    //     icon: ExposureZero,
+    // },
     {
         title: 'Tips / Donations',
         route: '/donations',

@@ -137,7 +137,7 @@ export const LinksPage = (): JSX.Element => {
                 >
                     PA Wallpapers
                 </Button>
-                <Button
+                {/* <Button
                     className={classes.link}
                     variant={'contained'}
                     color={'primary'}
@@ -145,7 +145,7 @@ export const LinksPage = (): JSX.Element => {
                     target="_blank"
                 >
                     EZU Link Tree
-                </Button>
+                </Button> */}
                 <Button
                     className={classes.link}
                     variant={'contained'}

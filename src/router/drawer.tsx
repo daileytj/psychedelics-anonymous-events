@@ -22,6 +22,7 @@ const useStyles = makeStyles(() =>
             fontWeight: 400,
             letterSpacing: '2px',
             textTransform: 'uppercase',
+            fontFamily: 'Sawton Circular',
         },
     })
 );
