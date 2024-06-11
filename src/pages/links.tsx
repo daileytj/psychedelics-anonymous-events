@@ -132,11 +132,47 @@ export const LinksPage = (): JSX.Element => {
                     className={classes.link}
                     variant={'contained'}
                     color={'primary'}
+                    href={'https://x.com/psyzen_xyz?s=21'}
+                    target="_blank"
+                >
+                    PsyZen Twitter
+                </Button>
+                <Button
+                    className={classes.link}
+                    variant={'contained'}
+                    color={'primary'}
+                    href={'https://x.com/paspaces?s=21'}
+                    target="_blank"
+                >
+                    PA Spaces Twitter
+                </Button>
+                <Button
+                    className={classes.link}
+                    variant={'contained'}
+                    color={'primary'}
+                    href={'https://x.com/psychanonbot?s=21'}
+                    target="_blank"
+                >
+                    PA Sales Bot Twitter
+                </Button>
+                <Button
+                    className={classes.link}
+                    variant={'contained'}
+                    color={'primary'}
+                    href={'https://x.com/kloss_xyz'}
+                    target="_blank"
+                >
+                    Kloss Twitter
+                </Button>
+                {/* <Button
+                    className={classes.link}
+                    variant={'contained'}
+                    color={'primary'}
                     href={'https://rareboy.com/wallpapers/psychedelics-anonymous-genesis'}
                     target="_blank"
                 >
                     PA Wallpapers
-                </Button>
+                </Button> */}
                 {/* <Button
                     className={classes.link}
                     variant={'contained'}
@@ -146,7 +182,7 @@ export const LinksPage = (): JSX.Element => {
                 >
                     EZU Link Tree
                 </Button> */}
-                <Button
+                {/* <Button
                     className={classes.link}
                     variant={'contained'}
                     color={'primary'}
@@ -154,7 +190,7 @@ export const LinksPage = (): JSX.Element => {
                     target="_blank"
                 >
                     {`My Twitter... go follow ;)`}
-                </Button>
+                </Button> */}
             </div>
         </div>
     );

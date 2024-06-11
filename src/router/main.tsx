@@ -14,6 +14,6 @@ export const MainRouter = (): JSX.Element => (
         <Route key={`route_meme-bank-starter-kit`} path={`meme-bank/meme-starter-kit`} element={<MemeAssetsPage />} />
         <Route key={`route_meme-bank-audio`} path={`meme-bank/audio`} element={<MemeAssetsPage />} />
         {/* <Route key={`iconz`} path={`iconz`} element={<IconzDownloadPage />} /> */}
-        <Route path={'/'} element={<Navigate to="/daily-spaces" replace />} />
+        <Route path={'/'} element={<Navigate to="/weekly-spaces" replace />} />
     </Routes>
 );

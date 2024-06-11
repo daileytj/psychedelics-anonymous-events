@@ -109,7 +109,7 @@ export const PASpacesPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Daily Spaces
+                        Weekly Spaces
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -117,12 +117,8 @@ export const PASpacesPage = (): JSX.Element => {
                 <div className={classes.emptyContainer}>
                     {isLoading && <CircularProgress color="secondary" size={64} />}
                     {!isLoading && (
-                        <Typography
-                            variant={'h6'}
-                            color={'secondary'}
-                            style={{ textAlign: 'center', marginTop: '2rem' }}
-                        >
-                            No Events Currently Scheduled
+                        <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem', color: '#F3F5F7' }}>
+                            Coming Soon
                         </Typography>
                     )}
                 </div>

@@ -5,6 +5,8 @@ import { MainRouter } from './router/main';
 import { DrawerLayout } from '@brightlayer-ui/react-components';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 
+import ReactGA from 'react-ga4';
+
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from 'firebase/analytics';
 
@@ -47,6 +49,8 @@ export const App = (): JSX.Element => {
     };
 
     useEffect(() => {
+        ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+
         setIsDisclaimerDismissed(localStorage.getItem('disclaimerRead'));
         triggerDisclaimer();
     }, []);

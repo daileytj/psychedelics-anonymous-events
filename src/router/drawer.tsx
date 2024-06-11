@@ -63,7 +63,13 @@ export const NavigationDrawer: React.FC = () => {
             <DrawerHeader
                 // title={'PA Fam'}
                 // subtitle={'Community Site'}
-                titleContent={<img src={PAFAMLogo} alt={'PA Fam Logo'} style={{ width: 240, marginLeft: '16px' }} />}
+                titleContent={
+                    <img
+                        src={PAFAMLogo}
+                        alt={'PA Fam Logo'}
+                        style={{ width: 160, marginLeft: '16px', padding: '16px 16px 16px 0px' }}
+                    />
+                }
                 icon={<Menu />}
                 onIconClick={(): void => {
                     setDrawerOpen(!drawerOpen);

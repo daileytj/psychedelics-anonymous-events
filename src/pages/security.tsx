@@ -148,7 +148,7 @@ export const SecurityPage = (): JSX.Element => {
                 </Card>
             </div> */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                <Typography variant={'h6'} color={'secondary'} style={{ textAlign: 'center', marginTop: '2rem' }}>
+                <Typography variant={'h6'} style={{ textAlign: 'center', marginTop: '2rem', color: '#F3F5F7' }}>
                     Coming Soon
                 </Typography>
             </div>

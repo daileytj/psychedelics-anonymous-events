@@ -22,6 +22,7 @@ import CloudDownload from '@material-ui/icons/CloudDownload';
 import { saveAs } from 'file-saver';
 import SwipeableViews from 'react-swipeable-views';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 // meme-assets
 
@@ -111,6 +112,18 @@ import TheConnection from '../assets/meme-assets/audio/the-connection.mp3';
 // import TheTravelers from '../assets/meme-assets/audio/ezu_the_travelers.mp3';
 // import TheChangelings from '../assets/meme-assets/audio/ezu_the_changelings.mp3';
 // import TheKeepers from '../assets/meme-assets/audio/ezu_the_keepers.mp3';
+import Trip1 from '../assets/meme-assets/audio/Trip_1.wav';
+
+// video memes
+import AimGunMeme from '../assets/meme-assets/video-memes/aim_gun_meme.mp4';
+import AimGunMeme2 from '../assets/meme-assets/video-memes/aim_gun_meme1_1.mp4';
+import CheersJetMeme from '../assets/meme-assets/video-memes/cheers_jet_meme_1.mp4';
+import CheersMeme from '../assets/meme-assets/video-memes/cheers_meme_1.mp4';
+import CookingMeme from '../assets/meme-assets/video-memes/cooking_meme_1.mp4';
+import SaltBaeMeme from '../assets/meme-assets/video-memes/saltbae_meme_1.mp4';
+import SaxophoneMeme from '../assets/meme-assets/video-memes/saxophone_meme_1.mp4';
+import SaxophoneMeme2 from '../assets/meme-assets/video-memes/saxophone_meme_2_1.mp4';
+import ThinkingMeme from '../assets/meme-assets/video-memes/thinking_meme_1.mp4';
 
 const TabPanel = (props: { [x: string]: any; children: any; value: any; index: any }): JSX.Element => {
     const { children, value, index, ...other } = props;
@@ -217,9 +230,22 @@ const theGoodStuffAssets: MemeAsset[] = [
     { name: 'Spray Paint', source: SprayPaint },
 ];
 
+const videoMemes: MemeAsset[] = [
+    { name: 'Aim Gun Meme', source: AimGunMeme },
+    { name: 'Aim Gun Meme 2', source: AimGunMeme2 },
+    { name: 'Cheers Jet Meme', source: CheersJetMeme },
+    { name: 'Cheers Meme', source: CheersMeme },
+    { name: 'Cooking Meme', source: CookingMeme },
+    { name: 'Salt Bae Meme', source: SaltBaeMeme },
+    { name: 'Saxophone Meme', source: SaxophoneMeme },
+    { name: 'Saxophone Meme 2', source: SaxophoneMeme2 },
+    { name: 'Thinking Meme', source: ThinkingMeme },
+];
+
 const audioAssets: MemeAsset[] = [
     { name: 'PA - We Are The Night', source: WeAreTheNight },
     { name: 'PA - The Connection', source: TheConnection },
+    { name: 'Trip 1', source: Trip1 },
     // { name: 'Ezu - The Travelers [ l i g h t ]', source: TheTravelers },
     // { name: 'Ezu - The Changelings [ v a p o r ]', source: TheChangelings },
     // { name: 'Ezu - The Keepers [ e a r t h ]', source: TheKeepers },
@@ -493,6 +519,51 @@ export const MemeAssetsPage = (): JSX.Element => {
                 <TabPanel value={value} index={2}>
                     <div className={classes.container}>
                         <Grid container spacing={2} alignItems={'stretch'}>
+                            {videoMemes.map((asset: MemeAsset, index: number) => (
+                                <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
+                                    <Card
+                                        style={{
+                                            maxWidth: '100%',
+                                            minHeight: '100%',
+                                            overflow: 'hidden',
+                                            backgroundColor: 'transparent',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            borderRadius: 0,
+                                        }}
+                                        elevation={4}
+                                    >
+                                        <div style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
+                                            {/* <video controls style={{ margin: 16, width: '100%' }} key={asset.name}>
+                                                <source src={asset.source} type="video/mp4" />
+                                            </video> */}
+                                            <ReactPlayer
+                                                url={asset.source}
+                                                controls
+                                                width="100%"
+                                                height="100%"
+                                                style={{ margin: 16 }}
+                                            />
+                                        </div>
+                                        <div style={{ display: 'flex', overflow: 'hidden' }}>
+                                            <Button
+                                                className={classes.button}
+                                                variant={'contained'}
+                                                color={'primary'}
+                                                onClick={(): void => downloadImage(asset)}
+                                            >
+                                                <Typography
+                                                    variant="body2"
+                                                    style={{ padding: 8, textOverflow: 'ellipsis' }}
+                                                >
+                                                    {asset.name}
+                                                </Typography>
+                                                <CloudDownload />
+                                            </Button>
+                                        </div>
+                                    </Card>
+                                </Grid>
+                            ))}
                             {theGoodStuffAssets.map((asset: MemeAsset, index: number) => (
                                 <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={index} style={{ width: '100%' }}>
                                     <Card
@@ -537,7 +608,7 @@ export const MemeAssetsPage = (): JSX.Element => {
                         <Typography variant={'h6'} style={{ textAlign: 'center', marginBottom: 16 }}>
                             Get started with these resources:
                         </Typography>
-                        <Button
+                        {/* <Button
                             className={classes.starterKitLink}
                             variant={'contained'}
                             color={'primary'}
@@ -547,6 +618,15 @@ export const MemeAssetsPage = (): JSX.Element => {
                             target="_blank"
                         >
                             JB&apos;s Starter Kit Thread
+                        </Button> */}
+                        <Button
+                            className={classes.starterKitLink}
+                            variant={'contained'}
+                            color={'primary'}
+                            href={'https://www.canva.com/'}
+                            target="_blank"
+                        >
+                            Canva
                         </Button>
                         <Button
                             className={classes.starterKitLink}

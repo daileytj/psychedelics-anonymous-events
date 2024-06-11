@@ -16,6 +16,7 @@ import { useDrawer } from '../contexts/drawerContextProvider';
 import { getPAEvents } from '../api';
 import { EventCard, PAEvent } from '../components/EventCard';
 import { useGoogleAnalyticsPageView } from '../hooks/useGoogleAnalyticsPageView';
+import MagnetiqLogo from '../assets/magnetiq-logo.png';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -99,7 +100,7 @@ export const PAOfficialEventsPage = (): JSX.Element => {
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        Official Events
+                        Community Events
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -107,13 +108,25 @@ export const PAOfficialEventsPage = (): JSX.Element => {
                 <div className={classes.emptyContainer}>
                     {isLoading && <CircularProgress color="secondary" size={64} />}
                     {!isLoading && (
-                        <Typography
-                            variant={'h6'}
-                            color={'secondary'}
-                            style={{ textAlign: 'center', marginTop: '2rem' }}
-                        >
-                            No Events Currently Scheduled
-                        </Typography>
+                        <div>
+                            <Typography
+                                variant={'h6'}
+                                style={{ textAlign: 'center', marginTop: '2rem', color: '#F3F5F7' }}
+                            >
+                                Coming 2024
+                            </Typography>
+                            <Typography
+                                variant={'body1'}
+                                style={{ textAlign: 'center', marginTop: '2rem', color: '#F3F5F7' }}
+                            >
+                                Powered By:
+                            </Typography>
+                            <img
+                                src={MagnetiqLogo}
+                                alt={'Magnetiq Logo'}
+                                style={{ width: 240, marginLeft: '16px', padding: '16px 16px 16px 0px' }}
+                            />
+                        </div>
                     )}
                 </div>
             )}
