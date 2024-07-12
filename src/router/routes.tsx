@@ -28,6 +28,8 @@ import {
     LinksPage,
 } from '../pages';
 import { GenesisDEDownloadPage } from '../pages/genesisDownloaderDE';
+import { VolunteerPage } from '../pages/volunteer';
+import VolunteerIcon from '@material-ui/icons/Accessibility';
 
 export const PAGES = [
     // {
@@ -84,6 +86,12 @@ export const PAGES = [
     //     component: EzuDownloadPage,
     //     icon: InsertPhoto,
     // },
+    {
+        title: 'Volunteer',
+        route: '/volunteer',
+        component: VolunteerPage,
+        icon: VolunteerIcon,
+    },
     {
         title: 'AR Prints',
         route: '/augmented-reality-prints',
